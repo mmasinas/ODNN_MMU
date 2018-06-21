@@ -1,0 +1,3921 @@
+Cell_ID,Strain,Phenotype
+2482690,TSA150,multilobed
+2482691,TSA150,multilobed
+2482695,TSA150,multilobed
+2482696,TSA150,multilobed
+2482697,TSA150,multilobed
+2482698,TSA150,multilobed
+2482703,TSA150,multilobed
+2482710,TSA150,multilobed
+2482711,TSA150,multilobed
+2482712,TSA150,multilobed
+2482715,TSA150,multilobed
+2482716,TSA150,multilobed
+2482717,TSA150,multilobed
+2482719,TSA150,enlarged
+2482721,TSA150,multilobed
+2486686,DMA3865,negative
+2493894,DMA1,negative
+2494307,DMA1,negative
+2495460,DMA520,multilobed
+2495462,DMA520,multilobed
+2495467,DMA520,multilobed
+2495468,DMA520,multilobed
+2495476,DMA520,multilobed
+2495481,DMA520,multilobed
+2495492,DMA520,multilobed
+2495493,DMA520,multilobed
+2495497,DMA520,multilobed
+2495504,DMA520,multilobed
+2495506,DMA520,multilobed
+2495513,DMA520,multilobed
+2495519,DMA520,multilobed
+2495524,DMA520,multilobed
+2495527,DMA520,multilobed
+2495532,DMA520,multilobed
+2495543,DMA520,multilobed
+2495552,DMA520,multilobed
+2495558,DMA520,multilobed
+2495563,DMA520,multilobed
+2495564,DMA520,multilobed
+2495566,DMA520,multilobed
+2495598,DMA520,multilobed
+2495599,DMA520,multilobed
+2495613,DMA520,multilobed
+2495619,DMA520,multilobed
+2495625,DMA520,multilobed
+2495630,DMA520,multilobed
+2495632,DMA520,multilobed
+2495645,DMA520,multilobed
+2495649,DMA520,multilobed
+2495651,DMA520,multilobed
+2495652,DMA520,multilobed
+2495653,DMA520,multilobed
+2495673,DMA520,multilobed
+2495677,DMA520,multilobed
+2495685,DMA520,multilobed
+2495686,DMA520,multilobed
+2495705,DMA520,multilobed
+2495707,DMA520,multilobed
+2495710,DMA520,multilobed
+2495714,DMA520,multilobed
+2495717,DMA520,multilobed
+2495776,DMA520,multilobed
+2495777,DMA520,multilobed
+2495778,DMA520,multilobed
+2495799,DMA520,multilobed
+2495817,DMA520,multilobed
+2495826,DMA520,multilobed
+2495832,DMA520,multilobed
+2495835,DMA520,multilobed
+2495839,DMA520,multilobed
+2495846,DMA520,multilobed
+2495849,DMA520,multilobed
+2495855,DMA520,multilobed
+2495865,DMA520,multilobed
+2495869,DMA520,multilobed
+2500678,DMA3865,negative
+2506237,DMA1,negative
+2528663,DMA1,negative
+2528799,DMA1,negative
+2529819,DMA1,negative
+2529977,DMA1,enlarged
+2530996,DMA1,negative
+2531498,DMA1,negative
+2533899,DMA1,negative
+2534801,DMA-SLOW236,class E
+2534803,DMA-SLOW236,multilobed
+2534838,DMA-SLOW236,class E
+2534842,DMA-SLOW236,class E
+2536191,DMA-SLOW395,class E
+2536197,DMA-SLOW395,class E
+2536201,DMA-SLOW395,class E
+2536205,DMA-SLOW395,class E
+2536216,DMA-SLOW395,class E
+2536219,DMA-SLOW395,class E
+2536222,DMA-SLOW395,class E
+2536233,DMA-SLOW395,class E
+2536237,DMA-SLOW395,class E
+2536245,DMA-SLOW395,class E
+2536248,DMA-SLOW395,class E
+2536257,DMA-SLOW395,class E
+2536271,DMA-SLOW395,class E
+2536272,DMA-SLOW395,class E
+2536282,DMA-SLOW395,class E
+2536284,DMA-SLOW395,class E
+2538531,DMA1,negative
+2538710,DMA1,negative
+2539108,DMA1,negative
+2539376,DMA1,negative
+2539383,DMA1,negative
+2540178,DMA1,negative
+2540912,DMA1,negative
+2542471,DMA3865,negative
+2542474,DMA3865,negative
+2546977,DMA1,negative
+2547069,DMA1,negative
+2548380,DMA1,negative
+2549237,DMA1,negative
+2551485,DMA1,negative
+2552114,DMA1,negative
+2552811,DMA1,negative
+2553212,DMA1,negative
+2553319,DMA1,negative
+2553380,DMA1,negative
+2553804,DMA1,negative
+2553898,DMA1,negative
+2562442,DMA1,multilobed
+2563034,DMA1,negative
+2563183,DMA1,negative
+2563369,DMA1,negative
+2563822,DMA1,negative
+2563863,DMA1,negative
+2564807,DMA1,negative
+2564990,DMA1,negative
+2565010,DMA1,negative
+2567626,DMA1,negative
+2569445,DMA1,negative
+2571148,DMA294,highly fragmented
+2571156,DMA294,highly fragmented
+2571157,DMA294,highly fragmented
+2571162,DMA294,highly fragmented
+2571163,DMA294,highly fragmented
+2571167,DMA294,highly fragmented
+2571172,DMA294,highly fragmented
+2571174,DMA294,highly fragmented
+2571176,DMA294,highly fragmented
+2571177,DMA294,highly fragmented
+2571178,DMA294,highly fragmented
+2571180,DMA294,highly fragmented
+2571181,DMA294,highly fragmented
+2571183,DMA294,highly fragmented
+2571187,DMA294,highly fragmented
+2571188,DMA294,highly fragmented
+2571189,DMA294,highly fragmented
+2571190,DMA294,highly fragmented
+2571204,DMA294,highly fragmented
+2571208,DMA294,highly fragmented
+2571214,DMA294,highly fragmented
+2571222,DMA294,highly fragmented
+2571227,DMA294,highly fragmented
+2571229,DMA294,highly fragmented
+2571232,DMA294,highly fragmented
+2571237,DMA294,highly fragmented
+2571241,DMA294,highly fragmented
+2571249,DMA294,highly fragmented
+2571251,DMA294,highly fragmented
+2571253,DMA294,highly fragmented
+2571262,DMA294,highly fragmented
+2571263,DMA294,highly fragmented
+2571264,DMA294,highly fragmented
+2571265,DMA294,highly fragmented
+2571269,DMA294,highly fragmented
+2571271,DMA294,highly fragmented
+2571272,DMA294,highly fragmented
+2571275,DMA294,highly fragmented
+2571289,DMA294,highly fragmented
+2571290,DMA294,highly fragmented
+2571292,DMA294,highly fragmented
+2571298,DMA294,highly fragmented
+2571300,DMA294,highly fragmented
+2571302,DMA294,highly fragmented
+2571303,DMA294,highly fragmented
+2571307,DMA294,highly fragmented
+2571309,DMA294,highly fragmented
+2571314,DMA294,highly fragmented
+2571316,DMA294,highly fragmented
+2571317,DMA294,highly fragmented
+2571318,DMA294,highly fragmented
+2571320,DMA294,highly fragmented
+2571322,DMA294,highly fragmented
+2571324,DMA294,highly fragmented
+2571325,DMA294,highly fragmented
+2571326,DMA294,highly fragmented
+2571328,DMA294,highly fragmented
+2571331,DMA294,highly fragmented
+2571334,DMA294,highly fragmented
+2571346,DMA294,highly fragmented
+2571352,DMA294,highly fragmented
+2571353,DMA294,highly fragmented
+2571355,DMA294,highly fragmented
+2571357,DMA294,highly fragmented
+2571358,DMA294,highly fragmented
+2575326,DMA1,negative
+2575371,DMA1,negative
+2575873,DMA-SLOW296,V-ATPase complex assembly defect
+2575874,DMA-SLOW296,V-ATPase complex assembly defect
+2575875,DMA-SLOW296,V-ATPase complex assembly defect
+2575876,DMA-SLOW296,V-ATPase complex assembly defect
+2575877,DMA-SLOW296,V-ATPase complex assembly defect
+2575878,DMA-SLOW296,V-ATPase complex assembly defect
+2575879,DMA-SLOW296,V-ATPase complex assembly defect
+2575880,DMA-SLOW296,V-ATPase complex assembly defect
+2575881,DMA-SLOW296,V-ATPase complex assembly defect
+2575882,DMA-SLOW296,V-ATPase complex assembly defect
+2575884,DMA-SLOW296,V-ATPase complex assembly defect
+2575885,DMA-SLOW296,V-ATPase complex assembly defect
+2575886,DMA-SLOW296,V-ATPase complex assembly defect
+2575887,DMA-SLOW296,V-ATPase complex assembly defect
+2575888,DMA-SLOW296,V-ATPase complex assembly defect
+2575889,DMA-SLOW296,V-ATPase complex assembly defect
+2575892,DMA-SLOW296,V-ATPase complex assembly defect
+2575893,DMA-SLOW296,V-ATPase complex assembly defect
+2575894,DMA-SLOW296,V-ATPase complex assembly defect
+2575895,DMA-SLOW296,V-ATPase complex assembly defect
+2575896,DMA-SLOW296,V-ATPase complex assembly defect
+2575899,DMA-SLOW296,V-ATPase complex assembly defect
+2575900,DMA-SLOW296,V-ATPase complex assembly defect
+2575901,DMA-SLOW296,V-ATPase complex assembly defect
+2575902,DMA-SLOW296,V-ATPase complex assembly defect
+2575903,DMA-SLOW296,V-ATPase complex assembly defect
+2575904,DMA-SLOW296,V-ATPase complex assembly defect
+2575905,DMA-SLOW296,V-ATPase complex assembly defect
+2575906,DMA-SLOW296,V-ATPase complex assembly defect
+2575907,DMA-SLOW296,V-ATPase complex assembly defect
+2575908,DMA-SLOW296,V-ATPase complex assembly defect
+2575909,DMA-SLOW296,V-ATPase complex assembly defect
+2575910,DMA-SLOW296,V-ATPase complex assembly defect
+2575911,DMA-SLOW296,V-ATPase complex assembly defect
+2575912,DMA-SLOW296,V-ATPase complex assembly defect
+2575913,DMA-SLOW296,V-ATPase complex assembly defect
+2575914,DMA-SLOW296,V-ATPase complex assembly defect
+2575916,DMA-SLOW296,V-ATPase complex assembly defect
+2575917,DMA-SLOW296,V-ATPase complex assembly defect
+2575918,DMA-SLOW296,V-ATPase complex assembly defect
+2575920,DMA-SLOW296,V-ATPase complex assembly defect
+2575921,DMA-SLOW296,V-ATPase complex assembly defect
+2575922,DMA-SLOW296,V-ATPase complex assembly defect
+2575923,DMA-SLOW296,V-ATPase complex assembly defect
+2575924,DMA-SLOW296,V-ATPase complex assembly defect
+2575925,DMA-SLOW296,V-ATPase complex assembly defect
+2575926,DMA-SLOW296,V-ATPase complex assembly defect
+2575927,DMA-SLOW296,V-ATPase complex assembly defect
+2575928,DMA-SLOW296,V-ATPase complex assembly defect
+2575929,DMA-SLOW296,V-ATPase complex assembly defect
+2575930,DMA-SLOW296,V-ATPase complex assembly defect
+2575931,DMA-SLOW296,V-ATPase complex assembly defect
+2575932,DMA-SLOW296,V-ATPase complex assembly defect
+2575934,DMA-SLOW296,V-ATPase complex assembly defect
+2575935,DMA-SLOW296,V-ATPase complex assembly defect
+2575936,DMA-SLOW296,V-ATPase complex assembly defect
+2575937,DMA-SLOW296,V-ATPase complex assembly defect
+2575938,DMA-SLOW296,V-ATPase complex assembly defect
+2575939,DMA-SLOW296,V-ATPase complex assembly defect
+2575940,DMA-SLOW296,V-ATPase complex assembly defect
+2575941,DMA-SLOW296,V-ATPase complex assembly defect
+2575942,DMA-SLOW296,V-ATPase complex assembly defect
+2575943,DMA-SLOW296,V-ATPase complex assembly defect
+2575944,DMA-SLOW296,V-ATPase complex assembly defect
+2575946,DMA-SLOW296,V-ATPase complex assembly defect
+2575947,DMA-SLOW296,V-ATPase complex assembly defect
+2575948,DMA-SLOW296,V-ATPase complex assembly defect
+2575949,DMA-SLOW296,V-ATPase complex assembly defect
+2575952,DMA-SLOW296,V-ATPase complex assembly defect
+2575953,DMA-SLOW296,V-ATPase complex assembly defect
+2575954,DMA-SLOW296,V-ATPase complex assembly defect
+2575955,DMA-SLOW296,V-ATPase complex assembly defect
+2575956,DMA-SLOW296,V-ATPase complex assembly defect
+2575957,DMA-SLOW296,V-ATPase complex assembly defect
+2575958,DMA-SLOW296,V-ATPase complex assembly defect
+2575959,DMA-SLOW296,V-ATPase complex assembly defect
+2575960,DMA-SLOW296,V-ATPase complex assembly defect
+2575961,DMA-SLOW296,V-ATPase complex assembly defect
+2575962,DMA-SLOW296,V-ATPase complex assembly defect
+2575963,DMA-SLOW296,V-ATPase complex assembly defect
+2575965,DMA-SLOW296,V-ATPase complex assembly defect
+2577664,DMA1,negative
+2583374,DMA1,negative
+2583572,DMA1,negative
+2583643,DMA1,negative
+2589481,DMA1,negative
+2589690,DMA1,negative
+2590012,DMA1,negative
+2590892,DMA1,negative
+2591662,DMA1,negative
+2591831,DMA1,negative
+2592403,DMA1,negative
+2592521,DMA1,negative
+2594870,DMA1,negative
+2599240,DMA1,negative
+2605895,DMA1,negative
+2619860,DMA1,negative
+2620031,DMA1,negative
+2632900,DMA1,negative
+2632922,DMA1,negative
+2633524,DMA1,negative
+2634531,DMA1,negative
+2634816,DMA1,negative
+2635460,DMA1,negative
+2635522,DMA1,negative
+2635646,DMA1,negative
+2637996,DMA3715,V-ATPase complex assembly defect
+2637997,DMA3715,V-ATPase complex assembly defect
+2637998,DMA3715,V-ATPase complex assembly defect
+2637999,DMA3715,V-ATPase complex assembly defect
+2638000,DMA3715,V-ATPase complex assembly defect
+2638004,DMA3715,V-ATPase complex assembly defect
+2638005,DMA3715,V-ATPase complex assembly defect
+2638007,DMA3715,V-ATPase complex assembly defect
+2638008,DMA3715,V-ATPase complex assembly defect
+2638009,DMA3715,V-ATPase complex assembly defect
+2638013,DMA3715,V-ATPase complex assembly defect
+2638014,DMA3715,V-ATPase complex assembly defect
+2638018,DMA3715,V-ATPase complex assembly defect
+2638021,DMA3715,V-ATPase complex assembly defect
+2638022,DMA3715,V-ATPase complex assembly defect
+2638023,DMA3715,V-ATPase complex assembly defect
+2638026,DMA3715,V-ATPase complex assembly defect
+2638027,DMA3715,V-ATPase complex assembly defect
+2638028,DMA3715,V-ATPase complex assembly defect
+2638034,DMA3715,V-ATPase complex assembly defect
+2638036,DMA3715,V-ATPase complex assembly defect
+2638037,DMA3715,V-ATPase complex assembly defect
+2638039,DMA3715,V-ATPase complex assembly defect
+2638042,DMA3715,V-ATPase complex assembly defect
+2638044,DMA3715,V-ATPase complex assembly defect
+2638046,DMA3715,V-ATPase complex assembly defect
+2638048,DMA3715,V-ATPase complex assembly defect
+2638051,DMA3715,V-ATPase complex assembly defect
+2638052,DMA3715,V-ATPase complex assembly defect
+2638053,DMA3715,V-ATPase complex assembly defect
+2638054,DMA3715,V-ATPase complex assembly defect
+2638056,DMA3715,V-ATPase complex assembly defect
+2638057,DMA3715,V-ATPase complex assembly defect
+2638060,DMA3715,V-ATPase complex assembly defect
+2638063,DMA3715,V-ATPase complex assembly defect
+2638064,DMA3715,V-ATPase complex assembly defect
+2638066,DMA3715,V-ATPase complex assembly defect
+2638071,DMA3715,V-ATPase complex assembly defect
+2638072,DMA3715,V-ATPase complex assembly defect
+2638075,DMA3715,V-ATPase complex assembly defect
+2638077,DMA3715,V-ATPase complex assembly defect
+2638078,DMA3715,V-ATPase complex assembly defect
+2638089,DMA3715,V-ATPase complex assembly defect
+2638090,DMA3715,V-ATPase complex assembly defect
+2638095,DMA3715,V-ATPase complex assembly defect
+2638098,DMA3715,V-ATPase complex assembly defect
+2638101,DMA3715,V-ATPase complex assembly defect
+2640486,DMA3865,negative
+2640595,DMA3865,negative
+2642165,DMA3865,negative
+2642700,DMA3865,negative
+2646436,DMA1,negative
+2646508,DMA1,negative
+2646680,DMA1,multilobed
+2651329,DMA1,multilobed
+2651361,DMA1,negative
+2651442,DMA1,negative
+2667389,DMA1,negative
+2669016,DMA294,highly fragmented
+2669023,DMA294,highly fragmented
+2669024,DMA294,highly fragmented
+2669032,DMA294,highly fragmented
+2669037,DMA294,highly fragmented
+2669038,DMA294,highly fragmented
+2669048,DMA294,highly fragmented
+2669049,DMA294,highly fragmented
+2669054,DMA294,highly fragmented
+2674281,DMA1,negative
+2674427,DMA1,negative
+2680904,DMA1,negative
+2687876,DMA1,negative
+2688168,DMA1,negative
+2688236,DMA1,negative
+2688353,DMA1,negative
+2688385,DMA1,negative
+2688516,DMA1,negative
+2688608,DMA1,negative
+2688801,DMA1,negative
+2688922,DMA1,negative
+2688933,DMA1,negative
+2689249,DMA1,negative
+2689894,DMA1,negative
+2689972,DMA1,negative
+2690206,DMA1,negative
+2690715,DMA1,negative
+2691429,DMA1,negative
+2692914,DMA1,negative
+2701931,DMA4182,enlarged
+2701933,DMA4182,enlarged
+2701935,DMA4182,enlarged
+2701946,DMA4182,enlarged
+2701947,DMA4182,enlarged
+2701961,DMA4182,enlarged
+2701964,DMA4182,enlarged
+2701971,DMA4182,class E
+2701972,DMA4182,enlarged
+2701986,DMA4182,enlarged
+2701988,DMA4182,enlarged
+2701992,DMA4182,class E
+2701994,DMA4182,enlarged
+2701995,DMA4182,enlarged
+2702009,DMA4182,enlarged
+2702017,DMA4182,enlarged
+2702020,DMA4182,enlarged
+2702024,DMA4182,class E
+2702029,DMA4182,enlarged
+2702031,DMA4182,enlarged
+2702036,DMA4182,enlarged
+2702038,DMA4182,enlarged
+2702039,DMA4182,enlarged
+2702045,DMA4182,enlarged
+2702052,DMA4182,enlarged
+2702054,DMA4182,enlarged
+2702059,DMA4182,enlarged
+2702062,DMA4182,enlarged
+2702068,DMA4182,enlarged
+2704863,DMA1,negative
+2707850,DMA1,negative
+2707856,DMA1,negative
+2708778,DMA1,negative
+2709021,DMA1,negative
+2709467,DMA1,negative
+2709595,DMA1,negative
+2710114,DMA1,negative
+2711054,DMA1,negative
+2711800,DMA1,negative
+2712077,DMA1,negative
+2713029,DMA1,negative
+2713150,DMA1,negative
+2713375,DMA1,negative
+2713914,DMA1,negative
+2715075,DMA1,negative
+2715306,DMA1,negative
+2715461,DMA1,negative
+2715585,DMA1,negative
+2715811,DMA1,negative
+2716185,DMA1,negative
+2724885,DMA1,negative
+2725028,DMA1,negative
+2725035,DMA1,negative
+2732769,DMA3865,negative
+2739618,TSA60,sec
+2739620,TSA60,sec
+2739622,TSA60,sec
+2739628,TSA60,sec
+2739635,TSA60,sec
+2739637,TSA60,sec
+2739638,TSA60,sec
+2739639,TSA60,sec
+2739643,TSA60,sec
+2739654,TSA60,sec
+2739661,TSA60,sec
+2739663,TSA60,sec
+2739669,TSA60,sec
+2739670,TSA60,sec
+2739671,TSA60,sec
+2739675,TSA60,sec
+2739679,TSA60,sec
+2739681,TSA60,sec
+2739682,TSA60,sec
+2739683,TSA60,sec
+2739686,TSA60,sec
+2739690,TSA60,sec
+2739692,TSA60,sec
+2739697,TSA60,sec
+2739698,TSA60,sec
+2739700,TSA60,sec
+2739708,TSA60,sec
+2739709,TSA60,sec
+2739712,TSA60,sec
+2739713,TSA60,sec
+2739715,TSA60,sec
+2739721,TSA60,sec
+2739723,TSA60,class E
+2739725,TSA60,sec
+2739727,TSA60,sec
+2739732,TSA60,sec
+2739735,TSA60,sec
+2739742,TSA60,sec
+2739743,TSA60,sec
+2739745,TSA60,sec
+2739748,TSA60,sec
+2739756,TSA60,sec
+2739761,TSA60,sec
+2739762,TSA60,sec
+2739765,TSA60,highly fragmented
+2739771,TSA60,sec
+2739772,TSA60,sec
+2739780,TSA60,sec
+2739782,TSA60,sec
+2739783,TSA60,sec
+2739785,TSA60,sec
+2739787,TSA60,sec
+2739788,TSA60,sec
+2739790,TSA60,sec
+2739794,TSA60,sec
+2739795,TSA60,sec
+2739796,TSA60,sec
+2739798,TSA60,sec
+2739799,TSA60,sec
+2739800,TSA60,sec
+2739802,TSA60,sec
+2739803,TSA60,sec
+2739804,TSA60,sec
+2739805,TSA60,sec
+2739806,TSA60,sec
+2739813,TSA60,sec
+2739815,TSA60,sec
+2739816,TSA60,sec
+2739818,TSA60,sec
+2739820,TSA60,sec
+2739825,TSA60,sec
+2739826,TSA60,sec
+2739827,TSA60,sec
+2739829,TSA60,sec
+2739830,TSA60,sec
+2739832,TSA60,sec
+2739834,TSA60,sec
+2739839,TSA60,sec
+2739841,TSA60,sec
+2739843,TSA60,sec
+2739846,TSA60,sec
+2739847,TSA60,sec
+2739848,TSA60,sec
+2739850,TSA60,sec
+2739852,TSA60,sec
+2739856,TSA60,sec
+2739857,TSA60,sec
+2739858,TSA60,sec
+2739860,TSA60,sec
+2739862,TSA60,sec
+2739863,TSA60,sec
+2739868,TSA60,sec
+2739872,TSA60,sec
+2739873,TSA60,sec
+2739875,TSA60,sec
+2739877,TSA60,sec
+2739881,TSA60,sec
+2739884,TSA60,sec
+2739888,TSA60,sec
+2739889,TSA60,sec
+2739891,TSA60,sec
+2739892,TSA60,sec
+2739895,TSA60,sec
+2739896,TSA60,sec
+2739897,TSA60,sec
+2739901,TSA60,sec
+2744454,TSA216,multilobed
+2744477,TSA216,multilobed
+2744492,TSA216,multilobed
+2751818,DMA3865,negative
+2758684,DMA1,negative
+2758697,DMA1,negative
+2764249,DMA1,negative
+2765073,DMA3865,negative
+2767362,DMA3865,negative
+2770392,DMA3865,negative
+2772682,TSA675,multilobed
+2772686,TSA675,multilobed
+2772688,TSA675,multilobed
+2772711,TSA675,multilobed
+2772723,TSA675,multilobed
+2772731,TSA675,multilobed
+2772735,TSA675,multilobed
+2772740,TSA675,multilobed
+2772745,TSA675,multilobed
+2781992,TSA1214,sec
+2781993,TSA1214,sec
+2781996,TSA1214,sec
+2781998,TSA1214,sec
+2781999,TSA1214,sec
+2782003,TSA1214,sec
+2782006,TSA1214,sec
+2782010,TSA1214,sec
+2782011,TSA1214,sec
+2782012,TSA1214,sec
+2782016,TSA1214,sec
+2782027,TSA1214,sec
+2782032,TSA1214,sec
+2782036,TSA1214,sec
+2782038,TSA1214,sec
+2782041,TSA1214,sec
+2782042,TSA1214,sec
+2782663,TSA1090,sec
+2782664,TSA1090,sec
+2782665,TSA1090,sec
+2782666,TSA1090,sec
+2782669,TSA1090,sec
+2782674,TSA1090,sec
+2782675,TSA1090,sec
+2782676,TSA1090,sec
+2782677,TSA1090,sec
+2782678,TSA1090,sec
+2782679,TSA1090,sec
+2782684,TSA1090,sec
+2782697,TSA1090,sec
+2782702,TSA1090,sec
+2782703,TSA1090,sec
+2782704,TSA1090,sec
+2782705,TSA1090,sec
+2782708,TSA1090,sec
+2782709,TSA1090,sec
+2782715,TSA1090,sec
+2782718,TSA1090,sec
+2782719,TSA1090,sec
+2782722,TSA1090,sec
+2782724,TSA1090,sec
+2782725,TSA1090,sec
+2782736,TSA1090,sec
+2782737,TSA1090,sec
+2783816,DMA1,negative
+2784717,DMA1,negative
+2785016,DMA1,negative
+2785734,DMA1,negative
+2786071,DMA1,negative
+2786197,DMA1,negative
+2786240,DMA1,negative
+2786471,DMA1,negative
+2786687,DMA1,negative
+2787326,DMA1,negative
+2787709,DMA1,negative
+2787864,DMA1,negative
+2789219,DMA1,negative
+2789394,DMA1,negative
+2789496,DMA1,negative
+2796304,DMA1674,highly fragmented
+2796305,DMA1674,highly fragmented
+2796306,DMA1674,highly fragmented
+2796308,DMA1674,highly fragmented
+2796309,DMA1674,highly fragmented
+2796314,DMA1674,highly fragmented
+2796316,DMA1674,highly fragmented
+2796318,DMA1674,highly fragmented
+2796319,DMA1674,highly fragmented
+2796322,DMA1674,highly fragmented
+2796324,DMA1674,highly fragmented
+2796325,DMA1674,highly fragmented
+2796326,DMA1674,highly fragmented
+2796329,DMA1674,highly fragmented
+2796336,DMA1674,highly fragmented
+2796337,DMA1674,highly fragmented
+2796344,DMA1674,highly fragmented
+2796346,DMA1674,highly fragmented
+2796352,DMA1674,highly fragmented
+2796355,DMA1674,highly fragmented
+2796356,DMA1674,highly fragmented
+2796358,DMA1674,highly fragmented
+2796359,DMA1674,highly fragmented
+2796366,DMA1674,highly fragmented
+2796368,DMA1674,highly fragmented
+2796369,DMA1674,highly fragmented
+2796381,DMA1674,highly fragmented
+2796382,DMA1674,highly fragmented
+2796384,DMA1674,highly fragmented
+2796388,DMA1674,highly fragmented
+2796395,DMA1674,highly fragmented
+2796396,DMA1674,highly fragmented
+2796403,DMA1674,highly fragmented
+2796404,DMA1674,highly fragmented
+2796406,DMA1674,highly fragmented
+2796411,DMA1674,highly fragmented
+2796412,DMA1674,highly fragmented
+2799478,DMA1,negative
+2804403,DMA1,negative
+2809816,DMA1,negative
+2815789,DMA1,negative
+2815960,DMA1,negative
+2816188,DMA1,negative
+2821141,DMA1,negative
+2821289,DMA1,negative
+2849014,DMA1,negative
+2858731,DMA3865,negative
+2861064,TSA304,multilobed
+2861066,TSA304,multilobed
+2861069,TSA304,multilobed
+2861081,TSA304,multilobed
+2861082,TSA304,multilobed
+2861084,TSA304,multilobed
+2861090,TSA304,multilobed
+2861096,TSA304,multilobed
+2861101,TSA304,multilobed
+2861106,TSA304,enlarged
+2861111,TSA304,multilobed
+2861114,TSA304,multilobed
+2861116,TSA304,multilobed
+2861122,TSA304,enlarged
+2861131,TSA304,multilobed
+2861132,TSA304,multilobed
+2863726,DMA1,negative
+2863942,DMA1,negative
+2872980,DMA1,negative
+2875626,DMA1,negative
+2881901,DMA1,negative
+2882368,DMA1,negative
+2890017,DMA1,negative
+2890975,DMA3865,negative
+2899964,TSA220,multilobed
+2899966,TSA220,multilobed
+2900009,TSA220,multilobed
+2900248,DMA3198,multilobed
+2900270,DMA3198,multilobed
+2900274,DMA3198,multilobed
+2900309,DMA3198,multilobed
+2900320,DMA3198,multilobed
+2900324,DMA3198,multilobed
+2900348,DMA3198,multilobed
+2900356,DMA3198,multilobed
+2904021,DMA1,negative
+2904150,DMA1,negative
+2909624,DMA-SLOW46,class E
+2909629,DMA-SLOW46,class E
+2909630,DMA-SLOW46,class E
+2909638,DMA-SLOW46,class E
+2909642,DMA-SLOW46,class E
+2909654,DMA-SLOW46,class E
+2909662,DMA-SLOW46,class E
+2909681,DMA-SLOW46,class E
+2909682,DMA-SLOW46,multilobed
+2909696,DMA-SLOW46,class E
+2909703,DMA-SLOW46,class E
+2910415,DMA-SLOW405,V-ATPase complex assembly defect
+2910417,DMA-SLOW405,V-ATPase complex assembly defect
+2910418,DMA-SLOW405,V-ATPase complex assembly defect
+2910420,DMA-SLOW405,V-ATPase complex assembly defect
+2910422,DMA-SLOW405,V-ATPase complex assembly defect
+2910423,DMA-SLOW405,V-ATPase complex assembly defect
+2910424,DMA-SLOW405,V-ATPase complex assembly defect
+2910425,DMA-SLOW405,V-ATPase complex assembly defect
+2910426,DMA-SLOW405,V-ATPase complex assembly defect
+2910427,DMA-SLOW405,V-ATPase complex assembly defect
+2910428,DMA-SLOW405,V-ATPase complex assembly defect
+2910429,DMA-SLOW405,V-ATPase complex assembly defect
+2910431,DMA-SLOW405,V-ATPase complex assembly defect
+2910432,DMA-SLOW405,V-ATPase complex assembly defect
+2910433,DMA-SLOW405,V-ATPase complex assembly defect
+2910434,DMA-SLOW405,V-ATPase complex assembly defect
+2910436,DMA-SLOW405,V-ATPase complex assembly defect
+2910438,DMA-SLOW405,V-ATPase complex assembly defect
+2910439,DMA-SLOW405,V-ATPase complex assembly defect
+2910441,DMA-SLOW405,V-ATPase complex assembly defect
+2910444,DMA-SLOW405,V-ATPase complex assembly defect
+2910445,DMA-SLOW405,V-ATPase complex assembly defect
+2910446,DMA-SLOW405,V-ATPase complex assembly defect
+2912328,DMA-SLOW230,class E
+2915295,DMA1,negative
+2925736,DMA3304,highly fragmented
+2925737,DMA3304,highly fragmented
+2925771,DMA3304,multilobed
+2925867,DMA3304,highly fragmented
+2929329,DMA1,negative
+2931380,DMA5159,multilobed
+2931421,DMA5159,multilobed
+2931803,DMA1,negative
+2932098,DMA1,negative
+2934511,DMA1,negative
+2943208,DMA1,negative
+2948623,DMA1,negative
+2949762,DMA1,negative
+2950042,DMA1,negative
+2950455,DMA1,multilobed
+2950956,DMA1,negative
+2951830,DMA1,negative
+2951961,DMA1,negative
+2952068,DMA1,negative
+2952682,DMA1,negative
+2952996,DMA1,negative
+2953333,DMA1,negative
+2953749,DMA1,negative
+2953875,DMA1,negative
+2958849,DMA1,negative
+2959135,DMA1,negative
+2965637,DMA1,negative
+2988948,DMA1,negative
+2989613,DMA1,negative
+2989646,DMA-SLOW395,class E
+2989651,DMA-SLOW395,multilobed
+2989670,DMA-SLOW395,class E
+2989679,DMA-SLOW395,class E
+2989680,DMA-SLOW395,class E
+2991486,DMA1,negative
+2991587,DMA1,negative
+2994202,DMA1,negative
+3000626,DMA1,negative
+3000736,DMA1,negative
+3000875,DMA1,negative
+3012990,TSA137,multilobed
+3012995,TSA137,multilobed
+3013007,TSA137,multilobed
+3013014,TSA137,multilobed
+3022234,DMA3865,negative
+3023408,DMA3865,negative
+3023966,DMA3865,negative
+3027134,TSA852,sec
+3027135,TSA852,sec
+3027138,TSA852,sec
+3027139,TSA852,sec
+3027140,TSA852,sec
+3027143,TSA852,sec
+3027145,TSA852,sec
+3027149,TSA852,sec
+3027152,TSA852,sec
+3027153,TSA852,sec
+3027154,TSA852,sec
+3027158,TSA852,sec
+3027161,TSA852,sec
+3027164,TSA852,sec
+3027169,TSA852,sec
+3027171,TSA852,sec
+3027172,TSA852,sec
+3027178,TSA852,sec
+3027180,TSA852,sec
+3027181,TSA852,sec
+3027182,TSA852,sec
+3027185,TSA852,sec
+3027195,TSA852,sec
+3027196,TSA852,sec
+3027197,TSA852,sec
+3027198,TSA852,sec
+3027206,TSA852,sec
+3027208,TSA852,sec
+3027210,TSA852,sec
+3027213,TSA852,sec
+3027215,TSA852,sec
+3027217,TSA852,sec
+3027219,TSA852,sec
+3027220,TSA852,sec
+3027221,TSA852,sec
+3027222,TSA852,sec
+3027223,TSA852,sec
+3027224,TSA852,sec
+3027226,TSA852,sec
+3027230,TSA852,sec
+3027232,TSA852,sec
+3027236,TSA852,sec
+3027243,TSA852,sec
+3027244,TSA852,sec
+3027246,TSA852,sec
+3027251,TSA852,sec
+3027256,TSA852,sec
+3027257,TSA852,sec
+3027258,TSA852,sec
+3027261,TSA852,sec
+3027263,TSA852,sec
+3027266,TSA852,sec
+3027268,TSA852,sec
+3027269,TSA852,sec
+3027271,TSA852,sec
+3027273,TSA852,sec
+3027397,TSA201,multilobed
+3027404,TSA201,multilobed
+3034759,DMA883,highly fragmented
+3034760,DMA883,highly fragmented
+3034762,DMA883,highly fragmented
+3034766,DMA883,highly fragmented
+3034774,DMA883,highly fragmented
+3034777,DMA883,highly fragmented
+3034779,DMA883,highly fragmented
+3034784,DMA883,highly fragmented
+3034787,DMA883,highly fragmented
+3034789,DMA883,highly fragmented
+3034790,DMA883,highly fragmented
+3034791,DMA883,highly fragmented
+3034794,DMA883,highly fragmented
+3034798,DMA883,highly fragmented
+3034800,DMA883,highly fragmented
+3034801,DMA883,highly fragmented
+3034804,DMA883,highly fragmented
+3034806,DMA883,highly fragmented
+3034809,DMA883,highly fragmented
+3034813,DMA883,highly fragmented
+3034814,DMA883,highly fragmented
+3034822,DMA883,highly fragmented
+3034824,DMA883,highly fragmented
+3034825,DMA883,highly fragmented
+3034834,DMA883,highly fragmented
+3034840,DMA883,highly fragmented
+3034842,DMA883,highly fragmented
+3034844,DMA883,highly fragmented
+3034845,DMA883,highly fragmented
+3034848,DMA883,highly fragmented
+3034849,DMA883,highly fragmented
+3034854,DMA883,highly fragmented
+3045307,DMA1,negative
+3066522,DMA1,negative
+3067262,DMA1,negative
+3068102,DMA1,negative
+3068135,DMA1,negative
+3068637,DMA-SLOW254,class E
+3068639,DMA-SLOW254,class E
+3068649,DMA-SLOW254,class E
+3068656,DMA-SLOW254,class E
+3068672,DMA-SLOW254,class E
+3069130,DMA1,enlarged
+3073464,DMA1,negative
+3073505,DMA1,negative
+3073514,DMA1,negative
+3073819,DMA1,negative
+3082960,DMA1,negative
+3083861,DMA1,negative
+3088328,DMA1,negative
+3088516,DMA1,negative
+3092841,DMA1,negative
+3093246,DMA1,negative
+3095711,DMA1,negative
+3095831,DMA1,negative
+3095882,DMA1,negative
+3098861,DMA1,negative
+3099333,DMA1,negative
+3099782,DMA1,enlarged
+3099815,DMA1,negative
+3100188,DMA1,negative
+3102888,TSA223,multilobed
+3102889,TSA223,multilobed
+3102907,TSA223,multilobed
+3102909,TSA223,multilobed
+3102910,TSA223,multilobed
+3102917,TSA223,multilobed
+3102918,TSA223,multilobed
+3102920,TSA223,multilobed
+3102924,TSA223,multilobed
+3102930,TSA223,multilobed
+3102931,TSA223,multilobed
+3102938,TSA223,multilobed
+3102939,TSA223,multilobed
+3102940,TSA223,multilobed
+3102942,TSA223,multilobed
+3104643,DMA3865,negative
+3104684,DMA3865,negative
+3109589,TSA904,multilobed
+3109624,TSA904,multilobed
+3112210,DMA3511,highly fragmented
+3112214,DMA3511,highly fragmented
+3112215,DMA3511,highly fragmented
+3112217,DMA3511,highly fragmented
+3112219,DMA3511,highly fragmented
+3112226,DMA3511,highly fragmented
+3112229,DMA3511,highly fragmented
+3112233,DMA3511,highly fragmented
+3112235,DMA3511,highly fragmented
+3112237,DMA3511,highly fragmented
+3112239,DMA3511,highly fragmented
+3112242,DMA3511,highly fragmented
+3112243,DMA3511,highly fragmented
+3112246,DMA3511,highly fragmented
+3112247,DMA3511,highly fragmented
+3112250,DMA3511,highly fragmented
+3112252,DMA3511,highly fragmented
+3112255,DMA3511,highly fragmented
+3112259,DMA3511,highly fragmented
+3112261,DMA3511,highly fragmented
+3112263,DMA3511,highly fragmented
+3112271,DMA3511,highly fragmented
+3112275,DMA3511,highly fragmented
+3112277,DMA3511,highly fragmented
+3112281,DMA3511,highly fragmented
+3112284,DMA3511,highly fragmented
+3112286,DMA3511,highly fragmented
+3112305,DMA3511,highly fragmented
+3112308,DMA3511,highly fragmented
+3112309,DMA3511,highly fragmented
+3112317,DMA3511,highly fragmented
+3112320,DMA3511,highly fragmented
+3112321,DMA3511,highly fragmented
+3112324,DMA3511,highly fragmented
+3112327,DMA3511,highly fragmented
+3112328,DMA3511,highly fragmented
+3112329,DMA3511,highly fragmented
+3112334,DMA3511,highly fragmented
+3112341,DMA3511,highly fragmented
+3112345,DMA3511,highly fragmented
+3112348,DMA3511,highly fragmented
+3112350,DMA3511,highly fragmented
+3112352,DMA3511,highly fragmented
+3112354,DMA3511,highly fragmented
+3112358,DMA3511,highly fragmented
+3112361,DMA3511,highly fragmented
+3112367,DMA3511,highly fragmented
+3112380,DMA3511,highly fragmented
+3112382,DMA3511,highly fragmented
+3112383,DMA3511,highly fragmented
+3112387,DMA3511,highly fragmented
+3112390,DMA3511,highly fragmented
+3112391,DMA3511,highly fragmented
+3112392,DMA3511,highly fragmented
+3114237,DMA1,negative
+3115113,DMA1,negative
+3115745,DMA1,negative
+3116344,DMA1,negative
+3117109,DMA1,negative
+3117926,DMA1,negative
+3118166,DMA1,negative
+3130784,DMA1,negative
+3132476,DMA3865,negative
+3141217,DMA1,negative
+3148292,DMA1,negative
+3150909,TSA911,multilobed
+3150931,TSA911,multilobed
+3150963,TSA911,multilobed
+3150992,TSA911,multilobed
+3151000,TSA911,multilobed
+3153213,TSA725,sec
+3153214,TSA725,sec
+3153215,TSA725,sec
+3153216,TSA725,sec
+3153217,TSA725,sec
+3153218,TSA725,sec
+3153219,TSA725,sec
+3153220,TSA725,sec
+3153222,TSA725,sec
+3153225,TSA725,sec
+3153226,TSA725,sec
+3153228,TSA725,sec
+3153229,TSA725,sec
+3153230,TSA725,sec
+3153239,TSA725,sec
+3153242,TSA725,sec
+3153243,TSA725,sec
+3153245,TSA725,sec
+3153246,TSA725,sec
+3153250,TSA725,sec
+3153252,TSA725,sec
+3153256,TSA725,sec
+3153257,TSA725,sec
+3153267,TSA725,sec
+3153269,TSA725,sec
+3153270,TSA725,sec
+3153272,TSA725,sec
+3153273,TSA725,sec
+3153275,TSA725,sec
+3153276,TSA725,sec
+3153278,TSA725,sec
+3153281,TSA725,sec
+3153286,TSA725,sec
+3153287,TSA725,sec
+3153291,TSA725,sec
+3153293,TSA725,sec
+3153295,TSA725,sec
+3153306,TSA725,sec
+3153307,TSA725,sec
+3153308,TSA725,sec
+3153309,TSA725,sec
+3153312,TSA725,sec
+3153313,TSA725,sec
+3153316,TSA725,sec
+3153317,TSA725,sec
+3153319,TSA725,sec
+3153325,TSA725,sec
+3153328,TSA725,sec
+3153329,TSA725,sec
+3153330,TSA725,sec
+3153331,TSA725,sec
+3153332,TSA725,sec
+3153333,TSA725,sec
+3153335,TSA725,sec
+3153339,TSA725,sec
+3153342,TSA725,sec
+3153343,TSA725,sec
+3153345,TSA725,sec
+3153354,TSA725,sec
+3153356,TSA725,sec
+3153365,TSA725,sec
+3153366,TSA725,sec
+3153367,TSA725,sec
+3153369,TSA725,sec
+3153370,TSA725,sec
+3153372,TSA725,sec
+3153374,TSA725,sec
+3153379,TSA725,sec
+3153380,TSA725,sec
+3153385,TSA725,sec
+3153387,TSA725,sec
+3153388,TSA725,sec
+3153389,TSA725,sec
+3153392,TSA725,sec
+3153393,TSA725,sec
+3153398,TSA725,sec
+3153399,TSA725,sec
+3154211,TSA650,multilobed
+3154218,TSA650,multilobed
+3154223,TSA650,multilobed
+3154227,TSA650,multilobed
+3154232,TSA650,multilobed
+3154237,TSA650,multilobed
+3154238,TSA650,multilobed
+3154240,TSA650,multilobed
+3156564,DMA3865,negative
+3159670,DMA3865,negative
+3159716,DMA3865,negative
+3161469,DMA3865,negative
+3162584,DMA1,negative
+3163778,DMA3411,enlarged
+3163783,DMA3411,enlarged
+3163785,DMA3411,enlarged
+3163787,DMA3411,enlarged
+3163789,DMA3411,enlarged
+3163791,DMA3411,enlarged
+3163795,DMA3411,enlarged
+3163796,DMA3411,enlarged
+3163798,DMA3411,enlarged
+3163801,DMA3411,enlarged
+3163803,DMA3411,enlarged
+3163804,DMA3411,enlarged
+3163810,DMA3411,enlarged
+3163813,DMA3411,enlarged
+3163821,DMA3411,enlarged
+3163825,DMA3411,enlarged
+3163828,DMA3411,enlarged
+3163830,DMA3411,enlarged
+3163831,DMA3411,enlarged
+3163834,DMA3411,enlarged
+3163837,DMA3411,enlarged
+3163839,DMA3411,enlarged
+3163844,DMA3411,enlarged
+3163849,DMA3411,enlarged
+3163851,DMA3411,enlarged
+3163852,DMA3411,enlarged
+3163855,DMA3411,enlarged
+3163858,DMA3411,enlarged
+3163862,DMA3411,enlarged
+3163863,DMA3411,enlarged
+3163865,DMA3411,enlarged
+3163866,DMA3411,enlarged
+3163867,DMA3411,enlarged
+3163868,DMA3411,enlarged
+3163871,DMA3411,enlarged
+3163880,DMA3411,enlarged
+3163882,DMA3411,enlarged
+3163883,DMA3411,enlarged
+3163884,DMA3411,enlarged
+3163887,DMA3411,enlarged
+3163889,DMA3411,enlarged
+3163890,DMA3411,enlarged
+3163891,DMA3411,enlarged
+3163894,DMA3411,enlarged
+3163895,DMA3411,enlarged
+3163897,DMA3411,enlarged
+3163898,DMA3411,enlarged
+3163900,DMA3411,enlarged
+3163903,DMA3411,enlarged
+3163906,DMA3411,enlarged
+3163908,DMA3411,enlarged
+3163917,DMA3411,enlarged
+3163918,DMA3411,enlarged
+3163919,DMA3411,enlarged
+3163920,DMA3411,enlarged
+3163923,DMA3411,enlarged
+3168579,DMA1,negative
+3173610,DMA1,negative
+3173875,DMA1,negative
+3179300,DMA3215,class E
+3179314,DMA3215,class E
+3179320,DMA3215,class E
+3179322,DMA3215,class E
+3179324,DMA3215,class E
+3179327,DMA3215,class E
+3179329,DMA3215,class E
+3179335,DMA3215,class E
+3179350,DMA3215,class E
+3179359,DMA3215,class E
+3179378,DMA3215,class E
+3179380,DMA3215,class E
+3179387,DMA3215,class E
+3179391,DMA3215,class E
+3179397,DMA3215,class E
+3179399,DMA3215,class E
+3179414,DMA3215,class E
+3179423,DMA3215,class E
+3179429,DMA3215,class E
+3179432,DMA3215,class E
+3179436,DMA3215,class E
+3179439,DMA3215,class E
+3179446,DMA3215,class E
+3180322,DMA1,negative
+3184874,DMA1,negative
+3185989,DMA1,negative
+3186216,DMA1,negative
+3189218,DMA3511,highly fragmented
+3189225,DMA3511,highly fragmented
+3189227,DMA3511,highly fragmented
+3189231,DMA3511,highly fragmented
+3189236,DMA3511,highly fragmented
+3189237,DMA3511,highly fragmented
+3189243,DMA3511,highly fragmented
+3189245,DMA3511,highly fragmented
+3189249,DMA3511,highly fragmented
+3189258,DMA3511,highly fragmented
+3189270,DMA3511,highly fragmented
+3189279,DMA3511,highly fragmented
+3189286,DMA3511,highly fragmented
+3189295,DMA3511,highly fragmented
+3189297,DMA3511,highly fragmented
+3189301,DMA3511,highly fragmented
+3189302,DMA3511,highly fragmented
+3189304,DMA3511,highly fragmented
+3189313,DMA3511,highly fragmented
+3189315,DMA3511,highly fragmented
+3189324,DMA3511,highly fragmented
+3189326,DMA3511,highly fragmented
+3189327,DMA3511,highly fragmented
+3189334,DMA3511,highly fragmented
+3189335,DMA3511,highly fragmented
+3189343,DMA3511,highly fragmented
+3189345,DMA3511,highly fragmented
+3189354,DMA3511,highly fragmented
+3189359,DMA3511,highly fragmented
+3189363,DMA3511,highly fragmented
+3189368,DMA3511,highly fragmented
+3189381,DMA3511,highly fragmented
+3189395,DMA3511,highly fragmented
+3189402,DMA3511,highly fragmented
+3189409,DMA3511,highly fragmented
+3189418,DMA3511,highly fragmented
+3191721,DMA1,negative
+3191808,DMA1,negative
+3192107,DMA1,negative
+3205117,DMA1,negative
+3214744,DMA1,negative
+3214782,DMA1,negative
+3215303,DMA1,negative
+3216712,DMA1,negative
+3216810,DMA1,negative
+3217101,DMA1,negative
+3217302,DMA1,negative
+3217660,DMA1,negative
+3218122,DMA1,negative
+3218190,DMA1,negative
+3218228,DMA1,negative
+3218608,DMA1,negative
+3218814,DMA1,negative
+3218869,DMA1,negative
+3219523,DMA1,negative
+3226986,DMA1,negative
+3232340,DMA1,negative
+3248251,DMA1,negative
+3274550,TSA138,multilobed
+3274553,TSA138,enlarged
+3274554,TSA138,multilobed
+3274560,TSA138,multilobed
+3274566,TSA138,enlarged
+3274585,TSA138,enlarged
+3274595,TSA138,multilobed
+3274604,TSA138,multilobed
+3274612,TSA138,multilobed
+3274627,TSA138,multilobed
+3277059,DMA1,negative
+3277132,DMA1,negative
+3277162,DMA1,negative
+3277182,DMA1,negative
+3277514,DMA1,negative
+3278119,DMA-SLOW248,V-ATPase complex assembly defect
+3278120,DMA-SLOW248,V-ATPase complex assembly defect
+3278122,DMA-SLOW248,V-ATPase complex assembly defect
+3278123,DMA-SLOW248,V-ATPase complex assembly defect
+3278124,DMA-SLOW248,V-ATPase complex assembly defect
+3278125,DMA-SLOW248,V-ATPase complex assembly defect
+3278126,DMA-SLOW248,V-ATPase complex assembly defect
+3278127,DMA-SLOW248,V-ATPase complex assembly defect
+3278128,DMA-SLOW248,V-ATPase complex assembly defect
+3278129,DMA-SLOW248,V-ATPase complex assembly defect
+3278130,DMA-SLOW248,V-ATPase complex assembly defect
+3278131,DMA-SLOW248,V-ATPase complex assembly defect
+3278132,DMA-SLOW248,V-ATPase complex assembly defect
+3278133,DMA-SLOW248,V-ATPase complex assembly defect
+3278135,DMA-SLOW248,V-ATPase complex assembly defect
+3278136,DMA-SLOW248,V-ATPase complex assembly defect
+3278137,DMA-SLOW248,V-ATPase complex assembly defect
+3278138,DMA-SLOW248,V-ATPase complex assembly defect
+3278139,DMA-SLOW248,V-ATPase complex assembly defect
+3278140,DMA-SLOW248,V-ATPase complex assembly defect
+3278141,DMA-SLOW248,V-ATPase complex assembly defect
+3278142,DMA-SLOW248,V-ATPase complex assembly defect
+3278143,DMA-SLOW248,V-ATPase complex assembly defect
+3278144,DMA-SLOW248,V-ATPase complex assembly defect
+3278145,DMA-SLOW248,V-ATPase complex assembly defect
+3278146,DMA-SLOW248,V-ATPase complex assembly defect
+3278147,DMA-SLOW248,V-ATPase complex assembly defect
+3278148,DMA-SLOW248,V-ATPase complex assembly defect
+3278149,DMA-SLOW248,V-ATPase complex assembly defect
+3278150,DMA-SLOW248,V-ATPase complex assembly defect
+3278151,DMA-SLOW248,V-ATPase complex assembly defect
+3278152,DMA-SLOW248,V-ATPase complex assembly defect
+3278153,DMA-SLOW248,V-ATPase complex assembly defect
+3278154,DMA-SLOW248,V-ATPase complex assembly defect
+3278155,DMA-SLOW248,V-ATPase complex assembly defect
+3278156,DMA-SLOW248,V-ATPase complex assembly defect
+3278157,DMA-SLOW248,V-ATPase complex assembly defect
+3278158,DMA-SLOW248,V-ATPase complex assembly defect
+3278159,DMA-SLOW248,V-ATPase complex assembly defect
+3278160,DMA-SLOW248,V-ATPase complex assembly defect
+3278161,DMA-SLOW248,V-ATPase complex assembly defect
+3278162,DMA-SLOW248,V-ATPase complex assembly defect
+3278163,DMA-SLOW248,V-ATPase complex assembly defect
+3278165,DMA-SLOW248,V-ATPase complex assembly defect
+3278166,DMA-SLOW248,V-ATPase complex assembly defect
+3278167,DMA-SLOW248,V-ATPase complex assembly defect
+3278170,DMA-SLOW248,V-ATPase complex assembly defect
+3278171,DMA-SLOW248,V-ATPase complex assembly defect
+3278172,DMA-SLOW248,V-ATPase complex assembly defect
+3278174,DMA-SLOW248,V-ATPase complex assembly defect
+3278175,DMA-SLOW248,V-ATPase complex assembly defect
+3278176,DMA-SLOW248,V-ATPase complex assembly defect
+3278178,DMA-SLOW248,V-ATPase complex assembly defect
+3278179,DMA-SLOW248,V-ATPase complex assembly defect
+3278180,DMA-SLOW248,V-ATPase complex assembly defect
+3278181,DMA-SLOW248,V-ATPase complex assembly defect
+3278182,DMA-SLOW248,V-ATPase complex assembly defect
+3278184,DMA-SLOW248,V-ATPase complex assembly defect
+3278185,DMA-SLOW248,V-ATPase complex assembly defect
+3278186,DMA-SLOW248,V-ATPase complex assembly defect
+3278187,DMA-SLOW248,V-ATPase complex assembly defect
+3278188,DMA-SLOW248,V-ATPase complex assembly defect
+3285658,DMA1,negative
+3287463,DMA3244,class E
+3287470,DMA3244,class E
+3287473,DMA3244,class E
+3287476,DMA3244,class E
+3287495,DMA3244,class E
+3287500,DMA3244,class E
+3287503,DMA3244,multilobed
+3287506,DMA3244,class E
+3287511,DMA3244,class E
+3287517,DMA3244,class E
+3287521,DMA3244,class E
+3287528,DMA3244,class E
+3287535,DMA3244,class E
+3287540,DMA3244,class E
+3287542,DMA3244,class E
+3287554,DMA3244,class E
+3287582,DMA3244,class E
+3287587,DMA3244,class E
+3287589,DMA3244,class E
+3287599,DMA3244,class E
+3287600,DMA3244,class E
+3287611,DMA3244,class E
+3287624,DMA3244,class E
+3287626,DMA3244,class E
+3287628,DMA3244,class E
+3287629,DMA3244,class E
+3287639,DMA3244,class E
+3287655,DMA3244,class E
+3287658,DMA3244,class E
+3287660,DMA3244,class E
+3287662,DMA3244,class E
+3287666,DMA3244,class E
+3287667,DMA3244,class E
+3287677,DMA3244,multilobed
+3287680,DMA3244,class E
+3287681,DMA3244,class E
+3287686,DMA3244,class E
+3287693,DMA3244,class E
+3287695,DMA3244,class E
+3287696,DMA3244,class E
+3287705,DMA3244,multilobed
+3287707,DMA3244,class E
+3287715,DMA3244,multilobed
+3287716,DMA3244,class E
+3289618,DMA1732,highly fragmented
+3289622,DMA1732,highly fragmented
+3289623,DMA1732,highly fragmented
+3289624,DMA1732,highly fragmented
+3289625,DMA1732,highly fragmented
+3289628,DMA1732,highly fragmented
+3289632,DMA1732,highly fragmented
+3289635,DMA1732,highly fragmented
+3289638,DMA1732,highly fragmented
+3289639,DMA1732,highly fragmented
+3289644,DMA1732,highly fragmented
+3289646,DMA1732,highly fragmented
+3292474,TSA800,multilobed
+3292483,TSA800,multilobed
+3292497,TSA800,multilobed
+3292501,TSA215,multilobed
+3292509,TSA215,multilobed
+3292517,TSA215,multilobed
+3292518,TSA215,multilobed
+3292521,TSA215,multilobed
+3292525,TSA215,multilobed
+3292531,TSA215,multilobed
+3292534,TSA215,multilobed
+3292535,TSA215,multilobed
+3296104,DMA4274,enlarged
+3296106,DMA4274,enlarged
+3296108,DMA4274,enlarged
+3296109,DMA4274,enlarged
+3296113,DMA4274,enlarged
+3296115,DMA4274,enlarged
+3296116,DMA4274,enlarged
+3296120,DMA4274,enlarged
+3296121,DMA4274,enlarged
+3296122,DMA4274,enlarged
+3296131,DMA4274,enlarged
+3296133,DMA4274,enlarged
+3296135,DMA4274,enlarged
+3296136,DMA4274,enlarged
+3296138,DMA4274,enlarged
+3296140,DMA4274,enlarged
+3296142,DMA4274,enlarged
+3296144,DMA4274,enlarged
+3296148,DMA4274,enlarged
+3298531,DMA1,negative
+3308045,DMA1,negative
+3309567,TSA305,sec
+3309568,TSA305,sec
+3309569,TSA305,sec
+3309570,TSA305,sec
+3309571,TSA305,sec
+3309575,TSA305,sec
+3309577,TSA305,sec
+3309579,TSA305,sec
+3309580,TSA305,sec
+3309583,TSA305,sec
+3309584,TSA305,sec
+3309585,TSA305,sec
+3309586,TSA305,sec
+3309588,TSA305,sec
+3309591,TSA305,sec
+3309592,TSA305,sec
+3309594,TSA305,sec
+3309598,TSA305,sec
+3309599,TSA305,sec
+3309600,TSA305,sec
+3309602,TSA305,sec
+3309605,TSA305,sec
+3309608,TSA305,sec
+3309611,TSA305,sec
+3309615,TSA305,sec
+3309616,TSA305,sec
+3309617,TSA305,sec
+3309620,TSA305,sec
+3309621,TSA305,sec
+3309623,TSA305,sec
+3309624,TSA305,sec
+3309625,TSA305,sec
+3309630,TSA305,sec
+3309633,TSA305,sec
+3309634,TSA305,sec
+3309637,TSA305,sec
+3309638,TSA305,sec
+3309642,TSA305,sec
+3309644,TSA305,sec
+3309645,TSA305,sec
+3309646,TSA305,sec
+3309648,TSA305,sec
+3309649,TSA305,sec
+3309651,TSA305,sec
+3309656,TSA305,sec
+3309657,TSA305,sec
+3309658,TSA305,sec
+3309661,TSA305,sec
+3309662,TSA305,sec
+3309663,TSA305,sec
+3309664,TSA305,sec
+3309665,TSA305,sec
+3309666,TSA305,sec
+3309667,TSA305,sec
+3309670,TSA305,sec
+3309671,TSA305,sec
+3309672,TSA305,sec
+3309673,TSA305,sec
+3309676,TSA305,sec
+3309678,TSA305,sec
+3309680,TSA305,sec
+3309684,TSA305,sec
+3309685,TSA305,sec
+3309687,TSA305,sec
+3309688,TSA305,sec
+3309689,TSA305,sec
+3309690,TSA305,sec
+3309691,TSA305,sec
+3309693,TSA305,sec
+3309695,TSA305,sec
+3309699,TSA305,sec
+3309702,TSA305,sec
+3309703,TSA305,sec
+3309704,TSA305,sec
+3309705,TSA305,sec
+3309706,TSA305,sec
+3309708,TSA305,sec
+3309710,TSA305,sec
+3309711,TSA305,sec
+3309712,TSA305,sec
+3309713,TSA305,sec
+3309714,TSA305,sec
+3309715,TSA305,sec
+3309716,TSA305,sec
+3313752,TSA148,multilobed
+3313755,TSA148,multilobed
+3313760,TSA148,multilobed
+3313761,TSA148,multilobed
+3313762,TSA148,multilobed
+3313780,TSA148,multilobed
+3313785,TSA148,multilobed
+3313793,TSA148,multilobed
+3313797,TSA148,multilobed
+3313799,TSA148,multilobed
+3313804,TSA148,multilobed
+3313806,TSA148,multilobed
+3313807,TSA148,multilobed
+3313808,TSA148,multilobed
+3313809,TSA148,multilobed
+3313810,TSA148,multilobed
+3313815,TSA148,multilobed
+3313818,TSA148,multilobed
+3313823,TSA148,multilobed
+3313825,TSA148,multilobed
+3313826,TSA148,multilobed
+3313829,TSA148,multilobed
+3313834,TSA148,multilobed
+3313836,TSA148,multilobed
+3313841,TSA148,multilobed
+3313845,TSA148,multilobed
+3313853,TSA148,multilobed
+3313862,TSA148,multilobed
+3313872,TSA148,multilobed
+3313883,TSA148,enlarged
+3313885,TSA148,multilobed
+3313895,TSA148,multilobed
+3313899,TSA148,multilobed
+3313900,TSA148,multilobed
+3313904,TSA148,multilobed
+3313910,TSA148,multilobed
+3313913,TSA148,multilobed
+3313919,TSA148,multilobed
+3313923,TSA148,multilobed
+3313938,TSA148,multilobed
+3313941,TSA148,multilobed
+3313950,TSA148,multilobed
+3313956,TSA148,multilobed
+3313971,TSA148,multilobed
+3313975,TSA148,multilobed
+3313976,TSA148,multilobed
+3313981,TSA148,multilobed
+3313984,TSA148,multilobed
+3313986,TSA148,multilobed
+3313988,TSA148,multilobed
+3313990,TSA148,multilobed
+3313992,TSA148,multilobed
+3313996,TSA148,multilobed
+3314001,TSA148,multilobed
+3314002,TSA148,multilobed
+3314015,TSA148,multilobed
+3314018,TSA148,multilobed
+3314023,TSA148,multilobed
+3314024,TSA148,multilobed
+3314026,TSA148,multilobed
+3318159,DMA1,negative
+3318177,DMA1,negative
+3322461,DMA1,negative
+3322510,DMA1,negative
+3322849,DMA1,enlarged
+3323378,DMA1,negative
+3328990,DMA-SLOW382,class E
+3328999,DMA-SLOW382,class E
+3329007,DMA-SLOW382,class E
+3329014,DMA-SLOW382,class E
+3336465,DMA1,negative
+3336611,DMA1,negative
+3341763,DMA4850,class E
+3341776,DMA4850,class E
+3341779,DMA4850,class E
+3341780,DMA4850,class E
+3341788,DMA4850,class E
+3341796,DMA4850,class E
+3341831,DMA4850,class E
+3341834,DMA4850,class E
+3341840,DMA4850,class E
+3341851,DMA4850,class E
+3341861,DMA4850,class E
+3341868,DMA4850,class E
+3341886,DMA4850,class E
+3341889,DMA4850,class E
+3341933,DMA4850,class E
+3342055,DMA649,highly fragmented
+3342056,DMA649,highly fragmented
+3342058,DMA649,highly fragmented
+3342060,DMA649,highly fragmented
+3342061,DMA649,highly fragmented
+3342062,DMA649,highly fragmented
+3342064,DMA649,highly fragmented
+3342066,DMA649,highly fragmented
+3342067,DMA649,highly fragmented
+3342068,DMA649,highly fragmented
+3342070,DMA649,highly fragmented
+3342071,DMA649,highly fragmented
+3342073,DMA649,highly fragmented
+3342074,DMA649,highly fragmented
+3342076,DMA649,highly fragmented
+3342077,DMA649,highly fragmented
+3342083,DMA649,highly fragmented
+3342086,DMA649,highly fragmented
+3342087,DMA649,highly fragmented
+3342090,DMA649,highly fragmented
+3342092,DMA649,highly fragmented
+3342093,DMA649,highly fragmented
+3342095,DMA649,highly fragmented
+3342097,DMA649,highly fragmented
+3342099,DMA649,highly fragmented
+3342101,DMA649,highly fragmented
+3342102,DMA649,highly fragmented
+3342106,DMA649,highly fragmented
+3342107,DMA649,highly fragmented
+3342108,DMA649,highly fragmented
+3342109,DMA649,highly fragmented
+3342112,DMA649,highly fragmented
+3342115,DMA649,highly fragmented
+3342117,DMA649,highly fragmented
+3342119,DMA649,highly fragmented
+3342120,DMA649,highly fragmented
+3342121,DMA649,highly fragmented
+3342123,DMA649,highly fragmented
+3342126,DMA649,highly fragmented
+3342129,DMA649,highly fragmented
+3342130,DMA649,highly fragmented
+3342131,DMA649,highly fragmented
+3342132,DMA649,highly fragmented
+3342133,DMA649,highly fragmented
+3342134,DMA649,highly fragmented
+3342136,DMA649,highly fragmented
+3342137,DMA649,highly fragmented
+3342139,DMA649,highly fragmented
+3342143,DMA649,highly fragmented
+3342144,DMA649,highly fragmented
+3342145,DMA649,highly fragmented
+3342147,DMA649,highly fragmented
+3342148,DMA649,highly fragmented
+3342149,DMA649,highly fragmented
+3342151,DMA649,highly fragmented
+3342154,DMA649,highly fragmented
+3342156,DMA649,highly fragmented
+3342157,DMA649,highly fragmented
+3342161,DMA649,highly fragmented
+3342164,DMA649,highly fragmented
+3342168,DMA649,highly fragmented
+3342173,DMA649,highly fragmented
+3342174,DMA649,highly fragmented
+3342182,DMA649,highly fragmented
+3342186,DMA649,highly fragmented
+3342187,DMA649,highly fragmented
+3342190,DMA649,highly fragmented
+3342192,DMA649,highly fragmented
+3342198,DMA649,highly fragmented
+3342201,DMA649,highly fragmented
+3342203,DMA649,highly fragmented
+3342204,DMA649,highly fragmented
+3342205,DMA649,highly fragmented
+3342206,DMA649,highly fragmented
+3342208,DMA649,highly fragmented
+3342209,DMA649,highly fragmented
+3342210,DMA649,highly fragmented
+3342211,DMA649,highly fragmented
+3342212,DMA649,highly fragmented
+3342215,DMA649,highly fragmented
+3342217,DMA649,highly fragmented
+3342219,DMA649,highly fragmented
+3342220,DMA649,highly fragmented
+3342222,DMA649,highly fragmented
+3342224,DMA649,highly fragmented
+3342227,DMA649,highly fragmented
+3342228,DMA649,highly fragmented
+3342229,DMA649,highly fragmented
+3342230,DMA649,highly fragmented
+3342232,DMA649,highly fragmented
+3342233,DMA649,highly fragmented
+3342234,DMA649,highly fragmented
+3342235,DMA649,highly fragmented
+3342239,DMA649,highly fragmented
+3342242,DMA649,highly fragmented
+3342246,DMA649,highly fragmented
+3342248,DMA649,highly fragmented
+3342251,DMA649,highly fragmented
+3342252,DMA649,highly fragmented
+3342255,DMA649,highly fragmented
+3342256,DMA649,highly fragmented
+3342258,DMA649,highly fragmented
+3342259,DMA649,highly fragmented
+3342260,DMA649,highly fragmented
+3342262,DMA649,highly fragmented
+3342265,DMA649,highly fragmented
+3342267,DMA649,highly fragmented
+3342269,DMA649,highly fragmented
+3342271,DMA649,highly fragmented
+3342272,DMA649,highly fragmented
+3342281,DMA649,highly fragmented
+3342283,DMA649,highly fragmented
+3342284,DMA649,highly fragmented
+3342285,DMA649,highly fragmented
+3342288,DMA649,highly fragmented
+3342290,DMA649,highly fragmented
+3342291,DMA649,highly fragmented
+3342292,DMA649,highly fragmented
+3342293,DMA649,highly fragmented
+3342294,DMA649,highly fragmented
+3342295,DMA649,highly fragmented
+3342296,DMA649,highly fragmented
+3342788,DMA3865,negative
+3344605,DMA3905,multilobed
+3344655,DMA3905,multilobed
+3347446,DMA1,negative
+3347757,DMA1,negative
+3353683,DMA1,negative
+3360073,DMA1,negative
+3365377,DMA1,negative
+3365446,DMA1,negative
+3365694,DMA1,negative
+3368063,DMA1,multilobed
+3368318,DMA1,negative
+3368912,DMA1,negative
+3369785,DMA1,negative
+3371383,DMA1,negative
+3373064,DMA1,negative
+3373853,DMA1,negative
+3377772,DMA1,negative
+3378947,DMA1,negative
+3379180,DMA1,negative
+3380086,DMA1,negative
+3380182,DMA1,negative
+3380330,DMA1,negative
+3380385,DMA1,negative
+3381547,DMA1,negative
+3381588,DMA1,negative
+3382117,DMA1,negative
+3382303,DMA1,negative
+3383077,DMA1,negative
+3383634,DMA1,negative
+3384142,DMA1,negative
+3384780,DMA1,negative
+3384838,DMA1,negative
+3389925,DMA1,negative
+3390313,DMA1,negative
+3393169,DMA3198,multilobed
+3393174,DMA3198,multilobed
+3393201,DMA3198,multilobed
+3393213,DMA3198,multilobed
+3393232,DMA3198,multilobed
+3393237,DMA3198,multilobed
+3393243,DMA3198,multilobed
+3393244,DMA3198,multilobed
+3393245,DMA3198,multilobed
+3393257,DMA3198,multilobed
+3393302,DMA3198,multilobed
+3397943,DMA1,negative
+3404077,DMA1,negative
+3409347,DMA3984,enlarged
+3409348,DMA3984,enlarged
+3409350,DMA3984,enlarged
+3409351,DMA3984,enlarged
+3409353,DMA3984,enlarged
+3409355,DMA3984,enlarged
+3409357,DMA3984,enlarged
+3409358,DMA3984,enlarged
+3409361,DMA3984,enlarged
+3409364,DMA3984,enlarged
+3409371,DMA3984,enlarged
+3409374,DMA3984,enlarged
+3409382,DMA3984,enlarged
+3409388,DMA3984,enlarged
+3409391,DMA3984,enlarged
+3409393,DMA3984,enlarged
+3409395,DMA3984,enlarged
+3409397,DMA3984,class E
+3409399,DMA3984,enlarged
+3409400,DMA3984,enlarged
+3409403,DMA3984,enlarged
+3409404,DMA3984,enlarged
+3409405,DMA3984,enlarged
+3409407,DMA3984,enlarged
+3409410,DMA3984,enlarged
+3409411,DMA3984,enlarged
+3409422,DMA3984,enlarged
+3409423,DMA3984,enlarged
+3409424,DMA3984,enlarged
+3409429,DMA3984,enlarged
+3409439,DMA3984,enlarged
+3409440,DMA3984,enlarged
+3409441,DMA3984,enlarged
+3409445,DMA3984,enlarged
+3409446,DMA3984,enlarged
+3409456,DMA3984,enlarged
+3409470,DMA3984,enlarged
+3409471,DMA3984,enlarged
+3409475,DMA3984,enlarged
+3409478,DMA3984,enlarged
+3409480,DMA3984,enlarged
+3409481,DMA3984,enlarged
+3409488,DMA3984,enlarged
+3409489,DMA3984,enlarged
+3409490,DMA3984,enlarged
+3409494,DMA3984,enlarged
+3409501,DMA3984,enlarged
+3409507,DMA3984,enlarged
+3409508,DMA3984,enlarged
+3409510,DMA3984,class E
+3409513,DMA3984,enlarged
+3409515,DMA3984,enlarged
+3409520,DMA3984,enlarged
+3409532,DMA3984,enlarged
+3409533,DMA3984,enlarged
+3409538,DMA3984,enlarged
+3409539,DMA3984,enlarged
+3409542,DMA3984,enlarged
+3409546,DMA3984,enlarged
+3409550,DMA3984,enlarged
+3409551,DMA3984,enlarged
+3409552,DMA3984,enlarged
+3409559,DMA3984,enlarged
+3409560,DMA3984,enlarged
+3409566,DMA3984,enlarged
+3409569,DMA3984,class E
+3409572,DMA3984,enlarged
+3409575,DMA3984,enlarged
+3409576,DMA3984,enlarged
+3409579,DMA3984,enlarged
+3409582,DMA3984,enlarged
+3409583,DMA3984,enlarged
+3409587,DMA3984,enlarged
+3409592,DMA3984,enlarged
+3409593,DMA3984,enlarged
+3409597,DMA3984,enlarged
+3409599,DMA3984,enlarged
+3409604,DMA3984,enlarged
+3409607,DMA3984,enlarged
+3409609,DMA3984,enlarged
+3409611,DMA3984,enlarged
+3409612,DMA3984,enlarged
+3409615,DMA3984,enlarged
+3409620,DMA3984,enlarged
+3409621,DMA3984,enlarged
+3409623,DMA3984,enlarged
+3409626,DMA3984,enlarged
+3409629,DMA3984,enlarged
+3409631,DMA3984,enlarged
+3409633,DMA3984,enlarged
+3409644,DMA3984,enlarged
+3409646,DMA3984,enlarged
+3409647,DMA3984,enlarged
+3409649,DMA3984,enlarged
+3409650,DMA3984,enlarged
+3409652,DMA3984,enlarged
+3409653,DMA3984,enlarged
+3409658,DMA3984,enlarged
+3409662,DMA3984,enlarged
+3415089,DMA1,negative
+3415182,DMA1,negative
+3420003,DMA3865,negative
+3426321,DMA3865,negative
+3428377,DMA1,negative
+3428435,DMA1,negative
+3433263,DMA1,negative
+3433314,DMA1,negative
+3442715,DMA1,negative
+3452555,DMA4559,highly fragmented
+3452556,DMA4559,highly fragmented
+3452559,DMA4559,highly fragmented
+3452560,DMA4559,highly fragmented
+3452563,DMA4559,highly fragmented
+3452564,DMA4559,highly fragmented
+3452574,DMA4559,highly fragmented
+3452580,DMA4559,highly fragmented
+3452581,DMA4559,highly fragmented
+3452597,DMA4559,highly fragmented
+3452600,DMA4559,highly fragmented
+3452602,DMA4559,highly fragmented
+3452616,DMA4559,highly fragmented
+3452622,DMA4559,highly fragmented
+3452627,DMA4559,highly fragmented
+3452641,DMA4559,highly fragmented
+3452647,DMA4559,highly fragmented
+3452648,DMA4559,highly fragmented
+3452650,DMA4559,highly fragmented
+3452654,DMA4559,highly fragmented
+3452664,DMA4559,highly fragmented
+3452685,DMA4559,highly fragmented
+3452687,DMA4559,highly fragmented
+3452705,DMA4559,highly fragmented
+3452706,DMA4559,highly fragmented
+3452709,DMA4559,highly fragmented
+3452718,DMA4559,highly fragmented
+3452720,DMA4559,highly fragmented
+3452722,DMA4559,highly fragmented
+3452728,DMA4559,highly fragmented
+3452733,DMA4559,highly fragmented
+3452736,DMA4559,highly fragmented
+3452753,DMA4559,highly fragmented
+3452766,DMA4559,highly fragmented
+3452767,DMA4559,highly fragmented
+3452769,DMA4559,highly fragmented
+3452777,DMA4559,highly fragmented
+3452781,DMA4559,highly fragmented
+3452795,DMA4559,highly fragmented
+3458016,DMA3865,negative
+3459640,TSA218,multilobed
+3459665,TSA218,multilobed
+3459666,TSA218,multilobed
+3459675,TSA218,highly fragmented
+3459709,TSA218,multilobed
+3459715,TSA218,multilobed
+3459718,TSA218,multilobed
+3459726,TSA218,multilobed
+3459741,TSA218,multilobed
+3459751,TSA218,multilobed
+3459752,TSA218,multilobed
+3459753,TSA218,multilobed
+3459832,TSA410,multilobed
+3459871,TSA410,multilobed
+3459897,TSA410,multilobed
+3459954,TSA410,multilobed
+3459993,TSA410,multilobed
+3460009,TSA410,multilobed
+3460013,TSA410,multilobed
+3460018,TSA410,multilobed
+3461066,TSA412,multilobed
+3461069,TSA412,multilobed
+3461074,TSA412,class E
+3462229,DMA3215,class E
+3462230,DMA3215,class E
+3462239,DMA3215,class E
+3462243,DMA3215,class E
+3462251,DMA3215,class E
+3462263,DMA3215,class E
+3462299,DMA3215,class E
+3462301,DMA3215,class E
+3462303,DMA3215,class E
+3462305,DMA3215,class E
+3462311,DMA3215,class E
+3462330,DMA3215,multilobed
+3462338,DMA3215,class E
+3478891,DMA1,negative
+3487824,DMA1,negative
+3497524,DMA1,negative
+3498544,DMA1,negative
+3499381,DMA1,negative
+3500563,DMA1,negative
+3500903,DMA1,negative
+3501389,DMA1,negative
+3501426,DMA1,negative
+3504125,DMA3865,negative
+3505480,DMA3865,negative
+3511782,DMA1,negative
+3519271,DMA3865,negative
+3521273,DMA1,negative
+3521306,DMA1,negative
+3524148,DMA1,negative
+3533810,DMA3865,negative
+3534735,DMA3865,negative
+3536216,DMA3865,negative
+3540110,DMA1,negative
+3544678,DMA1,negative
+3568449,DMA1,negative
+3571438,DMA1,negative
+3571780,DMA1,enlarged
+3578595,DMA649,highly fragmented
+3578597,DMA649,highly fragmented
+3578600,DMA649,highly fragmented
+3578608,DMA649,highly fragmented
+3578611,DMA649,highly fragmented
+3578613,DMA649,highly fragmented
+3578616,DMA649,highly fragmented
+3578620,DMA649,highly fragmented
+3578622,DMA649,highly fragmented
+3578623,DMA649,highly fragmented
+3578624,DMA649,highly fragmented
+3578628,DMA649,highly fragmented
+3578631,DMA649,highly fragmented
+3578634,DMA649,highly fragmented
+3578636,DMA649,highly fragmented
+3578637,DMA649,highly fragmented
+3578638,DMA649,highly fragmented
+3578641,DMA649,highly fragmented
+3578642,DMA649,highly fragmented
+3578645,DMA649,highly fragmented
+3578646,DMA649,highly fragmented
+3578647,DMA649,highly fragmented
+3578648,DMA649,highly fragmented
+3578650,DMA649,highly fragmented
+3578652,DMA649,highly fragmented
+3578655,DMA649,highly fragmented
+3578657,DMA649,highly fragmented
+3578664,DMA649,highly fragmented
+3578668,DMA649,highly fragmented
+3578671,DMA649,highly fragmented
+3578674,DMA649,highly fragmented
+3578677,DMA649,highly fragmented
+3578679,DMA649,highly fragmented
+3578683,DMA649,highly fragmented
+3578685,DMA649,highly fragmented
+3578687,DMA649,highly fragmented
+3578688,DMA649,highly fragmented
+3578690,DMA649,highly fragmented
+3578692,DMA649,highly fragmented
+3578703,DMA649,highly fragmented
+3578707,DMA649,highly fragmented
+3578708,DMA649,highly fragmented
+3578709,DMA649,highly fragmented
+3578710,DMA649,highly fragmented
+3578711,DMA649,highly fragmented
+3578716,DMA649,highly fragmented
+3578719,DMA649,highly fragmented
+3578720,DMA649,highly fragmented
+3578723,DMA649,highly fragmented
+3578726,DMA649,highly fragmented
+3578740,DMA649,highly fragmented
+3588283,DMA-SLOW179,V-ATPase complex assembly defect
+3588284,DMA-SLOW179,V-ATPase complex assembly defect
+3588285,DMA-SLOW179,V-ATPase complex assembly defect
+3588286,DMA-SLOW179,V-ATPase complex assembly defect
+3588287,DMA-SLOW179,V-ATPase complex assembly defect
+3588288,DMA-SLOW179,V-ATPase complex assembly defect
+3588289,DMA-SLOW179,V-ATPase complex assembly defect
+3588290,DMA-SLOW179,V-ATPase complex assembly defect
+3588291,DMA-SLOW179,V-ATPase complex assembly defect
+3588292,DMA-SLOW179,V-ATPase complex assembly defect
+3588293,DMA-SLOW179,V-ATPase complex assembly defect
+3588294,DMA-SLOW179,V-ATPase complex assembly defect
+3588295,DMA-SLOW179,V-ATPase complex assembly defect
+3588297,DMA-SLOW179,V-ATPase complex assembly defect
+3588298,DMA-SLOW179,V-ATPase complex assembly defect
+3588299,DMA-SLOW179,V-ATPase complex assembly defect
+3588300,DMA-SLOW179,V-ATPase complex assembly defect
+3588301,DMA-SLOW179,V-ATPase complex assembly defect
+3588302,DMA-SLOW179,V-ATPase complex assembly defect
+3588303,DMA-SLOW179,V-ATPase complex assembly defect
+3588304,DMA-SLOW179,V-ATPase complex assembly defect
+3588305,DMA-SLOW179,V-ATPase complex assembly defect
+3588306,DMA-SLOW179,V-ATPase complex assembly defect
+3588307,DMA-SLOW179,V-ATPase complex assembly defect
+3588308,DMA-SLOW179,V-ATPase complex assembly defect
+3588309,DMA-SLOW179,V-ATPase complex assembly defect
+3588310,DMA-SLOW179,V-ATPase complex assembly defect
+3588311,DMA-SLOW179,V-ATPase complex assembly defect
+3588313,DMA-SLOW179,V-ATPase complex assembly defect
+3588314,DMA-SLOW179,V-ATPase complex assembly defect
+3588315,DMA-SLOW179,V-ATPase complex assembly defect
+3588317,DMA-SLOW179,V-ATPase complex assembly defect
+3588318,DMA-SLOW179,V-ATPase complex assembly defect
+3588320,DMA-SLOW179,V-ATPase complex assembly defect
+3588321,DMA-SLOW179,V-ATPase complex assembly defect
+3588322,DMA-SLOW179,V-ATPase complex assembly defect
+3588323,DMA-SLOW179,V-ATPase complex assembly defect
+3588324,DMA-SLOW179,V-ATPase complex assembly defect
+3588325,DMA-SLOW179,V-ATPase complex assembly defect
+3588326,DMA-SLOW179,V-ATPase complex assembly defect
+3588327,DMA-SLOW179,V-ATPase complex assembly defect
+3588328,DMA-SLOW179,V-ATPase complex assembly defect
+3588330,DMA-SLOW179,V-ATPase complex assembly defect
+3588331,DMA-SLOW179,V-ATPase complex assembly defect
+3588332,DMA-SLOW179,V-ATPase complex assembly defect
+3588334,DMA-SLOW179,V-ATPase complex assembly defect
+3588335,DMA-SLOW179,V-ATPase complex assembly defect
+3588336,DMA-SLOW179,V-ATPase complex assembly defect
+3588337,DMA-SLOW179,V-ATPase complex assembly defect
+3588338,DMA-SLOW179,V-ATPase complex assembly defect
+3588339,DMA-SLOW179,V-ATPase complex assembly defect
+3588340,DMA-SLOW179,V-ATPase complex assembly defect
+3588341,DMA-SLOW179,V-ATPase complex assembly defect
+3588342,DMA-SLOW179,V-ATPase complex assembly defect
+3588343,DMA-SLOW179,V-ATPase complex assembly defect
+3588344,DMA-SLOW179,V-ATPase complex assembly defect
+3588345,DMA-SLOW179,V-ATPase complex assembly defect
+3588346,DMA-SLOW179,V-ATPase complex assembly defect
+3588347,DMA-SLOW179,V-ATPase complex assembly defect
+3588348,DMA-SLOW179,V-ATPase complex assembly defect
+3588349,DMA-SLOW179,V-ATPase complex assembly defect
+3588350,DMA-SLOW179,V-ATPase complex assembly defect
+3588351,DMA-SLOW179,V-ATPase complex assembly defect
+3588352,DMA-SLOW179,V-ATPase complex assembly defect
+3588353,DMA-SLOW179,V-ATPase complex assembly defect
+3588354,DMA-SLOW179,V-ATPase complex assembly defect
+3588355,DMA-SLOW179,V-ATPase complex assembly defect
+3588356,DMA-SLOW179,V-ATPase complex assembly defect
+3588357,DMA-SLOW179,V-ATPase complex assembly defect
+3588358,DMA-SLOW179,V-ATPase complex assembly defect
+3588359,DMA-SLOW179,V-ATPase complex assembly defect
+3588360,DMA-SLOW179,V-ATPase complex assembly defect
+3588361,DMA-SLOW179,V-ATPase complex assembly defect
+3588363,DMA-SLOW179,V-ATPase complex assembly defect
+3588364,DMA-SLOW179,V-ATPase complex assembly defect
+3588365,DMA-SLOW179,V-ATPase complex assembly defect
+3588366,DMA-SLOW179,V-ATPase complex assembly defect
+3588367,DMA-SLOW179,V-ATPase complex assembly defect
+3588368,DMA-SLOW179,V-ATPase complex assembly defect
+3588371,DMA-SLOW179,V-ATPase complex assembly defect
+3588372,DMA-SLOW179,V-ATPase complex assembly defect
+3588373,DMA-SLOW179,V-ATPase complex assembly defect
+3588374,DMA-SLOW179,V-ATPase complex assembly defect
+3588375,DMA-SLOW179,V-ATPase complex assembly defect
+3588376,DMA-SLOW179,V-ATPase complex assembly defect
+3588377,DMA-SLOW179,V-ATPase complex assembly defect
+3588379,DMA-SLOW179,V-ATPase complex assembly defect
+3588380,DMA-SLOW179,V-ATPase complex assembly defect
+3588381,DMA-SLOW179,V-ATPase complex assembly defect
+3588382,DMA-SLOW179,V-ATPase complex assembly defect
+3588383,DMA-SLOW179,V-ATPase complex assembly defect
+3588384,DMA-SLOW179,V-ATPase complex assembly defect
+3588386,DMA-SLOW179,V-ATPase complex assembly defect
+3588387,DMA-SLOW179,V-ATPase complex assembly defect
+3588388,DMA-SLOW179,V-ATPase complex assembly defect
+3588389,DMA-SLOW179,V-ATPase complex assembly defect
+3588390,DMA-SLOW179,V-ATPase complex assembly defect
+3588391,DMA-SLOW179,V-ATPase complex assembly defect
+3588392,DMA-SLOW179,V-ATPase complex assembly defect
+3588393,DMA-SLOW179,V-ATPase complex assembly defect
+3588394,DMA-SLOW179,V-ATPase complex assembly defect
+3588396,DMA-SLOW179,V-ATPase complex assembly defect
+3588397,DMA-SLOW179,V-ATPase complex assembly defect
+3588398,DMA-SLOW179,V-ATPase complex assembly defect
+3588399,DMA-SLOW179,V-ATPase complex assembly defect
+3588400,DMA-SLOW179,V-ATPase complex assembly defect
+3588401,DMA-SLOW179,V-ATPase complex assembly defect
+3588402,DMA-SLOW179,V-ATPase complex assembly defect
+3588404,DMA-SLOW179,V-ATPase complex assembly defect
+3588405,DMA-SLOW179,V-ATPase complex assembly defect
+3588406,DMA-SLOW179,V-ATPase complex assembly defect
+3588407,DMA-SLOW179,V-ATPase complex assembly defect
+3588408,DMA-SLOW179,V-ATPase complex assembly defect
+3588409,DMA-SLOW179,V-ATPase complex assembly defect
+3588410,DMA-SLOW179,V-ATPase complex assembly defect
+3588411,DMA-SLOW179,V-ATPase complex assembly defect
+3588412,DMA-SLOW179,V-ATPase complex assembly defect
+3588413,DMA-SLOW179,V-ATPase complex assembly defect
+3588414,DMA-SLOW179,V-ATPase complex assembly defect
+3588416,DMA-SLOW179,V-ATPase complex assembly defect
+3588417,DMA-SLOW179,V-ATPase complex assembly defect
+3589711,DMA1,negative
+3590414,DMA1,negative
+3590766,DMA1,enlarged
+3592703,DMA3865,negative
+3598487,DMA3865,negative
+3599780,TSA72,multilobed
+3599811,TSA72,multilobed
+3599818,TSA72,multilobed
+3599826,TSA72,multilobed
+3599834,TSA72,multilobed
+3599835,TSA72,multilobed
+3599892,TSA72,highly fragmented
+3599904,TSA72,multilobed
+3599920,TSA72,multilobed
+3600069,TSA72,multilobed
+3600125,TSA72,multilobed
+3601777,DMA1,negative
+3602027,DMA1,negative
+3602287,DMA1,negative
+3611184,DMA1,negative
+3617721,TSA202,multilobed
+3621931,DMA1,negative
+3621984,DMA1,negative
+3627002,TSA635,sec
+3627004,TSA635,sec
+3627006,TSA635,sec
+3627007,TSA635,sec
+3627008,TSA635,sec
+3627010,TSA635,sec
+3627015,TSA635,sec
+3627016,TSA635,sec
+3627017,TSA635,sec
+3627022,TSA635,sec
+3627025,TSA635,sec
+3627027,TSA635,sec
+3627028,TSA635,sec
+3627031,TSA635,sec
+3627034,TSA635,sec
+3627038,TSA635,sec
+3627039,TSA635,sec
+3627041,TSA635,sec
+3627045,TSA635,sec
+3627051,TSA635,sec
+3627053,TSA635,sec
+3627058,TSA635,sec
+3627062,TSA635,sec
+3627066,TSA635,sec
+3627067,TSA635,sec
+3627071,TSA635,sec
+3627074,TSA635,sec
+3627079,TSA635,sec
+3627084,TSA635,sec
+3627087,TSA635,sec
+3627088,TSA635,sec
+3627094,TSA635,sec
+3627096,TSA635,sec
+3627099,TSA635,sec
+3627100,TSA635,sec
+3627591,TSA408,multilobed
+3627598,TSA408,multilobed
+3627600,TSA408,multilobed
+3627601,TSA408,multilobed
+3627603,TSA408,multilobed
+3627604,TSA408,multilobed
+3627618,TSA408,multilobed
+3627622,TSA408,multilobed
+3627626,TSA408,enlarged
+3627627,TSA408,multilobed
+3627632,TSA408,multilobed
+3627636,TSA408,multilobed
+3627644,TSA408,multilobed
+3627646,TSA408,multilobed
+3627662,TSA408,multilobed
+3627671,TSA408,multilobed
+3627679,TSA408,multilobed
+3627686,TSA408,multilobed
+3627688,TSA408,multilobed
+3627715,TSA408,multilobed
+3627717,TSA408,multilobed
+3627718,TSA408,multilobed
+3627720,TSA408,multilobed
+3627721,TSA408,multilobed
+3627724,TSA408,multilobed
+3627725,TSA408,enlarged
+3627733,TSA408,multilobed
+3627742,TSA408,multilobed
+3627748,TSA408,multilobed
+3627749,TSA408,multilobed
+3627751,TSA408,multilobed
+3627752,TSA408,multilobed
+3627755,TSA408,enlarged
+3627759,TSA408,multilobed
+3627761,TSA408,multilobed
+3627762,TSA408,multilobed
+3627771,TSA408,multilobed
+3627778,TSA408,multilobed
+3627782,TSA408,multilobed
+3627786,TSA408,multilobed
+3627788,TSA408,multilobed
+3627789,TSA408,multilobed
+3627790,TSA408,multilobed
+3627791,TSA408,multilobed
+3627792,TSA408,multilobed
+3627803,TSA408,multilobed
+3627807,TSA408,multilobed
+3627814,TSA408,multilobed
+3627822,TSA408,multilobed
+3650716,DMA1,negative
+3660073,DMA1,negative
+3690655,DMA4477,highly fragmented
+3690663,DMA4477,highly fragmented
+3690664,DMA4477,highly fragmented
+3690667,DMA4477,highly fragmented
+3690675,DMA4477,highly fragmented
+3690686,DMA4477,highly fragmented
+3690692,DMA4477,highly fragmented
+3690693,DMA4477,highly fragmented
+3690695,DMA4477,highly fragmented
+3690701,DMA4477,highly fragmented
+3690709,DMA4477,highly fragmented
+3690711,DMA4477,highly fragmented
+3690712,DMA4477,highly fragmented
+3690719,DMA4477,highly fragmented
+3690726,DMA4477,highly fragmented
+3690729,DMA4477,highly fragmented
+3690748,DMA4477,highly fragmented
+3690751,DMA4477,highly fragmented
+3690754,DMA4477,highly fragmented
+3690756,DMA4477,highly fragmented
+3690759,DMA4477,highly fragmented
+3690764,DMA4477,highly fragmented
+3690770,DMA4477,highly fragmented
+3690787,DMA4477,highly fragmented
+3690794,DMA4477,highly fragmented
+3690802,DMA4477,highly fragmented
+3690808,DMA4477,highly fragmented
+3690814,DMA4477,highly fragmented
+3690823,DMA4477,highly fragmented
+3690825,DMA4477,highly fragmented
+3690828,DMA4477,highly fragmented
+3690834,DMA4477,highly fragmented
+3690836,DMA4477,highly fragmented
+3690853,DMA4477,highly fragmented
+3690860,DMA4477,highly fragmented
+3690866,DMA4477,highly fragmented
+3690871,DMA4477,highly fragmented
+3690873,DMA4477,highly fragmented
+3690877,DMA4477,highly fragmented
+3690879,DMA4477,highly fragmented
+3690881,DMA4477,highly fragmented
+3690889,DMA4477,highly fragmented
+3690900,DMA4477,highly fragmented
+3690903,DMA4477,highly fragmented
+3690904,DMA4477,highly fragmented
+3690909,DMA4477,highly fragmented
+3690911,DMA4477,highly fragmented
+3690912,DMA4477,highly fragmented
+3690923,DMA4477,highly fragmented
+3690927,DMA4477,highly fragmented
+3690940,DMA4477,highly fragmented
+3690941,DMA4477,highly fragmented
+3690942,DMA4477,highly fragmented
+3690944,DMA4477,highly fragmented
+3690946,DMA4477,highly fragmented
+3690950,DMA4477,highly fragmented
+3690955,DMA4477,highly fragmented
+3690960,DMA4477,highly fragmented
+3690962,DMA4477,highly fragmented
+3699637,DMA1,negative
+3705479,DMA3865,negative
+3709166,DMA1,negative
+3718568,DMA1,negative
+3720389,DMA1,negative
+3720698,DMA1,negative
+3721313,DMA1,negative
+3721363,DMA1,negative
+3722770,DMA3865,negative
+3722866,DMA3865,negative
+3729992,DMA1,negative
+3730115,DMA1,negative
+3730925,DMA1,negative
+3732580,DMA1,negative
+3732652,DMA1,negative
+3732892,DMA1262,multilobed
+3732898,DMA1262,multilobed
+3732908,DMA1262,multilobed
+3732910,DMA1262,multilobed
+3732920,DMA1262,multilobed
+3732921,DMA1262,multilobed
+3734764,DMA1,negative
+3735440,DMA1,negative
+3736428,DMA1,negative
+3736537,DMA1,negative
+3737881,DMA1,negative
+3738043,DMA1,negative
+3739001,DMA1,negative
+3739134,DMA1,negative
+3739160,DMA1,negative
+3739198,DMA1,negative
+3740461,DMA1,negative
+3745330,DMA4211,class E
+3745339,DMA4211,class E
+3745340,DMA4211,class E
+3745341,DMA4211,class E
+3745344,DMA4211,class E
+3745350,DMA4211,class E
+3745361,DMA4211,class E
+3745366,DMA4211,class E
+3745371,DMA4211,class E
+3745381,DMA4211,class E
+3745382,DMA4211,class E
+3745387,DMA4211,class E
+3745397,DMA4211,class E
+3745399,DMA4211,class E
+3746212,DMA1,negative
+3746655,DMA1,negative
+3748270,DMA1,negative
+3749565,DMA1,negative
+3750299,DMA1,negative
+3751545,DMA1,negative
+3752023,DMA1,multilobed
+3752122,DMA1,negative
+3752138,DMA1,negative
+3752149,DMA1,negative
+3752496,DMA1,negative
+3752575,DMA1,negative
+3752675,DMA1,negative
+3753415,DMA1,negative
+3753425,DMA1,negative
+3754996,DMA1,negative
+3758347,DMA1,negative
+3758390,DMA1,negative
+3758428,DMA1,negative
+3758430,DMA1,negative
+3760241,DMA1,negative
+3760417,DMA1,enlarged
+3761400,DMA1,negative
+3761835,DMA-SLOW126,V-ATPase complex assembly defect
+3761836,DMA-SLOW126,V-ATPase complex assembly defect
+3761839,DMA-SLOW126,V-ATPase complex assembly defect
+3761840,DMA-SLOW126,V-ATPase complex assembly defect
+3761841,DMA-SLOW126,V-ATPase complex assembly defect
+3761842,DMA-SLOW126,V-ATPase complex assembly defect
+3761843,DMA-SLOW126,V-ATPase complex assembly defect
+3761846,DMA-SLOW126,V-ATPase complex assembly defect
+3761847,DMA-SLOW126,V-ATPase complex assembly defect
+3761848,DMA-SLOW126,V-ATPase complex assembly defect
+3761849,DMA-SLOW126,V-ATPase complex assembly defect
+3761850,DMA-SLOW126,V-ATPase complex assembly defect
+3761851,DMA-SLOW126,V-ATPase complex assembly defect
+3761852,DMA-SLOW126,V-ATPase complex assembly defect
+3761853,DMA-SLOW126,V-ATPase complex assembly defect
+3761854,DMA-SLOW126,V-ATPase complex assembly defect
+3761856,DMA-SLOW126,V-ATPase complex assembly defect
+3761858,DMA-SLOW126,V-ATPase complex assembly defect
+3761860,DMA-SLOW126,V-ATPase complex assembly defect
+3761861,DMA-SLOW126,V-ATPase complex assembly defect
+3761862,DMA-SLOW126,V-ATPase complex assembly defect
+3761863,DMA-SLOW126,V-ATPase complex assembly defect
+3761864,DMA-SLOW126,V-ATPase complex assembly defect
+3761865,DMA-SLOW126,V-ATPase complex assembly defect
+3761866,DMA-SLOW126,V-ATPase complex assembly defect
+3761867,DMA-SLOW126,V-ATPase complex assembly defect
+3761868,DMA-SLOW126,V-ATPase complex assembly defect
+3761869,DMA-SLOW126,V-ATPase complex assembly defect
+3761871,DMA-SLOW126,V-ATPase complex assembly defect
+3761872,DMA-SLOW126,V-ATPase complex assembly defect
+3761873,DMA-SLOW126,V-ATPase complex assembly defect
+3761874,DMA-SLOW126,V-ATPase complex assembly defect
+3761875,DMA-SLOW126,V-ATPase complex assembly defect
+3761876,DMA-SLOW126,V-ATPase complex assembly defect
+3761877,DMA-SLOW126,V-ATPase complex assembly defect
+3761878,DMA-SLOW126,V-ATPase complex assembly defect
+3761879,DMA-SLOW126,V-ATPase complex assembly defect
+3761880,DMA-SLOW126,V-ATPase complex assembly defect
+3761882,DMA-SLOW126,V-ATPase complex assembly defect
+3761883,DMA-SLOW126,V-ATPase complex assembly defect
+3761884,DMA-SLOW126,V-ATPase complex assembly defect
+3761885,DMA-SLOW126,V-ATPase complex assembly defect
+3761886,DMA-SLOW126,V-ATPase complex assembly defect
+3761887,DMA-SLOW126,V-ATPase complex assembly defect
+3761888,DMA-SLOW126,V-ATPase complex assembly defect
+3761889,DMA-SLOW126,V-ATPase complex assembly defect
+3761890,DMA-SLOW126,V-ATPase complex assembly defect
+3761891,DMA-SLOW126,V-ATPase complex assembly defect
+3761892,DMA-SLOW126,V-ATPase complex assembly defect
+3761893,DMA-SLOW126,V-ATPase complex assembly defect
+3761894,DMA-SLOW126,V-ATPase complex assembly defect
+3761895,DMA-SLOW126,V-ATPase complex assembly defect
+3761896,DMA-SLOW126,V-ATPase complex assembly defect
+3761897,DMA-SLOW126,V-ATPase complex assembly defect
+3761898,DMA-SLOW126,V-ATPase complex assembly defect
+3761899,DMA-SLOW126,V-ATPase complex assembly defect
+3761900,DMA-SLOW126,V-ATPase complex assembly defect
+3761901,DMA-SLOW126,V-ATPase complex assembly defect
+3761902,DMA-SLOW126,V-ATPase complex assembly defect
+3761903,DMA-SLOW126,V-ATPase complex assembly defect
+3761904,DMA-SLOW126,V-ATPase complex assembly defect
+3761905,DMA-SLOW126,V-ATPase complex assembly defect
+3761906,DMA-SLOW126,V-ATPase complex assembly defect
+3761908,DMA-SLOW126,V-ATPase complex assembly defect
+3761909,DMA-SLOW126,V-ATPase complex assembly defect
+3761910,DMA-SLOW126,V-ATPase complex assembly defect
+3761911,DMA-SLOW126,V-ATPase complex assembly defect
+3761912,DMA-SLOW126,V-ATPase complex assembly defect
+3761913,DMA-SLOW126,V-ATPase complex assembly defect
+3761915,DMA-SLOW126,V-ATPase complex assembly defect
+3761916,DMA-SLOW126,V-ATPase complex assembly defect
+3761917,DMA-SLOW126,V-ATPase complex assembly defect
+3761918,DMA-SLOW126,V-ATPase complex assembly defect
+3761921,DMA-SLOW126,V-ATPase complex assembly defect
+3769277,DMA1,negative
+3769845,DMA1,negative
+3769881,DMA1,enlarged
+3772696,DMA1,negative
+3773099,DMA1,negative
+3783279,DMA1,negative
+3783842,DMA3865,negative
+3788985,DMA1,negative
+3789372,DMA1,negative
+3790353,DMA-SLOW405,V-ATPase complex assembly defect
+3790354,DMA-SLOW405,V-ATPase complex assembly defect
+3790355,DMA-SLOW405,V-ATPase complex assembly defect
+3790356,DMA-SLOW405,V-ATPase complex assembly defect
+3790357,DMA-SLOW405,V-ATPase complex assembly defect
+3790358,DMA-SLOW405,V-ATPase complex assembly defect
+3790359,DMA-SLOW405,V-ATPase complex assembly defect
+3790360,DMA-SLOW405,V-ATPase complex assembly defect
+3790361,DMA-SLOW405,V-ATPase complex assembly defect
+3790362,DMA-SLOW405,V-ATPase complex assembly defect
+3790363,DMA-SLOW405,V-ATPase complex assembly defect
+3790364,DMA-SLOW405,V-ATPase complex assembly defect
+3790366,DMA-SLOW405,V-ATPase complex assembly defect
+3790368,DMA-SLOW405,V-ATPase complex assembly defect
+3790370,DMA-SLOW405,V-ATPase complex assembly defect
+3790372,DMA-SLOW405,V-ATPase complex assembly defect
+3790374,DMA-SLOW405,V-ATPase complex assembly defect
+3790375,DMA-SLOW405,V-ATPase complex assembly defect
+3790376,DMA-SLOW405,V-ATPase complex assembly defect
+3790377,DMA-SLOW405,V-ATPase complex assembly defect
+3790378,DMA-SLOW405,V-ATPase complex assembly defect
+3790379,DMA-SLOW405,V-ATPase complex assembly defect
+3790380,DMA-SLOW405,V-ATPase complex assembly defect
+3790381,DMA-SLOW405,V-ATPase complex assembly defect
+3790382,DMA-SLOW405,V-ATPase complex assembly defect
+3790383,DMA-SLOW405,V-ATPase complex assembly defect
+3790385,DMA-SLOW405,V-ATPase complex assembly defect
+3790386,DMA-SLOW405,V-ATPase complex assembly defect
+3790388,DMA-SLOW405,V-ATPase complex assembly defect
+3790389,DMA-SLOW405,V-ATPase complex assembly defect
+3790390,DMA-SLOW405,V-ATPase complex assembly defect
+3790391,DMA-SLOW405,V-ATPase complex assembly defect
+3790392,DMA-SLOW405,V-ATPase complex assembly defect
+3790393,DMA-SLOW405,V-ATPase complex assembly defect
+3790395,DMA-SLOW405,V-ATPase complex assembly defect
+3790396,DMA-SLOW405,V-ATPase complex assembly defect
+3790397,DMA-SLOW405,V-ATPase complex assembly defect
+3790398,DMA-SLOW405,V-ATPase complex assembly defect
+3790399,DMA-SLOW405,V-ATPase complex assembly defect
+3790401,DMA-SLOW405,V-ATPase complex assembly defect
+3790402,DMA-SLOW405,V-ATPase complex assembly defect
+3790403,DMA-SLOW405,V-ATPase complex assembly defect
+3790404,DMA-SLOW405,V-ATPase complex assembly defect
+3790405,DMA-SLOW405,V-ATPase complex assembly defect
+3790406,DMA-SLOW405,V-ATPase complex assembly defect
+3790407,DMA-SLOW405,V-ATPase complex assembly defect
+3790408,DMA-SLOW405,V-ATPase complex assembly defect
+3790409,DMA-SLOW405,V-ATPase complex assembly defect
+3790410,DMA-SLOW405,V-ATPase complex assembly defect
+3790412,DMA-SLOW405,V-ATPase complex assembly defect
+3790413,DMA-SLOW405,V-ATPase complex assembly defect
+3791741,DMA1,negative
+3791756,DMA1,negative
+3792398,DMA1,enlarged
+3792762,DMA1,negative
+3794430,TSA909,multilobed
+3794431,TSA909,multilobed
+3794437,TSA909,multilobed
+3794442,TSA909,multilobed
+3794451,TSA909,multilobed
+3794455,TSA909,multilobed
+3794468,TSA909,multilobed
+3794472,TSA909,enlarged
+3794490,TSA909,multilobed
+3794494,TSA909,multilobed
+3794499,TSA909,multilobed
+3794503,TSA909,multilobed
+3794504,TSA909,multilobed
+3794508,TSA909,multilobed
+3794518,TSA909,multilobed
+3794521,TSA909,multilobed
+3794525,TSA909,multilobed
+3794531,TSA909,multilobed
+3794535,TSA909,multilobed
+3794541,TSA909,multilobed
+3794544,TSA909,multilobed
+3794546,TSA909,multilobed
+3794547,TSA909,multilobed
+3794571,TSA909,multilobed
+3794573,TSA909,multilobed
+3794574,TSA909,multilobed
+3794581,TSA909,multilobed
+3794592,TSA909,multilobed
+3794594,TSA909,multilobed
+3794615,TSA909,multilobed
+3794617,TSA909,multilobed
+3794618,TSA909,multilobed
+3794644,TSA909,multilobed
+3794646,TSA909,multilobed
+3794656,TSA909,multilobed
+3797037,DMA3865,negative
+3799219,DMA3865,negative
+3800186,DMA3865,negative
+3800298,DMA3865,negative
+3801486,DMA3865,negative
+3801740,DMA3865,negative
+3802850,DMA3865,negative
+3803543,DMA3865,negative
+3805828,DMA3865,negative
+3806028,DMA3865,negative
+3808990,DMA1,negative
+3811186,DMA1,negative
+3811652,DMA1,negative
+3811882,DMA1,negative
+3812211,DMA1,negative
+3812399,DMA1,negative
+3812718,DMA1,negative
+3812879,DMA1,negative
+3813491,DMA1,negative
+3814487,DMA1,negative
+3814917,DMA1,negative
+3814972,DMA1,negative
+3814997,DMA1,negative
+3816841,DMA1,negative
+3825404,DMA3865,negative
+3826122,DMA3865,negative
+3827195,DMA3865,negative
+3829340,DMA3865,negative
+3836168,TSA175,multilobed
+3836170,TSA175,multilobed
+3836172,TSA175,multilobed
+3836180,TSA175,multilobed
+3836186,TSA175,multilobed
+3836187,TSA175,multilobed
+3836192,TSA175,multilobed
+3836194,TSA175,multilobed
+3836195,TSA175,multilobed
+3836200,TSA175,multilobed
+3836203,TSA175,multilobed
+3836206,TSA175,multilobed
+3836207,TSA175,multilobed
+3836208,TSA175,multilobed
+3836214,TSA175,multilobed
+3836215,TSA175,multilobed
+3836216,TSA175,multilobed
+3836219,TSA175,multilobed
+3836221,TSA175,multilobed
+3836222,TSA175,multilobed
+3836844,DMA3905,multilobed
+3836847,DMA3905,multilobed
+3836860,DMA3905,multilobed
+3836862,DMA3905,multilobed
+3836864,DMA3905,multilobed
+3836868,DMA3905,multilobed
+3836869,DMA3905,multilobed
+3836870,DMA3905,multilobed
+3836878,DMA3905,multilobed
+3836896,DMA3905,multilobed
+3836899,DMA3905,multilobed
+3837290,DMA1,negative
+3838301,DMA1,negative
+3839147,DMA1,negative
+3839373,DMA1,negative
+3839707,DMA1,negative
+3840144,DMA1,negative
+3841208,DMA1,negative
+3841559,DMA1,negative
+3841775,DMA1,negative
+3842427,DMA1,negative
+3858987,DMA1,negative
+3867256,DMA3865,negative
+3869829,DMA1867,V-ATPase complex assembly defect
+3869831,DMA1867,V-ATPase complex assembly defect
+3869834,DMA1867,V-ATPase complex assembly defect
+3869836,DMA1867,V-ATPase complex assembly defect
+3869839,DMA1867,V-ATPase complex assembly defect
+3869840,DMA1867,V-ATPase complex assembly defect
+3869841,DMA1867,V-ATPase complex assembly defect
+3869842,DMA1867,V-ATPase complex assembly defect
+3869843,DMA1867,V-ATPase complex assembly defect
+3869844,DMA1867,V-ATPase complex assembly defect
+3869846,DMA1867,V-ATPase complex assembly defect
+3869847,DMA1867,V-ATPase complex assembly defect
+3869848,DMA1867,V-ATPase complex assembly defect
+3869849,DMA1867,V-ATPase complex assembly defect
+3869850,DMA1867,V-ATPase complex assembly defect
+3876268,TSA142,multilobed
+3880141,DMA1,negative
+3881119,DMA1,negative
+3881674,DMA1,negative
+3883854,DMA1,negative
+3884349,DMA1,negative
+3884534,DMA1,negative
+3885109,DMA1,negative
+3886168,DMA1,negative
+3886936,DMA3865,negative
+3888291,DMA3865,negative
+3888955,DMA3865,negative
+3889119,DMA3865,negative
+3891444,DMA3865,negative
+3892140,DMA3865,negative
+3893050,DMA3865,negative
+3895699,DMA3865,negative
+3896142,DMA3865,negative
+3899123,DMA3865,negative
+3909811,DMA1,negative
+3910055,DMA1,negative
+3916362,DMA-SLOW298,class E
+3916375,DMA-SLOW298,class E
+3916384,DMA-SLOW298,class E
+3916399,DMA-SLOW298,multilobed
+3916405,DMA-SLOW298,class E
+3916420,DMA-SLOW298,class E
+3916422,DMA-SLOW298,multilobed
+3916424,DMA-SLOW298,class E
+3916425,DMA-SLOW298,class E
+3925150,DMA1,negative
+3932396,DMA1,negative
+3934080,DMA1,negative
+3934187,DMA1,negative
+3935704,DMA1,negative
+3941867,TSA136,multilobed
+3941892,TSA136,multilobed
+3941897,TSA136,multilobed
+3941905,TSA136,multilobed
+3941914,TSA136,multilobed
+3941920,TSA136,multilobed
+3941926,TSA136,multilobed
+3941953,TSA136,multilobed
+3941963,TSA136,multilobed
+3942008,TSA136,multilobed
+3942013,TSA136,multilobed
+3957499,DMA1,negative
+3957604,DMA1,negative
+3958486,DMA1,negative
+3959325,DMA1,negative
+3959871,DMA1,negative
+3960440,DMA1,negative
+3973342,DMA1,negative
+3981001,TSA214,enlarged
+3981059,TSA214,enlarged
+3981134,TSA214,enlarged
+3981180,TSA214,enlarged
+3981227,TSA214,enlarged
+3981332,TSA214,enlarged
+3981353,TSA214,enlarged
+3989599,DMA3865,negative
+3991404,DMA1,negative
+3992873,DMA1,negative
+4000348,DMA3386,class E
+4000351,DMA3386,class E
+4000359,DMA3386,class E
+4000360,DMA3386,class E
+4000367,DMA3386,class E
+4000370,DMA3386,class E
+4000372,DMA3386,class E
+4000385,DMA3386,class E
+4000386,DMA3386,class E
+4000388,DMA3386,class E
+4000390,DMA3386,class E
+4000395,DMA3386,class E
+4000396,DMA3386,class E
+4000397,DMA3386,class E
+4000399,DMA3386,class E
+4000409,DMA3386,class E
+4000411,DMA3386,class E
+4000421,DMA3386,class E
+4000426,DMA3386,class E
+4000427,DMA3386,class E
+4000430,DMA3386,class E
+4000431,DMA3386,class E
+4000434,DMA3386,class E
+4000436,DMA3386,class E
+4000438,DMA3386,class E
+4000443,DMA3386,class E
+4000445,DMA3386,enlarged
+4000447,DMA3386,class E
+4000451,DMA3386,enlarged
+4000452,DMA3386,class E
+4000453,DMA3386,class E
+4000455,DMA3386,class E
+4000456,DMA3386,class E
+4000460,DMA3386,class E
+4000463,DMA3386,class E
+4000469,DMA3386,class E
+4000472,DMA3386,class E
+4000481,DMA3386,class E
+4000484,DMA3386,class E
+4000485,DMA3386,class E
+4000487,DMA3386,class E
+4000493,DMA3386,class E
+4000495,DMA3386,class E
+4000502,DMA3386,class E
+4000504,DMA3386,class E
+4000507,DMA3386,multilobed
+4000509,DMA3386,class E
+4000510,DMA3386,class E
+4000515,DMA3386,class E
+4000522,DMA3386,class E
+4000528,DMA3386,class E
+4000533,DMA3386,class E
+4000537,DMA3386,enlarged
+4000541,DMA3386,class E
+4000543,DMA3386,class E
+4000544,DMA3386,class E
+4000552,DMA3386,class E
+4000555,DMA3386,class E
+4000561,DMA3386,class E
+4000562,DMA3386,class E
+4000566,DMA3386,class E
+4000567,DMA3386,class E
+4000572,DMA3386,class E
+4000574,DMA3386,class E
+4000576,DMA3386,class E
+4000583,DMA3386,class E
+4000585,DMA3386,class E
+4000591,DMA3386,class E
+4000592,DMA3386,class E
+4000595,DMA3386,class E
+4000596,DMA3386,class E
+4000597,DMA3386,class E
+4000602,DMA3386,class E
+4000608,DMA3386,class E
+4000617,DMA3386,class E
+4000619,DMA3386,class E
+4000620,DMA3386,class E
+4000627,DMA3386,class E
+4000630,DMA3386,class E
+4000636,DMA3386,class E
+4000638,DMA3386,class E
+4000648,DMA3386,class E
+4000650,DMA3386,class E
+4000666,DMA3386,class E
+4000676,DMA3386,class E
+4000679,DMA3386,class E
+4000683,DMA3386,class E
+4000684,DMA3386,class E
+4000690,DMA3386,class E
+4000692,DMA3386,class E
+4000694,DMA3386,class E
+4000700,DMA3386,class E
+4000714,DMA3386,class E
+4000716,DMA3386,class E
+4000717,DMA3386,class E
+4000720,DMA3386,class E
+4000721,DMA3386,class E
+4000726,DMA3386,class E
+4000729,DMA3386,class E
+4000734,DMA3386,class E
+4000754,DMA3386,class E
+4000755,DMA3386,class E
+4000756,DMA3386,class E
+4000757,DMA3386,class E
+4000762,DMA3386,class E
+4000767,DMA3386,class E
+4000769,DMA3386,class E
+4000770,DMA3386,class E
+4004049,DMA1,negative
+4004138,DMA1,negative
+4004199,DMA1,negative
+4009896,DMA1,negative
+4010204,DMA1,negative
+4010334,DMA1,negative
+4012655,DMA4850,class E
+4012664,DMA4850,class E
+4012672,DMA4850,class E
+4012675,DMA4850,class E
+4012676,DMA4850,class E
+4012684,DMA4850,class E
+4012685,DMA4850,class E
+4012689,DMA4850,class E
+4012692,DMA4850,class E
+4012694,DMA4850,class E
+4012703,DMA4850,class E
+4012707,DMA4850,class E
+4012710,DMA4850,class E
+4012721,DMA4850,class E
+4012748,DMA4850,class E
+4012757,DMA4850,class E
+4012764,DMA4850,class E
+4012790,DMA4850,class E
+4012794,DMA4850,class E
+4012796,DMA4850,class E
+4012802,DMA4850,class E
+4012815,DMA4850,class E
+4012816,DMA4850,class E
+4012828,DMA4850,class E
+4012838,DMA4850,class E
+4012840,DMA4850,class E
+4012844,DMA4850,class E
+4012848,DMA4850,class E
+4012855,DMA4850,class E
+4033251,DMA1,negative
+4033951,DMA1,negative
+4033967,DMA1,negative
+4035928,DMA1,negative
+4036687,DMA1,negative
+4037523,DMA1,negative
+4037931,DMA1,negative
+4041215,DMA1,multilobed
+4041399,DMA1,negative
+4042332,DMA1,negative
+4042912,DMA1,negative
+4043405,DMA1,multilobed
+4043476,DMA1,negative
+4044312,DMA1,negative
+4045545,DMA1,negative
+4046048,DMA1,negative
+4046283,DMA1,negative
+4046303,DMA1,negative
+4046392,DMA1,negative
+4046923,DMA1,negative
+4047111,DMA1,negative
+4047643,DMA1,negative
+4048670,DMA1,negative
+4048958,DMA1,negative
+4048961,DMA1,negative
+4056921,DMA1,negative
+4072095,DMA3715,V-ATPase complex assembly defect
+4072096,DMA3715,V-ATPase complex assembly defect
+4072097,DMA3715,V-ATPase complex assembly defect
+4072099,DMA3715,V-ATPase complex assembly defect
+4072100,DMA3715,V-ATPase complex assembly defect
+4072102,DMA3715,V-ATPase complex assembly defect
+4072103,DMA3715,V-ATPase complex assembly defect
+4072104,DMA3715,V-ATPase complex assembly defect
+4072105,DMA3715,V-ATPase complex assembly defect
+4072107,DMA3715,V-ATPase complex assembly defect
+4072108,DMA3715,V-ATPase complex assembly defect
+4072110,DMA3715,V-ATPase complex assembly defect
+4072111,DMA3715,V-ATPase complex assembly defect
+4072112,DMA3715,V-ATPase complex assembly defect
+4072113,DMA3715,V-ATPase complex assembly defect
+4072116,DMA3715,V-ATPase complex assembly defect
+4072117,DMA3715,V-ATPase complex assembly defect
+4072119,DMA3715,V-ATPase complex assembly defect
+4072120,DMA3715,V-ATPase complex assembly defect
+4072121,DMA3715,V-ATPase complex assembly defect
+4072122,DMA3715,V-ATPase complex assembly defect
+4072124,DMA3715,V-ATPase complex assembly defect
+4072126,DMA3715,V-ATPase complex assembly defect
+4072127,DMA3715,V-ATPase complex assembly defect
+4072128,DMA3715,V-ATPase complex assembly defect
+4072129,DMA3715,V-ATPase complex assembly defect
+4072130,DMA3715,V-ATPase complex assembly defect
+4072131,DMA3715,V-ATPase complex assembly defect
+4072134,DMA3715,V-ATPase complex assembly defect
+4072135,DMA3715,V-ATPase complex assembly defect
+4072136,DMA3715,V-ATPase complex assembly defect
+4072137,DMA3715,V-ATPase complex assembly defect
+4072138,DMA3715,V-ATPase complex assembly defect
+4072139,DMA3715,V-ATPase complex assembly defect
+4072140,DMA3715,V-ATPase complex assembly defect
+4072141,DMA3715,V-ATPase complex assembly defect
+4072142,DMA3715,V-ATPase complex assembly defect
+4072143,DMA3715,V-ATPase complex assembly defect
+4072144,DMA3715,V-ATPase complex assembly defect
+4072146,DMA3715,V-ATPase complex assembly defect
+4072148,DMA3715,V-ATPase complex assembly defect
+4072149,DMA3715,V-ATPase complex assembly defect
+4072150,DMA3715,V-ATPase complex assembly defect
+4072151,DMA3715,V-ATPase complex assembly defect
+4072152,DMA3715,V-ATPase complex assembly defect
+4072153,DMA3715,V-ATPase complex assembly defect
+4072154,DMA3715,V-ATPase complex assembly defect
+4072156,DMA3715,V-ATPase complex assembly defect
+4072157,DMA3715,V-ATPase complex assembly defect
+4072158,DMA3715,V-ATPase complex assembly defect
+4072160,DMA3715,V-ATPase complex assembly defect
+4072161,DMA3715,V-ATPase complex assembly defect
+4072163,DMA3715,V-ATPase complex assembly defect
+4072164,DMA3715,V-ATPase complex assembly defect
+4072169,DMA3715,V-ATPase complex assembly defect
+4072171,DMA3715,V-ATPase complex assembly defect
+4072172,DMA3715,V-ATPase complex assembly defect
+4072173,DMA3715,V-ATPase complex assembly defect
+4072174,DMA3715,V-ATPase complex assembly defect
+4072176,DMA3715,V-ATPase complex assembly defect
+4072177,DMA3715,V-ATPase complex assembly defect
+4072178,DMA3715,V-ATPase complex assembly defect
+4072179,DMA3715,V-ATPase complex assembly defect
+4072180,DMA3715,V-ATPase complex assembly defect
+4072181,DMA3715,V-ATPase complex assembly defect
+4072182,DMA3715,V-ATPase complex assembly defect
+4072184,DMA3715,V-ATPase complex assembly defect
+4072185,DMA3715,V-ATPase complex assembly defect
+4072186,DMA3715,V-ATPase complex assembly defect
+4072187,DMA3715,V-ATPase complex assembly defect
+4072190,DMA3715,V-ATPase complex assembly defect
+4072191,DMA3715,V-ATPase complex assembly defect
+4072192,DMA3715,V-ATPase complex assembly defect
+4072193,DMA3715,V-ATPase complex assembly defect
+4072194,DMA3715,V-ATPase complex assembly defect
+4072195,DMA3715,V-ATPase complex assembly defect
+4072196,DMA3715,V-ATPase complex assembly defect
+4072197,DMA3715,V-ATPase complex assembly defect
+4072198,DMA3715,V-ATPase complex assembly defect
+4072199,DMA3715,V-ATPase complex assembly defect
+4072200,DMA3715,V-ATPase complex assembly defect
+4072201,DMA3715,V-ATPase complex assembly defect
+4072202,DMA3715,V-ATPase complex assembly defect
+4072203,DMA3715,V-ATPase complex assembly defect
+4072204,DMA3715,V-ATPase complex assembly defect
+4072205,DMA3715,V-ATPase complex assembly defect
+4072206,DMA3715,V-ATPase complex assembly defect
+4072207,DMA3715,V-ATPase complex assembly defect
+4072208,DMA3715,V-ATPase complex assembly defect
+4072209,DMA3715,V-ATPase complex assembly defect
+4072211,DMA3715,V-ATPase complex assembly defect
+4072213,DMA3715,V-ATPase complex assembly defect
+4072214,DMA3715,V-ATPase complex assembly defect
+4072215,DMA3715,V-ATPase complex assembly defect
+4072218,DMA3715,V-ATPase complex assembly defect
+4072219,DMA3715,V-ATPase complex assembly defect
+4072220,DMA3715,V-ATPase complex assembly defect
+4072221,DMA3715,V-ATPase complex assembly defect
+4072223,DMA3715,V-ATPase complex assembly defect
+4072224,DMA3715,V-ATPase complex assembly defect
+4072225,DMA3715,V-ATPase complex assembly defect
+4072226,DMA3715,V-ATPase complex assembly defect
+4072227,DMA3715,V-ATPase complex assembly defect
+4072228,DMA3715,V-ATPase complex assembly defect
+4072229,DMA3715,V-ATPase complex assembly defect
+4072230,DMA3715,V-ATPase complex assembly defect
+4072232,DMA3715,V-ATPase complex assembly defect
+4072234,DMA3715,V-ATPase complex assembly defect
+4072237,DMA3715,V-ATPase complex assembly defect
+4072238,DMA3715,V-ATPase complex assembly defect
+4072239,DMA3715,V-ATPase complex assembly defect
+4072240,DMA3715,V-ATPase complex assembly defect
+4072241,DMA3715,V-ATPase complex assembly defect
+4072242,DMA3715,V-ATPase complex assembly defect
+4072243,DMA3715,V-ATPase complex assembly defect
+4072244,DMA3715,V-ATPase complex assembly defect
+4072245,DMA3715,V-ATPase complex assembly defect
+4072247,DMA3715,V-ATPase complex assembly defect
+4072248,DMA3715,V-ATPase complex assembly defect
+4075089,DMA1,negative
+4088708,DMA1,negative
+4110318,DMA1,negative
+4110477,DMA1,negative
+4110560,DMA1,negative
+4114003,DMA3865,negative
+4116333,DMA3865,negative
+4118474,DMA3865,negative
+4120620,TSA119,sec
+4120621,TSA119,sec
+4120623,TSA119,sec
+4120625,TSA119,sec
+4120627,TSA119,sec
+4120630,TSA119,sec
+4120633,TSA119,sec
+4120634,TSA119,sec
+4120635,TSA119,sec
+4120638,TSA119,sec
+4120639,TSA119,sec
+4120645,TSA119,sec
+4120647,TSA119,sec
+4120648,TSA119,sec
+4120649,TSA119,sec
+4120650,TSA119,sec
+4120651,TSA119,sec
+4120653,TSA119,sec
+4120654,TSA119,sec
+4120655,TSA119,sec
+4120656,TSA119,sec
+4120657,TSA119,sec
+4120659,TSA119,sec
+4120661,TSA119,sec
+4120663,TSA119,sec
+4120664,TSA119,sec
+4120667,TSA119,sec
+4120668,TSA119,sec
+4120669,TSA119,sec
+4120670,TSA119,sec
+4120672,TSA119,sec
+4120673,TSA119,sec
+4120674,TSA119,sec
+4120675,TSA119,sec
+4120676,TSA119,sec
+4120678,TSA119,sec
+4120679,TSA119,sec
+4120681,TSA119,sec
+4120682,TSA119,sec
+4120684,TSA119,sec
+4120685,TSA119,sec
+4120686,TSA119,sec
+4120688,TSA119,sec
+4120691,TSA119,sec
+4120693,TSA119,sec
+4120694,TSA119,sec
+4120696,TSA119,sec
+4120698,TSA119,sec
+4120699,TSA119,sec
+4120701,TSA119,sec
+4120702,TSA119,sec
+4120705,TSA119,sec
+4120708,TSA119,sec
+4120711,TSA119,sec
+4120713,TSA119,sec
+4120714,TSA119,sec
+4120715,TSA119,sec
+4120717,TSA119,sec
+4120718,TSA119,sec
+4120719,TSA119,sec
+4120720,TSA119,sec
+4120721,TSA119,sec
+4120722,TSA119,sec
+4120724,TSA119,sec
+4120729,TSA119,sec
+4120732,TSA119,sec
+4120735,TSA119,sec
+4120736,TSA119,sec
+4120739,TSA119,sec
+4120741,TSA119,sec
+4120742,TSA119,sec
+4120743,TSA119,sec
+4120747,TSA119,sec
+4120748,TSA119,sec
+4120750,TSA119,sec
+4120752,TSA119,sec
+4120754,TSA119,sec
+4120756,TSA119,sec
+4120757,TSA119,sec
+4120758,TSA119,sec
+4120761,TSA119,sec
+4120762,TSA119,sec
+4120766,TSA119,sec
+4120767,TSA119,sec
+4120769,TSA119,sec
+4120773,TSA119,sec
+4120776,TSA119,sec
+4120777,TSA119,sec
+4120778,TSA119,sec
+4120781,TSA119,sec
+4120784,TSA119,sec
+4120785,TSA119,sec
+4120786,TSA119,sec
+4120787,TSA119,sec
+4120789,TSA119,sec
+4120796,TSA119,sec
+4120797,TSA119,sec
+4120800,TSA119,sec
+4120801,TSA119,sec
+4120805,TSA119,sec
+4120806,TSA119,sec
+4120807,TSA119,sec
+4120808,TSA119,sec
+4120810,TSA119,sec
+4120812,TSA119,sec
+4120815,TSA119,sec
+4120816,TSA119,sec
+4120819,TSA119,sec
+4120822,TSA119,sec
+4120827,TSA119,sec
+4120829,TSA119,sec
+4120831,TSA119,sec
+4120833,TSA119,sec
+4120834,TSA119,sec
+4120835,TSA119,sec
+4120836,TSA119,sec
+4120839,TSA119,sec
+4120842,TSA119,sec
+4120843,TSA119,sec
+4120844,TSA119,sec
+4120848,TSA119,sec
+4121371,TSA42,multilobed
+4121381,TSA42,multilobed
+4121399,TSA42,multilobed
+4121405,TSA42,multilobed
+4121415,TSA42,multilobed
+4121416,TSA42,multilobed
+4121421,TSA42,multilobed
+4121422,TSA42,enlarged
+4121428,TSA42,multilobed
+4121448,TSA42,multilobed
+4121450,TSA42,multilobed
+4121462,TSA42,multilobed
+4121465,TSA42,multilobed
+4121472,TSA42,multilobed
+4121485,TSA42,multilobed
+4121487,TSA42,multilobed
+4121500,TSA42,multilobed
+4121501,TSA42,multilobed
+4121502,TSA42,multilobed
+4121523,TSA42,multilobed
+4121524,TSA42,multilobed
+4124479,DMA3865,negative
+4128521,DMA2763,class E
+4128534,DMA2763,class E
+4128536,DMA2763,class E
+4128544,DMA2763,class E
+4128549,DMA2763,class E
+4128550,DMA2763,class E
+4128553,DMA2763,class E
+4128555,DMA2763,class E
+4128563,DMA2763,class E
+4128565,DMA2763,class E
+4128569,DMA2763,class E
+4128573,DMA2763,class E
+4128592,DMA2763,class E
+4128597,DMA2763,class E
+4128611,DMA2763,class E
+4130847,DMA1,negative
+4151057,DMA3865,negative
+4154174,DMA1,negative
+4159641,DMA1,negative
+4165407,DMA1,negative
+4170105,DMA1,negative
+4177748,DMA1,negative
+4177854,DMA1,negative
+4177967,DMA1,negative
+4178094,DMA1,negative
+4185917,DMA1,negative
+4198653,DMA1,negative
+4207336,DMA1,negative
+4207537,DMA1,enlarged
+4208119,DMA-SLOW392,class E
+4208127,DMA-SLOW392,class E
+4208130,DMA-SLOW392,class E
+4208133,DMA-SLOW392,class E
+4210344,DMA1,negative
+4210699,DMA1,negative
+4211049,DMA1,negative
+4212890,DMA1,negative
+4213981,DMA1,negative
+4214891,DMA1,negative
+4215242,DMA1,negative
+4215896,DMA1,negative
+4216169,DMA1,negative
+4216213,DMA1,negative
+4247363,DMA3865,negative
+4248790,DMA3865,negative
+4249465,DMA3865,negative
+4262633,DMA1,negative
+4263048,DMA1,negative
+4263204,DMA1,multilobed
+4264493,DMA1,negative
+4264624,DMA1,negative
+4265164,DMA1,negative
+4266427,DMA1,negative
+4266824,DMA1,negative
+4266906,DMA1,negative
+4266992,DMA1,negative
+4267020,DMA1,negative
+4267078,DMA1,negative
+4267325,DMA1,negative
+4267385,DMA1,negative
+4267455,DMA1,negative
+4267919,DMA1,negative
+4268002,DMA1,negative
+4268012,DMA1,negative
+4268114,DMA1,negative
+4268231,DMA1,negative
+4269342,DMA1,negative
+4269607,DMA1,multilobed
+4269730,DMA1,negative
+4269889,DMA1,negative
+4270064,DMA1,negative
+4280116,TSA634,sec
+4280118,TSA634,sec
+4280119,TSA634,sec
+4280121,TSA634,sec
+4280123,TSA634,sec
+4280124,TSA634,sec
+4280126,TSA634,sec
+4280127,TSA634,sec
+4280129,TSA634,sec
+4280131,TSA634,sec
+4280132,TSA634,sec
+4280134,TSA634,sec
+4280136,TSA634,sec
+4280137,TSA634,sec
+4280138,TSA634,sec
+4280139,TSA634,sec
+4280142,TSA634,sec
+4280143,TSA634,sec
+4280145,TSA634,sec
+4280148,TSA634,sec
+4280150,TSA634,sec
+4280151,TSA634,sec
+4280152,TSA634,sec
+4280154,TSA634,sec
+4280155,TSA634,sec
+4280156,TSA634,sec
+4280158,TSA634,sec
+4280159,TSA634,sec
+4280161,TSA634,sec
+4280162,TSA634,sec
+4280163,TSA634,sec
+4280164,TSA634,sec
+4280166,TSA634,sec
+4280170,TSA634,sec
+4280171,TSA634,sec
+4280172,TSA634,sec
+4280173,TSA634,sec
+4280174,TSA634,sec
+4280179,TSA634,sec
+4280182,TSA634,sec
+4280183,TSA634,sec
+4280184,TSA634,sec
+4280185,TSA634,sec
+4280187,TSA634,sec
+4280191,TSA634,sec
+4280192,TSA634,sec
+4280194,TSA634,sec
+4280195,TSA634,sec
+4280197,TSA634,sec
+4280199,TSA634,sec
+4280202,TSA634,sec
+4280204,TSA634,sec
+4280205,TSA634,sec
+4280206,TSA634,sec
+4280208,TSA634,sec
+4280209,TSA634,sec
+4280210,TSA634,sec
+4280212,TSA634,sec
+4280216,TSA634,sec
+4280218,TSA634,sec
+4280219,TSA634,sec
+4280220,TSA634,sec
+4280222,TSA634,sec
+4280226,TSA634,sec
+4280227,TSA634,sec
+4280230,TSA634,sec
+4280231,TSA634,sec
+4280232,TSA634,sec
+4280233,TSA634,sec
+4280234,TSA634,sec
+4280235,TSA634,sec
+4280236,TSA634,sec
+4280237,TSA634,sec
+4280239,TSA634,sec
+4280240,TSA634,sec
+4280242,TSA634,sec
+4280245,TSA634,sec
+4280246,TSA634,sec
+4280248,TSA634,sec
+4280251,TSA634,sec
+4280253,TSA634,sec
+4280254,TSA634,sec
+4280257,TSA634,sec
+4280260,TSA634,sec
+4280261,TSA634,sec
+4280262,TSA634,sec
+4280265,TSA634,sec
+4280266,TSA634,sec
+4280267,TSA634,sec
+4280269,TSA634,sec
+4280270,TSA634,sec
+4280271,TSA634,sec
+4280273,TSA634,sec
+4280275,TSA634,sec
+4280279,TSA634,sec
+4280280,TSA634,sec
+4280281,TSA634,sec
+4280283,TSA634,sec
+4280284,TSA634,sec
+4280285,TSA634,sec
+4280287,TSA634,sec
+4280293,TSA634,sec
+4280294,TSA634,sec
+4280299,TSA634,sec
+4280302,TSA634,sec
+4280305,TSA634,sec
+4280308,TSA634,sec
+4280312,TSA634,sec
+4280318,TSA634,sec
+4280319,TSA634,sec
+4280321,TSA634,sec
+4280322,TSA634,sec
+4280324,TSA634,sec
+4280325,TSA634,sec
+4280326,TSA634,sec
+4280328,TSA634,sec
+4280331,TSA634,sec
+4280333,TSA634,sec
+4280334,TSA634,sec
+4280336,TSA634,sec
+4280338,TSA634,sec
+4280340,TSA634,sec
+4280342,TSA634,sec
+4280343,TSA634,sec
+4280344,TSA634,sec
+4280345,TSA634,sec
+4280347,TSA634,sec
+4280348,TSA634,sec
+4280354,TSA634,sec
+4280356,TSA634,sec
+4280359,TSA634,sec
+4280364,TSA634,sec
+4280366,TSA634,sec
+4280367,TSA634,sec
+4280371,TSA634,sec
+4280374,TSA634,sec
+4280377,TSA634,sec
+4280378,TSA634,sec
+4280379,TSA634,sec
+4280380,TSA634,sec
+4281670,TSA54,sec
+4281671,TSA54,sec
+4281672,TSA54,sec
+4281673,TSA54,sec
+4281675,TSA54,sec
+4281678,TSA54,sec
+4281680,TSA54,sec
+4281681,TSA54,sec
+4281683,TSA54,sec
+4281684,TSA54,sec
+4281685,TSA54,sec
+4281686,TSA54,sec
+4281687,TSA54,sec
+4281690,TSA54,sec
+4281691,TSA54,sec
+4281693,TSA54,sec
+4281694,TSA54,sec
+4281695,TSA54,sec
+4281697,TSA54,sec
+4281700,TSA54,sec
+4281701,TSA54,sec
+4281702,TSA54,sec
+4281703,TSA54,sec
+4281704,TSA54,sec
+4281705,TSA54,sec
+4281706,TSA54,sec
+4281707,TSA54,sec
+4281708,TSA54,sec
+4281710,TSA54,sec
+4281711,TSA54,sec
+4281712,TSA54,sec
+4281713,TSA54,sec
+4281716,TSA54,sec
+4281717,TSA54,sec
+4281718,TSA54,sec
+4281720,TSA54,sec
+4281721,TSA54,sec
+4281722,TSA54,sec
+4281724,TSA54,sec
+4281725,TSA54,sec
+4281726,TSA54,sec
+4281727,TSA54,sec
+4281728,TSA54,sec
+4281730,TSA54,sec
+4281732,TSA54,sec
+4281733,TSA54,sec
+4281734,TSA54,sec
+4281735,TSA54,sec
+4281740,TSA54,sec
+4281743,TSA54,sec
+4281744,TSA54,sec
+4281745,TSA54,sec
+4281747,TSA54,sec
+4281750,TSA54,sec
+4281752,TSA54,sec
+4281753,TSA54,sec
+4281754,TSA54,sec
+4281755,TSA54,sec
+4281756,TSA54,sec
+4281761,TSA54,sec
+4281762,TSA54,sec
+4281764,TSA54,sec
+4281765,TSA54,sec
+4281768,TSA54,sec
+4281769,TSA54,sec
+4281771,TSA54,sec
+4281775,TSA54,sec
+4281776,TSA54,sec
+4281777,TSA54,sec
+4281778,TSA54,sec
+4281779,TSA54,sec
+4281782,TSA54,sec
+4281783,TSA54,sec
+4281784,TSA54,sec
+4281786,TSA54,sec
+4281787,TSA54,sec
+4281788,TSA54,sec
+4281789,TSA54,sec
+4281791,TSA54,sec
+4281794,TSA54,sec
+4281796,TSA54,sec
+4281797,TSA54,sec
+4281798,TSA54,sec
+4281801,TSA54,sec
+4281803,TSA54,sec
+4281806,TSA54,sec
+4281807,TSA54,sec
+4281808,TSA54,sec
+4281809,TSA54,sec
+4281811,TSA54,sec
+4281813,TSA54,sec
+4281814,TSA54,sec
+4281815,TSA54,sec
+4281818,TSA54,sec
+4281819,TSA54,sec
+4281820,TSA54,sec
+4281822,TSA54,sec
+4281825,TSA54,sec
+4281826,TSA54,sec
+4281828,TSA54,sec
+4281831,TSA54,sec
+4282353,DMA3865,negative
+4284231,DMA1,multilobed
+4285758,DMA1,negative
+4286674,DMA1,negative
+4287129,DMA1,negative
+4287983,DMA1,negative
+4289122,DMA1,negative
+4289161,DMA1,negative
+4289430,DMA1,negative
+4290908,DMA1552,enlarged
+4290909,DMA1552,enlarged
+4290913,DMA1552,enlarged
+4290915,DMA1552,enlarged
+4290917,DMA1552,enlarged
+4290919,DMA1552,enlarged
+4290921,DMA1552,enlarged
+4290927,DMA1552,enlarged
+4290929,DMA1552,enlarged
+4290943,DMA1552,enlarged
+4290949,DMA1552,enlarged
+4290952,DMA1552,enlarged
+4290956,DMA1552,enlarged
+4290957,DMA1552,enlarged
+4290960,DMA1552,enlarged
+4290962,DMA1552,enlarged
+4290963,DMA1552,enlarged
+4290966,DMA1552,enlarged
+4290969,DMA1552,enlarged
+4290971,DMA1552,enlarged
+4290977,DMA1552,enlarged
+4290980,DMA1552,enlarged
+4290984,DMA1552,enlarged
+4290988,DMA1552,enlarged
+4290989,DMA1552,enlarged
+4290990,DMA1552,enlarged
+4290993,DMA1552,enlarged
+4290997,DMA1552,enlarged
+4291001,DMA1552,enlarged
+4291005,DMA1552,enlarged
+4291007,DMA1552,enlarged
+4291009,DMA1552,enlarged
+4291010,DMA1552,enlarged
+4291012,DMA1552,enlarged
+4291013,DMA1552,enlarged
+4291014,DMA1552,enlarged
+4291018,DMA1552,enlarged
+4291025,DMA1552,enlarged
+4291026,DMA1552,enlarged
+4291030,DMA1552,enlarged
+4291033,DMA1552,enlarged
+4291035,DMA1552,enlarged
+4291038,DMA1552,enlarged
+4291041,DMA1552,enlarged
+4291045,DMA1552,enlarged
+4291046,DMA1552,enlarged
+4291048,DMA1552,enlarged
+4293889,DMA1,negative
+4293923,DMA1,negative
+4297586,TSA149,multilobed
+4297600,TSA149,multilobed
+4297610,TSA149,multilobed
+4297615,TSA149,multilobed
+4297655,TSA149,multilobed
+4297656,TSA149,multilobed
+4297659,TSA149,multilobed
+4297660,TSA149,multilobed
+4297664,TSA149,multilobed
+4297666,TSA149,multilobed
+4297668,TSA149,multilobed
+4297675,TSA149,multilobed
+4297679,TSA149,multilobed
+4297696,TSA149,multilobed
+4297703,TSA149,multilobed
+4297712,TSA149,multilobed
+4297725,TSA149,multilobed
+4297730,TSA149,multilobed
+4297737,TSA149,multilobed
+4297738,TSA149,multilobed
+4297753,TSA149,multilobed
+4297760,TSA149,multilobed
+4297769,TSA149,multilobed
+4297775,TSA149,multilobed
+4297780,TSA149,multilobed
+4297801,TSA149,multilobed
+4297804,TSA149,multilobed
+4297806,TSA149,multilobed
+4297809,TSA149,multilobed
+4297812,TSA149,multilobed
+4297858,TSA200,multilobed
+4297859,TSA200,multilobed
+4297875,TSA200,multilobed
+9449491,DMA3715,V-ATPase complex assembly defect
+9449492,DMA3715,V-ATPase complex assembly defect
+9449493,DMA3715,V-ATPase complex assembly defect
+9449494,DMA3715,V-ATPase complex assembly defect
+9449495,DMA3715,V-ATPase complex assembly defect
+9449496,DMA3715,V-ATPase complex assembly defect
+9449497,DMA3715,V-ATPase complex assembly defect
+9449498,DMA3715,V-ATPase complex assembly defect
+9449499,DMA3715,V-ATPase complex assembly defect
+9449500,DMA3715,V-ATPase complex assembly defect
+9449501,DMA3715,V-ATPase complex assembly defect
+9449502,DMA3715,V-ATPase complex assembly defect
+9449503,DMA3715,V-ATPase complex assembly defect
+9449506,DMA3715,V-ATPase complex assembly defect
+9449507,DMA3715,V-ATPase complex assembly defect
+9449508,DMA3715,V-ATPase complex assembly defect
+9449509,DMA3715,V-ATPase complex assembly defect
+9449512,DMA3715,V-ATPase complex assembly defect
+9449514,DMA3715,V-ATPase complex assembly defect
+9449516,DMA3715,V-ATPase complex assembly defect
+9449517,DMA3715,V-ATPase complex assembly defect
+9449518,DMA3715,V-ATPase complex assembly defect
+9449519,DMA3715,V-ATPase complex assembly defect
+9449520,DMA3715,V-ATPase complex assembly defect
+9449521,DMA3715,V-ATPase complex assembly defect
+9449524,DMA3715,V-ATPase complex assembly defect
+9449525,DMA3715,V-ATPase complex assembly defect
+9449526,DMA3715,V-ATPase complex assembly defect
+9449527,DMA3715,V-ATPase complex assembly defect
+9449528,DMA3715,V-ATPase complex assembly defect
+9449531,DMA3715,V-ATPase complex assembly defect
+9449533,DMA3715,V-ATPase complex assembly defect
+9449534,DMA3715,V-ATPase complex assembly defect
+9449535,DMA3715,V-ATPase complex assembly defect
+9449536,DMA3715,V-ATPase complex assembly defect
+9449538,DMA3715,V-ATPase complex assembly defect
+9449539,DMA3715,V-ATPase complex assembly defect
+9449540,DMA3715,V-ATPase complex assembly defect
+9449541,DMA3715,V-ATPase complex assembly defect
+9449542,DMA3715,V-ATPase complex assembly defect
+9449543,DMA3715,V-ATPase complex assembly defect
+9449544,DMA3715,V-ATPase complex assembly defect
+9449545,DMA3715,V-ATPase complex assembly defect
+9449546,DMA3715,V-ATPase complex assembly defect
+9449551,DMA3715,V-ATPase complex assembly defect
+9449554,DMA3715,V-ATPase complex assembly defect
+9449555,DMA3715,V-ATPase complex assembly defect
+9449558,DMA3715,V-ATPase complex assembly defect
+9449559,DMA3715,V-ATPase complex assembly defect
+9449560,DMA3715,V-ATPase complex assembly defect
+9449561,DMA3715,V-ATPase complex assembly defect
+9449566,DMA3715,V-ATPase complex assembly defect
+9449567,DMA3715,V-ATPase complex assembly defect
+9449569,DMA3715,V-ATPase complex assembly defect
+9449571,DMA3715,V-ATPase complex assembly defect
+9449572,DMA3715,V-ATPase complex assembly defect
+9449573,DMA3715,V-ATPase complex assembly defect
+9449574,DMA3715,V-ATPase complex assembly defect
+9449575,DMA3715,V-ATPase complex assembly defect
+9449576,DMA3715,V-ATPase complex assembly defect
+9449577,DMA3715,V-ATPase complex assembly defect
+9449579,DMA3715,V-ATPase complex assembly defect
+9449580,DMA3715,V-ATPase complex assembly defect
+9452257,DMA4182,enlarged
+9452258,DMA4182,enlarged
+9452259,DMA4182,enlarged
+9452260,DMA4182,enlarged
+9452262,DMA4182,enlarged
+9452265,DMA4182,enlarged
+9452266,DMA4182,enlarged
+9452269,DMA4182,enlarged
+9452272,DMA4182,enlarged
+9452276,DMA4182,enlarged
+9452282,DMA4182,enlarged
+9452287,DMA4182,enlarged
+9452290,DMA4182,enlarged
+9452300,DMA4182,enlarged
+9452303,DMA4182,enlarged
+9452309,DMA4182,enlarged
+9452310,DMA4182,enlarged
+9452311,DMA4182,enlarged
+9452312,DMA4182,enlarged
+9452317,DMA4182,enlarged
+9452403,DMA1674,highly fragmented
+9452405,DMA1674,highly fragmented
+9452409,DMA1674,highly fragmented
+9452411,DMA1674,highly fragmented
+9452414,DMA1674,highly fragmented
+9452415,DMA1674,highly fragmented
+9452421,DMA1674,highly fragmented
+9452422,DMA1674,highly fragmented
+9452424,DMA1674,highly fragmented
+9452425,DMA1674,highly fragmented
+9452428,DMA1674,highly fragmented
+9452430,DMA1674,highly fragmented
+9452431,DMA1674,highly fragmented
+9452436,DMA1674,highly fragmented
+9452438,DMA1674,highly fragmented
+9452441,DMA1674,highly fragmented
+9452442,DMA1674,highly fragmented
+9452446,DMA1674,highly fragmented
+9452450,DMA1674,highly fragmented
+9452451,DMA1674,highly fragmented
+9452453,DMA1674,highly fragmented
+9452454,DMA1674,highly fragmented
+9452456,DMA1674,highly fragmented
+9452793,DMA3511,highly fragmented
+9452797,DMA3511,highly fragmented
+9452813,DMA3511,highly fragmented
+9452818,DMA3511,highly fragmented
+9452819,DMA3511,highly fragmented
+9452822,DMA3511,highly fragmented
+9452825,DMA3511,highly fragmented
+9452826,DMA3511,highly fragmented
+9454849,DMA1,negative
+9458646,DMA4477,highly fragmented
+9458653,DMA4477,highly fragmented
+9458654,DMA4477,highly fragmented
+9458658,DMA4477,highly fragmented
+9458659,DMA4477,highly fragmented
+9473519,DMA1,negative
+9473716,DMA1,negative
+9474087,DMA1,negative
+9476023,DMA1,negative
+9478906,DMA1,negative
+9479258,DMA1,negative
+9479711,DMA1,negative
+9479816,DMA1,negative
+9482688,DMA1,negative
+9482762,DMA1,negative
+9483016,DMA3386,class E
+9483022,DMA3386,class E
+9483034,DMA3386,class E
+9483041,DMA3386,class E
+9483049,DMA3386,class E
+9483068,DMA3386,class E
+9483071,DMA3386,class E
+9483077,DMA3386,class E
+9483084,DMA3386,class E
+9501648,DMA883,highly fragmented
+9501651,DMA883,highly fragmented
+9501652,DMA883,highly fragmented
+9501664,DMA883,highly fragmented
+9501678,DMA883,highly fragmented
+9501685,DMA883,highly fragmented
+9501690,DMA883,highly fragmented
+9512612,DMA1,negative
+9514040,DMA1,negative
+9514259,DMA1,negative
+9514778,DMA1,negative
+9515568,DMA1,negative
+9515773,DMA1,negative
+9516518,DMA1,negative
+9519593,DMA1262,multilobed
+9519615,DMA1262,multilobed
+9519640,DMA1262,multilobed
+9521623,DMA1,negative
+9528733,DMA1,negative
+9528862,DMA1,negative
+9530271,DMA3198,multilobed
+9530273,DMA3198,multilobed
+9530330,DMA3198,multilobed
+9530934,DMA4850,class E
+9530938,DMA4850,class E
+9530941,DMA4850,class E
+9530955,DMA4850,class E
+9530971,DMA4850,class E
+9530989,DMA4850,class E
+9530991,DMA4850,class E
+9532283,DMA1,negative
+9533091,DMA1,negative
+9533151,DMA1,negative
+9533750,DMA1,negative
+9534176,DMA1,negative
+9548186,DMA1,negative
+9549622,DMA1262,multilobed
+9549624,DMA1262,multilobed
+9549628,DMA1262,multilobed
+9549637,DMA1262,multilobed
+9549644,DMA1262,multilobed
+9549654,DMA1262,multilobed
+9549662,DMA1262,multilobed
+9549663,DMA1262,multilobed
+9549676,DMA1262,multilobed
+9549725,DMA1262,multilobed
+9551430,DMA1732,highly fragmented
+9551434,DMA1732,highly fragmented
+9551435,DMA1732,highly fragmented
+9551440,DMA1732,highly fragmented
+9551442,DMA1732,highly fragmented
+9551450,DMA1732,highly fragmented
+9551454,DMA1732,highly fragmented
+9551858,DMA3984,enlarged
+9551862,DMA3984,enlarged
+9551863,DMA3984,enlarged
+9551867,DMA3984,enlarged
+9551872,DMA3984,enlarged
+9551883,DMA3984,enlarged
+9551887,DMA3984,enlarged
+9551890,DMA3984,enlarged
+9551933,DMA3984,enlarged
+9551939,DMA3984,enlarged
+9551942,DMA3984,enlarged
+9551944,DMA3984,enlarged
+9551945,DMA3984,enlarged
+9551948,DMA3984,enlarged
+9551949,DMA3984,enlarged
+9551951,DMA3984,enlarged
+9551953,DMA3984,enlarged
+9551958,DMA3984,enlarged
+9551960,DMA3984,enlarged
+9551962,DMA3984,enlarged
+9551966,DMA3984,enlarged
+9553205,DMA3304,highly fragmented
+9553242,DMA3304,highly fragmented
+9553244,DMA3304,highly fragmented
+9553245,DMA3304,highly fragmented
+9553247,DMA3304,multilobed
+9553251,DMA3304,multilobed
+9553277,DMA3304,multilobed
+9553302,DMA3304,highly fragmented
+9553492,DMA4559,highly fragmented
+9553493,DMA4559,highly fragmented
+9553498,DMA4559,highly fragmented
+9553500,DMA4559,highly fragmented
+9553505,DMA4559,highly fragmented
+9553509,DMA4559,highly fragmented
+9553510,DMA4559,highly fragmented
+9553511,DMA4559,highly fragmented
+9553552,DMA4559,highly fragmented
+9553555,DMA4559,highly fragmented
+9553561,DMA4559,highly fragmented
+9553569,DMA4559,highly fragmented
+9553570,DMA4559,highly fragmented
+9553571,DMA4559,highly fragmented
+9553572,DMA4559,highly fragmented
+9553575,DMA4559,highly fragmented
+9553577,DMA4559,highly fragmented
+9553579,DMA4559,highly fragmented
+9553580,DMA4559,highly fragmented
+9553583,DMA4559,highly fragmented
+9553584,DMA4559,highly fragmented
+9553591,DMA4559,highly fragmented
+9553599,DMA4559,highly fragmented
+9553603,DMA4559,highly fragmented
+9553608,DMA4559,highly fragmented
+9553614,DMA4559,highly fragmented
+9553630,DMA4559,highly fragmented
+9553632,DMA4559,highly fragmented
+9553634,DMA4559,highly fragmented
+9553640,DMA4559,highly fragmented
+9553642,DMA4559,highly fragmented
+9553646,DMA4559,highly fragmented
+9553647,DMA4559,highly fragmented
+9553652,DMA4559,highly fragmented
+9553667,DMA4559,highly fragmented
+9553671,DMA4559,highly fragmented
+9554482,DMA1,negative
+9555645,DMA3411,enlarged
+9555646,DMA3411,enlarged
+9555648,DMA3411,enlarged
+9555649,DMA3411,enlarged
+9555651,DMA3411,enlarged
+9555652,DMA3411,enlarged
+9555653,DMA3411,enlarged
+9555655,DMA3411,enlarged
+9555658,DMA3411,enlarged
+9555659,DMA3411,enlarged
+9555660,DMA3411,enlarged
+9555661,DMA3411,enlarged
+9555664,DMA3411,enlarged
+9555666,DMA3411,enlarged
+9555667,DMA3411,enlarged
+9555670,DMA3411,enlarged
+9555674,DMA3411,enlarged
+9555675,DMA3411,enlarged
+9555677,DMA3411,enlarged
+9555682,DMA3411,enlarged
+9555684,DMA3411,enlarged
+9555688,DMA3411,enlarged
+9555689,DMA3411,enlarged
+9555690,DMA3411,enlarged
+9555692,DMA3411,enlarged
+9555693,DMA3411,enlarged
+9555694,DMA3411,enlarged
+9555695,DMA3411,enlarged
+9555698,DMA3411,enlarged
+9555699,DMA3411,enlarged
+9555701,DMA3411,enlarged
+9555704,DMA3411,enlarged
+9555709,DMA3411,enlarged
+9555710,DMA3411,enlarged
+9555712,DMA3411,enlarged
+9561787,DMA1,negative
+9561983,DMA1,negative
+9562666,DMA1,negative
+9569697,DMA1867,V-ATPase complex assembly defect
+9569698,DMA1867,V-ATPase complex assembly defect
+9569699,DMA1867,V-ATPase complex assembly defect
+9569706,DMA1867,V-ATPase complex assembly defect
+9569707,DMA1867,V-ATPase complex assembly defect
+9569714,DMA1867,V-ATPase complex assembly defect
+9569715,DMA1867,V-ATPase complex assembly defect
+9569716,DMA1867,V-ATPase complex assembly defect
+9569717,DMA1867,V-ATPase complex assembly defect
+9569719,DMA1867,V-ATPase complex assembly defect
+9569720,DMA1867,V-ATPase complex assembly defect
+9578729,DMA1,negative
+9579481,DMA1,negative
+9580017,DMA1,negative
+9580174,DMA1,negative
+9580224,DMA1,negative
+9581092,DMA1,negative
+9582249,DMA1,negative
+9582469,DMA1,negative
+9582876,DMA1,negative
+9584630,DMA520,multilobed
+9584641,DMA520,multilobed
+9584650,DMA520,multilobed
+9584660,DMA520,multilobed
+9584669,DMA520,multilobed
+9584683,DMA520,multilobed
+9584685,DMA520,multilobed
+9584739,DMA1,negative
+9584848,DMA1,negative
+9585743,DMA3215,class E
+9585750,DMA3215,class E
+9585751,DMA3215,class E
+9585752,DMA3215,class E
+9585753,DMA3215,multilobed
+9585763,DMA3215,multilobed
+9585764,DMA3215,multilobed
+9585769,DMA3215,class E
+9585781,DMA3215,class E
+9585790,DMA3215,class E
+9585797,DMA3215,multilobed
+9585806,DMA3215,class E
+9585809,DMA3215,multilobed
+9586622,DMA883,highly fragmented
+9586626,DMA883,highly fragmented
+9586639,DMA883,highly fragmented
+9586642,DMA883,highly fragmented
+9586645,DMA883,highly fragmented
+9586647,DMA883,highly fragmented
+9586652,DMA883,highly fragmented
+9586654,DMA883,highly fragmented
+9586655,DMA883,highly fragmented
+9586656,DMA883,highly fragmented
+9586665,DMA883,highly fragmented
+9586671,DMA883,highly fragmented
+9586677,DMA883,highly fragmented
+9586680,DMA883,highly fragmented
+9586681,DMA883,highly fragmented
+9586683,DMA883,highly fragmented
+9586684,DMA883,highly fragmented
+9586706,DMA883,highly fragmented
+9586708,DMA883,highly fragmented
+9586714,DMA883,highly fragmented
+9586721,DMA883,highly fragmented
+9586722,DMA883,highly fragmented
+9587582,DMA1,negative
+9589657,DMA1,negative
+9593929,DMA1,negative
+9595755,DMA1,negative
+9597107,DMA1,negative
+9597949,DMA1,negative
+9598378,DMA1,negative
+9598634,DMA1,negative
+9599170,DMA1,multilobed
+9600100,DMA883,highly fragmented
+9600102,DMA883,highly fragmented
+9600103,DMA883,highly fragmented
+9600105,DMA883,highly fragmented
+9600109,DMA883,highly fragmented
+9600111,DMA883,highly fragmented
+9600116,DMA883,highly fragmented
+9600118,DMA883,highly fragmented
+9600120,DMA883,highly fragmented
+9600124,DMA883,highly fragmented
+9600125,DMA883,highly fragmented
+9600128,DMA883,highly fragmented
+9600130,DMA883,highly fragmented
+9600131,DMA883,highly fragmented
+9600132,DMA883,highly fragmented
+9602372,DMA4274,enlarged
+9606953,DMA1,negative
+9613749,DMA1,negative
+9617034,DMA1,negative
