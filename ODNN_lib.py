@@ -268,7 +268,7 @@ def save_data(df, features, identifiers, output):
             output:         Output filename
         """
 
-    # Saves scaled data for all plates
+    # Save scaled data for all plates
     data_scaled_columns = ['cell_id', 'plate', 'row', 'column'] + identifiers + features
     data_scaled_output = df['cell_id'].reshape(-1, 1)
     for i in (['plate', 'row', 'column'] + identifiers):

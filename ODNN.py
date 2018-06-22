@@ -1,5 +1,3 @@
-# python ODNN.py -i input/screen1_plates.txt -f input/screen1_feature_set.txt -m input/screens_mapping_sheet.csv -c input/screen1_controls.csv -u strain
-
 # Copyright (c) 2018, Mojca Mattiazzi Usaj & Nil Sahin
 # All rights reserved.
 #
