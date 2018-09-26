@@ -1,7 +1,7 @@
 # ODNN
 This repository contains the code and example datasets for the paper:  
 "Endocytosis Screening"  
-Mattiazzi Usaj, M., Sahin, N., **more_authors**, Morris, Q., Boone, C., & Andrews, B.J.  
+Mattiazzi Usaj, M., Sahin, N., **...**, Morris, Q., Boone, C., & Andrews, B.J.  
 **Journal**  
 <http://paper_journal_link.com>
 
@@ -29,7 +29,7 @@ You can use the following command to install all the required packages:
     pip install -r requirements.txt
 
 
-## Requiremenets
+## Requirements
 * This analysis is made on an array format. Plate-Row-Column information should be input.
 * At least one well identifier is required. This can be strain or condition information.
 * Every cell should have a unique ID number (cell_ID). This can be generated at any software to process sheets.
