@@ -1,55 +1,28 @@
-# Copyright (c) 2018, Mojca Mattiazzi Usaj & Nil Sahin
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without modification,
-# are permitted provided that the following conditions are met:
-#
-# 1. Redistributions of source code must retain the above copyright notice, this
-# list of conditions and the following disclaimer.
-#
-# 2. Redistributions in binary form must reproduce the above copyright notice,
-# this list of conditions and the following disclaimer in the documentation and/or
-# other materials provided with the distribution.
-#
-# 3. Neither the name of the copyright holder nor the names of its contributors
-# may be used to endorse or promote products derived from this software without
-# specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-# (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-# ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-# Required packages
-
 import matplotlib
 matplotlib.use('Agg')
-import sys
+
 import os
-import pandas as pd
+import sys
 import itertools
-import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix, accuracy_score
-from scipy import stats
-from keras.models import Sequential
-from keras.layers import Dense
+import numpy as np
+import pandas as pd
+
 from keras import optimizers, losses
+from keras.layers import Dense
+from keras.models import Sequential
+from scipy import stats
+from sklearn.metrics import confusion_matrix, accuracy_score
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 def read_input_files(plate_list, input_data, features, map_file, location):
     """ Read input files for plates, CP features, mapping sheet.
-        Return in lists and dataframe.
+        Return in lists and data frame.
 
         Args:
-            filename:       File of plate list to be analyzed
+            plate_list:     File of plate list to be analyzed
             input_data:     Input data, scaled and filled with identifiers
             features:       File of CP feature list to be used in the analysis
             map_file:       Map gene names from plate-row-column info.
@@ -58,7 +31,7 @@ def read_input_files(plate_list, input_data, features, map_file, location):
         Return:
             plates:         Plates to be analyzed
             feature_set:    Features to be analyzed
-            mapping_sheet:  Dataframe to map strain/condition information from arrayed plates
+            mapping_sheet:  Data frame to map strain/condition information from arrayed plates
             map_features:   Strain/condition identifier columns
         """
 
@@ -92,7 +65,7 @@ def read_input_files(plate_list, input_data, features, map_file, location):
 
 
 def lower_column_names(df):
-    """ Return pandas dataframe with lower column names.
+    """ Return pandas data frame with lower column names.
 
         Args:
             df: Pandas DataFrame object
@@ -101,9 +74,7 @@ def lower_column_names(df):
             df: Pandas DataFrame object with lowercase column names
         """
 
-    column_names = df.columns.values.tolist()
-    column_names = [c.lower() for c in column_names]
-    df.columns = column_names
+    df.columns = [c.lower() for c in df.columns]
 
     return df
 
@@ -191,10 +162,10 @@ def extract_plate_information(df, filename, features, mapping_sheet, neg, identi
     """ Read a CP output for a plate and extract required information.
 
         Args:
-            df:             CP output of a plate as a dataframe
+            df:             CP output of a plate as a data frame
             filename:       Filename of the plate
             features:       Features to be analyzed
-            mapping_sheet:  Dataframe to map gene and allele names
+            mapping_sheet:  Data frame to map gene and allele names
             neg:            Negative controls for scaling
             identifier:     Unique identifier for the strain/condition
             identifiers:    Strain/condition identifier columns
@@ -215,9 +186,7 @@ def extract_plate_information(df, filename, features, mapping_sheet, neg, identi
     ms_plate = mapping_sheet[mapping_sheet.plate == plate_name]
 
     # Initialize strain identifier lists
-    identifier_lists = []
-    for i in identifiers:
-        identifier_lists.append([])
+    identifier_lists = [[] for _ in range(len(identifiers))]
 
     # Add strain identifier information for each well
     for i in range(len(plate_df['column'])):
@@ -252,7 +221,7 @@ def standard_scaler_fit_transform(data_fit, data_transform=np.array([])):
     mean = np.nanmean(data_fit, axis=0)
     variance = np.nanstd(data_fit, axis=0)
 
-    if len(data_transform)>0:
+    if len(data_transform) > 0:
         return (data_transform - mean) / variance
     else:
         return (data_fit - mean) / variance
@@ -393,13 +362,13 @@ def prepare_phenotype_data(df, identifier, identifiers, features, pos_controls_f
         phenotype_data = df['cell_id'][df['mask_pc'] == 1].reshape(-1, 1)
         for i in (identifiers + ['plate', 'row', 'column']):
             phenotype_data = np.concatenate((phenotype_data, df[i][df['mask_pc'] == 1].reshape(-1, 1)), axis=1)
-        phenotype_data = np.concatenate((phenotype_data, np.array(phenotypes).reshape(-1,1),
+        phenotype_data = np.concatenate((phenotype_data, np.array(phenotypes).reshape(-1, 1),
                                          df['data_scaled'][df['mask_pc'] == 1]), axis=1)
         phenotype_df = pd.DataFrame(data=phenotype_data, columns=phenotype_data_columns)
 
     # Save positive control data
     phenotype_df = phenotype_df.fillna('').reset_index(drop=True)
-    phenotype_df.to_csv(path_or_buf = output['PhenotypeData'], index=False)
+    phenotype_df.to_csv(path_or_buf=output['PhenotypeData'], index=False)
 
     # Add None as a phenotype class
     phenotype_classes = np.append(phenotype_classes, ['none'])
@@ -431,30 +400,30 @@ def split_labeled_set(pheno_df, features, k):
     pheno_df[features] = pheno_df[features].fillna(0)
 
     # Separate labeled set data and labels
-    X = np.asarray(pheno_df[features])
+    x = np.asarray(pheno_df[features])
     f = pd.factorize(pheno_df['phenotype'])
     y = np.zeros((f[0].shape[0], len(set(f[0]))))
     y[np.arange(f[0].shape[0]), f[0].T] = 1
     phenotypes = f[1]
 
     # Split training and test set for k-fold cross-validation
-    X_train = []
-    X_test = []
+    x_train = []
+    x_test = []
     y_train = []
     y_test = []
-    divide = X.shape[0] // k
+    divide = x.shape[0] // k
     for cv in range(k):
         start = cv * divide
         end = (cv + 1) * divide
-        if cv == (k-1):
-            end = X.shape[0]
-        mask_train = np.asarray([False if x in list(range(start, end)) else True for x in list(range(0, X.shape[0]))])
-        X_train.append(X[mask_train == 1].copy())
-        X_test.append(X[mask_train == 0].copy())
+        if cv == (k - 1):
+            end = x.shape[0]
+        mask_train = np.asarray([False if x in list(range(start, end)) else True for x in list(range(0, x.shape[0]))])
+        x_train.append(x[mask_train == 1].copy())
+        x_test.append(x[mask_train == 0].copy())
         y_train.append(y[mask_train == 1].copy())
         y_test.append(y[mask_train == 0].copy())
 
-    return pheno_df, X, y, X_train, X_test, y_train, y_test, phenotypes
+    return pheno_df, x, y, x_train, x_test, y_train, y_test, phenotypes
 
 
 def make_predictions(df, param, pheno_df, threshold, features, output):
@@ -477,7 +446,7 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
 
     # Split training and test set for cross-validation
     k = param['k_fold_cv']
-    pheno_df, X, y, X_train, X_test, y_train, y_test, phenotypes = split_labeled_set(pheno_df, features, k)
+    pheno_df, x, y, x_train, x_test, y_train, y_test, phenotypes = split_labeled_set(pheno_df, features, k)
 
     # Initialize arrays for NN runs
     identifier_index = len(pheno_df.columns.values) - len(features)
@@ -486,32 +455,32 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
     sum_prob_test = np.zeros([y.shape[0], y.shape[1]])
 
     # Train NN with cross validation for evaluating performance
-    divide = X.shape[0] // k
-    runn = 1
+    divide = x.shape[0] // k
+    run = 1
     for cv in range(k):
         start = cv * divide
         end = (cv + 1) * divide
         if cv == (k - 1):
-            end = X.shape[0]
+            end = x.shape[0]
         # Train and make predictions for each fold for a number of runs
         for n in range(param['runs']):
             # Train NN with training set
-            model = neural_network(X_train[cv], y_train[cv], param, phenotypes, X_test[cv], y_test[cv])
+            model = neural_network(x_train[cv], y_train[cv], param, phenotypes, x_test[cv], y_test[cv])
             # Predictions on test data
-            probabilities_test = model.predict(X_test[cv], batch_size=param['batch_size'])
+            probabilities_test = model.predict(x_test[cv], batch_size=param['batch_size'])
             sum_prob_test[start:end] += probabilities_test
 
             # Predictions on labeled data
-            probabilities_labeled = model.predict(X, batch_size=param['batch_size'])
+            probabilities_labeled = model.predict(x, batch_size=param['batch_size'])
             predictions_labeled = np.argmax(probabilities_labeled, axis=1)
             sum_prob_labeled += probabilities_labeled
-            df_output['Run-%d' % runn] = [phenotypes[i] for i in predictions_labeled]
-            runn += 1
+            df_output['Run-%d' % run] = [phenotypes[i] for i in predictions_labeled]
+            run += 1
 
     # Train NN with the complete labeled set
     sum_prob_all = np.zeros([df['data_scaled'].shape[0], y.shape[1]])
     for n in range(param['runs']):
-        model = neural_network(X, y, param, phenotypes)
+        model = neural_network(x, y, param, phenotypes)
         # Predictions on all data
         probabilities_all = model.predict(df['data_scaled'], batch_size=param['batch_size'])
         sum_prob_all += probabilities_all
@@ -526,42 +495,42 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
     plot_confusion_matrix(y_true, y_pred, phenotypes, output['Confusion'])
 
     # Make predictions for the complete data
-    y_ALL = sum_prob_all/param['runs']
-    y_prob_ALL = (y_ALL >= threshold).astype('int')
-    y_pred_ALL = np.argmax(y_ALL, axis=1)
-    phenotype_ALL = []
-    for i in range(len(y_pred_ALL)):
-        pred = phenotypes[y_pred_ALL[i]]
+    y_all = sum_prob_all / param['runs']
+    y_prob_all = (y_all >= threshold).astype('int')
+    y_pred_all = np.argmax(y_all, axis=1)
+    phenotype_all = []
+    for i in range(len(y_pred_all)):
+        pred = phenotypes[y_pred_all[i]]
         # If none of the probabilities pass the threshold, predict as None phenotype
-        if sum(y_prob_ALL[i]) == 0:
+        if sum(y_prob_all[i]) == 0:
             pred = 'none'
-        phenotype_ALL.append(pred)
+        phenotype_all.append(pred)
 
     # Save phenotype predictions for cell_IDs provided
-    cellID = pd.DataFrame(columns=['CellID', 'Prediction'] + list(phenotypes))
-    cellID['CellID'] = df['cell_id']
-    cellID['Prediction'] = np.array(phenotype_ALL)
+    cell_id = pd.DataFrame(columns=['CellID', 'Prediction'] + list(phenotypes))
+    cell_id['CellID'] = df['cell_id']
+    cell_id['Prediction'] = np.array(phenotype_all)
     for i in range(len(phenotypes)):
-        cellID[phenotypes[i]] = y_ALL[:, i]
-    cellID = cellID.sort_values('CellID', ascending=True).reset_index(drop=True)
-    cellID.to_csv(path_or_buf=output['PhenotypeCellIDs'], index=False)
+        cell_id[phenotypes[i]] = y_all[:, i]
+    cell_id = cell_id.sort_values('CellID', ascending=True).reset_index(drop=True)
+    cell_id.to_csv(path_or_buf=output['PhenotypeCellIDs'], index=False)
 
     # Save predictions and inlier state in the combined dictionary
-    df['phenotype'] = np.array(phenotype_ALL)
+    df['phenotype'] = np.array(phenotype_all)
     df['is_inlier'] = np.array([p == 'negative' for p in df['phenotype']])
 
     return df
 
 
-def neural_network(X_train, y_train, param, phenotypes, X_test=np.array([]), y_test=np.array([])):
+def neural_network(x_train, y_train, param, phenotypes, x_test=np.array([]), y_test=np.array([])):
     """ Train NN and return the model.
 
         Args:
-            X_train:        Training set input data
+            x_train:        Training set input data
             y_train:        Training set labels
             param:          Neural network hyper-parameters
             phenotypes:     List of phenotype classes
-            X_test:         Test set input data
+            x_test:         Test set input data
             y_test:         Test set labels
 
         Return:
@@ -569,7 +538,7 @@ def neural_network(X_train, y_train, param, phenotypes, X_test=np.array([]), y_t
         """
 
     # NN layer units
-    input_units = X_train.shape[1]
+    input_units = x_train.shape[1]
     output_units = len(phenotypes)
 
     # NN architecture
@@ -588,15 +557,15 @@ def neural_network(X_train, y_train, param, phenotypes, X_test=np.array([]), y_t
     model.compile(loss=losses.categorical_crossentropy,
                   optimizer=sgd,
                   metrics=['accuracy'])
-    model.fit(X_train, y_train,
+    model.fit(x_train, y_train,
               epochs=param['num_epochs'],
               batch_size=param['batch_size'],
               validation_split=param['percent_to_valid'],
               verbose=1)
 
     # Evaluate model
-    if len(X_test):
-        score = model.evaluate(X_test, y_test, batch_size=param['batch_size'])
+    if len(x_test):
+        score = model.evaluate(x_test, y_test, batch_size=param['batch_size'])
         print('Test %s: %.2f' % (model.metrics_names[0], score[0]))
         print('Test %s: %.2f%%\n' % (model.metrics_names[1], score[1] * 100))
     else:
@@ -611,7 +580,7 @@ def cell_accuracy(df, sum_prob, phenotypes, n, output):
         Save in an output file.
 
         Args:
-            df:         Labeled set in a dataframe
+            df:         Labeled set in a data frame
             sum_prob:   Cumulative probability for each sample and label
             phenotypes: List of phenotype classes
             n:          Independent neural network training runs
@@ -659,7 +628,7 @@ def plot_confusion_matrix(y_true, y_pred, classes, output):
     cm = np.around(cm.astype('float') / cm.sum(axis=1)[:, np.newaxis], decimals=2)
 
     # Plot confusion matrix
-    plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
+    plt.imshow(cm, interpolation='nearest', cmap='Blues')
     plt.title('Acc %.2f%%' % (acc * 100))
     tick_marks = np.arange(len(classes))
     plt.xticks(tick_marks, classes, rotation=45, ha='right')
@@ -682,7 +651,7 @@ def plot_confusion_matrix(y_true, y_pred, classes, output):
 
 def pvalue_parameters(df):
     """ Return numbers of negative control cells and outlier negative control cells.
-        These numbers are used to calculate hypergeometric p-value.
+        These numbers are used to calculate hyper-geometric p-value.
 
         Args:
             df:                 Dictionary of combined data
@@ -713,7 +682,7 @@ def prepare_output_file_well(df, identifiers, phenotypes, output):
 
     print('\nPreparing the output values...')
 
-    # Save required data from dictionary to a pandas dataframe
+    # Save required data from dictionary to a pandas data frame
     final_df = pd.DataFrame()
     for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
         final_df[i] = df[i]
@@ -727,7 +696,7 @@ def prepare_output_file_well(df, identifiers, phenotypes, output):
     final_df_output = pd.DataFrame(columns=output_columns)
     this_row = 0
 
-    # Extract negative control cell numbers for hypergeometric p-value calculation
+    # Extract negative control cell numbers for hyper-geometric p-value calculation
     neg_cells, neg_cells_outliers = pvalue_parameters(df)
 
     # Analyze each plate separately
@@ -746,7 +715,7 @@ def prepare_output_file_well(df, identifiers, phenotypes, output):
             pene = float(num_outliers) / num_cells * 100
             pval = 1 - stats.hypergeom.cdf(num_outliers, neg_cells, neg_cells_outliers, num_cells)
 
-            # Enter well results into a final dataframe row
+            # Enter well results into a final data frame row
             line = []
             for i in (identifiers + ['plate', 'row', 'column']):
                 line.append(df_well[i].unique()[0])
@@ -755,7 +724,7 @@ def prepare_output_file_well(df, identifiers, phenotypes, output):
             line.append(num_cells)
             for i in phenotypes:
                 line.append(float(len(df_well[df_well.phenotype == i])) / num_cells)
-            final_df_output.loc[this_row,] = line
+            final_df_output.loc[this_row, ] = line
             this_row += 1
 
     # Save results
@@ -779,7 +748,7 @@ def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
             final_df_output:    Results for each strain/condition
         """
 
-    # Save required data from dictionary to a pandas dataframe
+    # Save required data from dictionary to a pandas data frame
     final_df = pd.DataFrame()
     for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
         final_df[i] = df[i]
@@ -793,7 +762,7 @@ def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
     final_df_output = pd.DataFrame(columns=output_columns)
     this_row = 0
 
-    # Extract negative control cell numbers for hypergeometric p-value calculation
+    # Extract negative control cell numbers for hyper-geometric p-value calculation
     neg_cells, neg_cells_outliers = pvalue_parameters(df)
 
     # Analyze each strain/condition separately
@@ -814,7 +783,7 @@ def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
             pene = float(num_outliers) / num_cells * 100
             pval = 1 - stats.hypergeom.cdf(num_outliers, neg_cells, neg_cells_outliers, num_cells)
 
-            # Enter strain/condition results into a final dataframe row
+            # Enter strain/condition results into a final data frame row
             line = []
             for i in identifiers:
                 line.append(df_strain[i].unique()[0])
@@ -824,7 +793,7 @@ def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
             line.append(num_wells)
             for i in phenotypes:
                 line.append(float(len(df_strain[df_strain.phenotype == i])) / num_cells)
-            final_df_output.loc[this_row,] = line
+            final_df_output.loc[this_row, ] = line
             this_row += 1
 
     # Save results
@@ -840,11 +809,11 @@ def evaluate_performance(controls_file, df, df_strain, neg, identifier, output):
 
         Args:
             controls_file:  Controls file with positive and negative controls
-            df:             Result dataframe for wells
-            df_strain:      Result dataframe for strain/condition
+            df:             Result data frame for wells
+            df_strain:      Result data frame for strain/condition
             neg:            Negative controls for scaling
             identifier:     Unique identifier for the strain/condition
-            output:         List of output filenames
+            output:         List of output file names
         """
 
     print('\nEvaluating performances...')
@@ -853,31 +822,31 @@ def evaluate_performance(controls_file, df, df_strain, neg, identifier, output):
     pos_controls = pd.read_csv(controls_file)
     pos_controls = lower_column_names(pos_controls)
     pos_control_strains = pos_controls[pos_controls['phenotype'] != 'negative'][identifier].unique().tolist()
-    PC = []
+    pc = []
     for strain in pos_control_strains:
         if strain in df_strain[identifier].tolist():
-            PC.append(df_strain[df_strain[identifier] == strain]['penetrance'].values[0])
-    PC = np.array(PC)
+            pc.append(df_strain[df_strain[identifier] == strain]['penetrance'].values[0])
+    pc = np.array(pc)
 
     # Penetrance values of all negative control wells
-    NC = np.array([])
+    nc = np.array([])
     for strain in neg:
-        NC = np.append(NC, np.asarray(df[df[identifier] == strain]['penetrance'].values))
+        nc = np.append(nc, np.asarray(df[df[identifier] == strain]['penetrance'].values))
 
     # Evaluate TPR-FPR-Precision values for ROC and PR curves
-    evaluate_performance_ROC_PR(NC, PC, output)
+    evaluate_performance_roc_pr(nc, pc, output)
 
     # Predict penetrance bins if available
     evaluate_performance_penetrance_bins(controls_file, df_strain, identifier, output)
 
 
-def evaluate_performance_ROC_PR(NC, PC, output):
+def evaluate_performance_roc_pr(nc, pc, output):
     """ Calculate TPR-FPR-Precision values and save in an output file.
         Threshold changes from 0 to 100th percentile of negative control penetrance values.
 
         Args:
-            NC:       Penetrance values of negative controls
-            PC:       Penetrance values of positive controls
+            nc:       Penetrance values of negative controls
+            pc:       Penetrance values of positive controls
             output:   Output filename
         """
 
@@ -886,20 +855,20 @@ def evaluate_performance_ROC_PR(NC, PC, output):
     penetrance_cutoff = []
     for i in range(101):
         # Penetrance at this percentile
-        penetrance_threshold = stats.scoreatpercentile(NC, i)
+        penetrance_threshold = stats.scoreatpercentile(nc, i)
         penetrance_cutoff.append(penetrance_threshold)
         # Count True and False Positives with each threshold
-        TP = len(PC[PC >= penetrance_threshold])
-        FP = len(NC[NC >= penetrance_threshold])
+        tp = len(pc[pc >= penetrance_threshold])
+        fp = len(nc[nc >= penetrance_threshold])
         # True positive rate (Recall) - TP / TP + FN
-        performance['tpr'].append(TP / float(len(PC)))
+        performance['tpr'].append(tp / float(len(pc)))
         # False positive rate - FP / FP + TN
-        performance['fpr'].append(FP / float(len(NC)))
+        performance['fpr'].append(fp / float(len(nc)))
         # Precision - TP / TP + FP
-        if FP == 0:
+        if fp == 0:
             performance['prec'].append(1)
         else:
-            performance['prec'].append(TP / float(TP + FP))
+            performance['prec'].append(tp / float(tp + fp))
 
     # Save TPR-FPR-Precision values
     roc_pr = pd.DataFrame({'Neg_Percentile': np.asarray(range(101)),
@@ -930,15 +899,15 @@ def evaluate_performance_penetrance_bins(controls_file, df, identifier, output):
     bin_df = pd.read_csv(controls_file)
     bin_df = lower_column_names(bin_df)
 
-    if ('bin' in bin_df.columns.values):
+    if 'bin' in bin_df.columns.values:
         # Remove strains not screened
-        mask = np.array([True if (x in df[identifier].tolist()) else False for x in bin_df[identifier]])
-        bin_df = bin_df[mask == True]
+        mask = np.array([1 if (x in df[identifier].tolist()) else False for x in bin_df[identifier]])
+        bin_df = bin_df[mask == 1]
         bin_df = bin_df.reset_index(drop=True)
 
-        # Initialize output dataframe for penetrance bins
-        bin_df_out = pd.DataFrame(columns=bin_df.columns.values.tolist() +
-                                          ['penetrance', 'predicted_bin', 'p_value', 'num_cells', 'num_wells'])
+        # Initialize output data frame for penetrance bins
+        bin_df_out = pd.DataFrame(columns=bin_df.columns.values.tolist() + ['penetrance', 'predicted_bin', 'p_value',
+                                                                            'num_cells', 'num_wells'])
         this_row = 0
         for i in range(len(bin_df)):
             # Extract strain/condition information and calculated penetrance (1 - negative%)
@@ -964,7 +933,7 @@ def evaluate_performance_penetrance_bins(controls_file, df, identifier, output):
             line.append(df[df[identifier] == strain]['p_value'].values[0])
             line.append(df[df[identifier] == strain]['num_cells'].values[0])
             line.append(df[df[identifier] == strain]['num_wells'].values[0])
-            bin_df_out.loc[this_row,] = line
+            bin_df_out.loc[this_row, ] = line
             this_row += 1
 
         # Save results
@@ -974,4 +943,3 @@ def evaluate_performance_penetrance_bins(controls_file, df, identifier, output):
         print('\nNo penetrance bins for this screen!')
 
     print('\n\n')
-
