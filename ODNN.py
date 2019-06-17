@@ -40,13 +40,13 @@ param = {'hidden_units': [54, 18],
          'percent_to_test': 0.2,
          'percent_to_valid': 0.2,
          'batch_size': 100,
-         'k_fold_cv': 3,
+         'k_fold_cv': 5,
          'learning_rate': 0.01,
          'decay': 1e-6,
          'momentum': 0.9,
          'nesterov': True,
          'num_epochs': 50,
-         'runs': 2}
+         'runs': 10}
 
 # Output files
 output_folder = 'ODNN_results'
