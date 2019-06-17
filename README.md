@@ -113,13 +113,13 @@ Please change these parameters in the code _ODNN.py_.
              'percent_to_test': 0.2,
              'percent_to_valid' : 0.2,
              'batch_size': 100,
-             'k_fold_cv': 3,
+             'k_fold_cv': 5,
              'learning_rate' : 0.01,
              'decay' : 1e-6,
              'momentum' : 0.9,
              'nesterov' : True,
              'num_epochs' : 50,
-             'runs': 2}
+             'runs': 10}
              
 **hidden_units**: Number of hidden units on two hidden layers in a list.
 The neural_network() function needs to be changed if more hidden layers are needed. _[int, int]_
