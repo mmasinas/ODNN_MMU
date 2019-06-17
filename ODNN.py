@@ -52,6 +52,7 @@ param = {'hidden_units': [54, 18],
 output_folder = 'ODNN_results'
 if not os.path.isdir(output_folder):
     os.system('mkdir %s' % output_folder)
+
 output = {'DataScaled':             '%s/Data_scaled.csv' % output_folder,
           'PhenotypeCellIDs':       '%s/Single_cell_phenotype_predictions.csv' % output_folder,
           'PhenotypeData':          '%s/Positive_controls_data.csv' % output_folder,
