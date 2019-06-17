@@ -1,19 +1,19 @@
 # ODNN
 This repository contains the code and example datasets for the paper:  
-"Endocytosis Screening"  
-Mattiazzi Usaj, M., Sahin, N., **...**, Morris, Q., Boone, C., & Andrews, B.J.  
-**Journal**  
-<http://paper_journal_link.com>
-
+"Exploring endocytic compartment morphology with systematic genetics and single cell image analysis"
+Mojca Mattiazzi Usaj, Nil Sahin, Helena Friesen, Carles Pons, Matej Usaj, Myra Paz Masinas,
+Ermira Shuteriqi, Aleksei Shkurin, Patrick Aloy, Quaid Morris, Charles Boone, and Brenda J. Andrews
 
 #### Mutant Phenotype Classification and Penetrance Calculation
 This script learns and predicts mutant phenotypes from genetic or chemical perturbation screens.
 _CellProfiler*_ is used for extracting features but any other software or custom features can be used.
 The plates are normalized with respect to normal (wild-type, WT) cells each plate.
 A fully neural network with 2 hidden layers is trained and used for single cell phenotype classification.
-The predictions are combined into well and strain for phenotype percentages and penetrance as percent cells with combined mutant phenotypes.
+The predictions are combined into well and strain for phenotype percentages
+and penetrance as percent cells with combined mutant phenotypes.
 
-*Carpenter AE, et al. CellProfiler: image analysis software for identifying and quantifying cell phenotypes. _Genome Biology_ 7:R100. PMID: 17076895 (2006).
+*Carpenter AE, et al. CellProfiler: image analysis software for identifying and quantifying cell phenotypes.
+_Genome Biology_ 7:R100. PMID: 17076895 (2006).
 
 
 ## Packages
