@@ -162,6 +162,8 @@ P-value is also calculated under the null negative distribution.
 **Data_scaled.csv**: For each cell and feature, the features are scaled with respect to negative cells for zero mean and unit variance. 
 The scaled features and single cell strain and location identifiers are saved in this file.  
 
+**Training_performance**: For training with cross-validation and on all the training set, the cross-entropy and accuracy of training and validation sets are plotted in this file.
+
 **Single_cell_phenotype_predictions.csv**: Phenotype predictions for single cells in the complete screen. 
 The average probability for each phenotype is displayed. If the maximum probability is less than the threshold, the prediction will be _none_.  
 
