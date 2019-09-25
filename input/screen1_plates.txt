@@ -1,3 +1,3 @@
-/home/morphology/mpg3/Nil/EndocytosisScreening/Lib/GitHub/input/screen1/plate3_2011-11-19.csv
-/home/morphology/mpg3/Nil/EndocytosisScreening/Lib/GitHub/input/screen1/plate4_2011-11-29.csv
+input/screen1/plate3_2011-11-19.csv
+input/screen1/plate4_2011-11-29.csv
 

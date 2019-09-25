@@ -865,9 +865,7 @@ def evaluate_performance_roc_pr(nc, pc, output):
         # False positive rate - FP / FP + TN
         performance['fpr'].append(fp / float(len(nc)))
         # Precision - TP / TP + FP
-        if fp == 0:
-            performance['prec'].append(1)
-        else:
+        if fp:
             performance['prec'].append(tp / float(tp + fp))
 
     # Save TPR-FPR-Precision values

@@ -20,15 +20,15 @@ _Genome Biology_ 7:R100. PMID: 17076895 (2006).
 
 ## Packages
 
-Python 2.7+: http://www.python.org/getit/
+Python 3+: http://www.python.org/getit/
    
-Tensorflow v1.0+: https://www.tensorflow.org/install
+Tensorflow 1.13+: https://www.tensorflow.org/install
    
-Keras v2.0+: https://keras.io/#installation
+Keras 2.2+: https://keras.io/#installation
 
 You can use the following command to install all the required packages:
 
-    pip install -r requirements.txt
+    conda create --name <env> --file requirements.txt python=3.6.2 anaconda
 
 
 ## Requirements
