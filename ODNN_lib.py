@@ -445,8 +445,8 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
     print('\nMaking predictions...')
 
     # Split training and test set for cross-validation
-    k = param['k_fold_cv']
-    pheno_df, x, y, x_train, x_test, y_train, y_test, phenotypes = split_labeled_set(pheno_df, features, k)
+    pheno_df, x, y, x_train, x_test, y_train, y_test, phenotypes = split_labeled_set(pheno_df, features,
+                                                                                     param['k_fold_cv'])
 
     # Initialize arrays for NN runs
     identifier_index = len(pheno_df.columns.values) - len(features)
@@ -455,17 +455,20 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
     sum_prob_test = np.zeros([y.shape[0], y.shape[1]])
 
     # Train NN with cross validation for evaluating performance
-    divide = x.shape[0] // k
+    performance = pd.DataFrame()
+    divide = x.shape[0] // param['k_fold_cv']
     run = 1
-    for cv in range(k):
+    for cv in range(param['k_fold_cv']):
         start = cv * divide
         end = (cv + 1) * divide
-        if cv == (k - 1):
+        if cv == (param['k_fold_cv'] - 1):
             end = x.shape[0]
         # Train and make predictions for each fold for a number of runs
         for n in range(param['runs']):
+            runn = n + cv * param['runs']
             # Train NN with training set
-            model = neural_network(x_train[cv], y_train[cv], param, phenotypes, x_test[cv], y_test[cv])
+            model, performance = neural_network(x_train[cv], y_train[cv], param, phenotypes, performance, runn,
+                                                x_test[cv], y_test[cv])
             # Predictions on test data
             probabilities_test = model.predict(x_test[cv], batch_size=param['batch_size'])
             sum_prob_test[start:end] += probabilities_test
@@ -477,17 +480,22 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
             df_output['Run-%d' % run] = [phenotypes[i] for i in predictions_labeled]
             run += 1
 
+    # Save training performance of cross-validation
+    num_runs = param['k_fold_cv'] * param['runs']
+    plot_training_performance(performance, output['TrainingCV'], num_runs)
+
     # Train NN with the complete labeled set
+    performance = pd.DataFrame()
     sum_prob_all = np.zeros([df['data_scaled'].shape[0], y.shape[1]])
     for n in range(param['runs']):
-        model = neural_network(x, y, param, phenotypes)
+        model, performance = neural_network(x, y, param, phenotypes, performance, n)
         # Predictions on all data
         probabilities_all = model.predict(df['data_scaled'], batch_size=param['batch_size'])
         sum_prob_all += probabilities_all
+    plot_training_performance(performance, output['Training'], param['runs'])
 
     # Labeled set single cell accuracies
-    cv_runs = k * param['runs']
-    cell_accuracy(df_output, sum_prob_labeled, phenotypes, cv_runs, output)
+    cell_accuracy(df_output, sum_prob_labeled, phenotypes, num_runs, output)
 
     # Test-set predictions
     y_pred = np.argmax(sum_prob_test, axis=1)
@@ -522,7 +530,7 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
     return df
 
 
-def neural_network(x_train, y_train, param, phenotypes, x_test=np.array([]), y_test=np.array([])):
+def neural_network(x_train, y_train, param, phenotypes, performance, n, x_test=np.array([]), y_test=np.array([])):
     """ Train NN and return the model.
 
         Args:
@@ -530,6 +538,8 @@ def neural_network(x_train, y_train, param, phenotypes, x_test=np.array([]), y_t
             y_train:        Training set labels
             param:          Neural network hyper-parameters
             phenotypes:     List of phenotype classes
+            performance:    Cross-entropy and accuracy at each training
+            n:              The specific run out of the total random initializations
             x_test:         Test set input data
             y_test:         Test set labels
 
@@ -557,13 +567,18 @@ def neural_network(x_train, y_train, param, phenotypes, x_test=np.array([]), y_t
     model.compile(loss=losses.categorical_crossentropy,
                   optimizer=sgd,
                   metrics=['accuracy'])
-    model.fit(x_train, y_train,
-              epochs=param['num_epochs'],
-              batch_size=param['batch_size'],
-              validation_split=param['percent_to_valid'],
-              verbose=1)
+    hist = model.fit(x_train, y_train,
+                     epochs=param['num_epochs'],
+                     batch_size=param['batch_size'],
+                     validation_split=param['percent_to_valid'],
+                     verbose=1)
 
     # Evaluate model
+    performance['Loss_%d' % n] = hist.history['loss']
+    performance['Val_Loss_%d' % n] = hist.history['val_loss']
+    performance['Accuracy_%d' % n] = hist.history['acc']
+    performance['Val_Accuracy_%d' % n] = hist.history['val_acc']
+
     if len(x_test):
         score = model.evaluate(x_test, y_test, batch_size=param['batch_size'])
         print('Test %s: %.2f' % (model.metrics_names[0], score[0]))
@@ -571,7 +586,69 @@ def neural_network(x_train, y_train, param, phenotypes, x_test=np.array([]), y_t
     else:
         print('Trained on all labeled samples\n')
 
-    return model
+    return model, performance
+
+
+def plot_training_performance(performance, output, num_runs):
+    """ Plot the cross-entropy and accuracy for training and validation set.
+
+        Args:
+            performance:    Cross-entropy and accuracy at each training
+            output:         Output filename
+            num_runs:       Total number of runs (number of random initializations times the number of folds)
+        """
+
+    # Save the training performance in a spreadsheet
+    performance.to_csv('%s.csv' % output, index=False)
+
+    fontsize = 16
+    plt.figure(figsize=(10, 10))
+
+    # Loss
+    plt.subplot(211)
+    train_all = []
+    valid_all = []
+    for i in range(1, num_runs+1):
+        train = performance.iloc[:, performance.columns.get_loc('Loss_%d' % i)].values
+        valid = performance.iloc[:, performance.columns.get_loc('Val_Loss_%d' % i)].values
+        train_all.append(train)
+        valid_all.append(valid)
+        plt.plot(train, 'lightblue', alpha=0.4)
+        plt.plot(valid, 'lightgreen', alpha=0.4)
+
+    plt.plot(np.mean(train_all, axis=0), 'blue', label='Training')
+    plt.plot(np.mean(valid_all, axis=0), 'green', label='Validation')
+    plt.xlabel('Epoch', fontsize=fontsize)
+    plt.ylabel('Loss', fontsize=fontsize)
+    plt.xticks(fontsize=fontsize-4)
+    plt.yticks(fontsize=fontsize-4)
+    fig = plt.gcf()
+    plt.legend(fontsize=fontsize, loc='upper right')
+
+    # Acc
+    plt.subplot(212)
+    train_all = []
+    valid_all = []
+    for i in range(1, num_runs+1):
+        train = performance.iloc[:, performance.columns.get_loc('Accuracy_%d' % i)].values
+        valid = performance.iloc[:, performance.columns.get_loc('Val_Accuracy_%d' % i)].values
+        train_all.append(train)
+        valid_all.append(valid)
+        plt.plot(train, 'lightblue', alpha=0.4)
+        plt.plot(valid, 'lightgreen', alpha=0.4)
+
+    plt.plot(np.mean(train_all, axis=0), 'blue', label='Training')
+    plt.plot(np.mean(valid_all, axis=0), 'green', label='Validation')
+    plt.xlabel('Epoch', fontsize=fontsize)
+    plt.ylabel('Accuracy', fontsize=fontsize)
+    plt.xticks(fontsize=fontsize-4)
+    plt.yticks(fontsize=fontsize-4)
+    plt.ylim([0, 1.1])
+    plt.legend(fontsize=fontsize, loc='lower right')
+
+    fig.savefig('%s.png' % output, bbox_inches='tight')
+    fig.clf()
+    plt.close(fig)
 
 
 def cell_accuracy(df, sum_prob, phenotypes, n, output):
