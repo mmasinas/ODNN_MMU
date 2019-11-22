@@ -1,39 +1,27 @@
+import argparse
 from ODNN_lib import *
-from optparse import OptionParser
 
 # Parameters to specify
-parser = OptionParser()
-parser.add_option('-i', '--input-files', type='str', dest='input_files',
-                  default='', help='Input files to be analyzed')
-parser.add_option('-d', '--input-data', type='str', dest='input_data',
-                  default='', help='Input data, scaled and filled with identifiers')
-parser.add_option('-f', '--features', type='str', dest='features_file',
-                  default='', help='Feature Sets to include')
-parser.add_option('-m', '--mapping-sheet', type='str', dest='map_file',
-                  default='', help='Mapping sheet for strain identifiers')
-parser.add_option('-p', '--probability', type='float', dest='probability',
-                  default=0, help='Minimum probability to make predictions for a cell')
-parser.add_option('-u', '--identifier', type='str', dest='identifier',
-                  default='', help='Unique strain identifier: gene - allele')
-parser.add_option('-c', '--control', type='str', dest='control',
-                  default='', help='Path to positive and negative controls file')
-parser.add_option('-x', '--pos-control-cell', type='str', dest='pos_control_cell',
-                  default='', help='Path to positive controls file with single cell labels')
-parser.add_option('-y', '--pos-control-celldata', type='str', dest='pos_control_celldata',
-                  default='', help='Path to positive controls file with single cell labels and data')
-(options, args) = parser.parse_args()
-
-input_data = options.input_data
-input_f = options.input_files
-features_f = options.features_file
-mapping_f = options.map_file
-probability = options.probability
-identifier = options.identifier.lower()
-
-controls_f = options.control
-pos_controls_cell_f = options.pos_control_cell
-pos_controls_celldata_f = options.pos_control_celldata
-pos_controls_f = [controls_f, pos_controls_cell_f, pos_controls_celldata_f]
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--input-files', default='',
+                    help='Input files to be analyzed')
+parser.add_argument('-d', '--input-data', default='',
+                    help='Input data, scaled and filled with identifiers')
+parser.add_argument('-f', '--features-file', default='',
+                    help='Feature sets to include')
+parser.add_argument('-m', '--mapping-file', default='',
+                    help='Mapping sheet for strain identifiers')
+parser.add_argument('-p', '--probability', default=0,
+                    help='Minimum probability to make predictions for a cell')
+parser.add_argument('-u', '--identifier', default='',
+                    help='Unique strain identifier: gene - allele')
+parser.add_argument('-c', '--controls-file', default='',
+                    help='Positive and negative controls file')
+parser.add_argument('-x', '--pos-control-cell', default='',
+                    help='Positive controls file with single cell labels')
+parser.add_argument('-y', '--pos-control-celldata', default='',
+                    help='Positive controls file with single cell labels and data')
+args = parser.parse_args()
 
 # Neural network hyper-parameters
 param = {'hidden_units': [54, 18],
@@ -68,27 +56,34 @@ output = {'DataScaled':             '%s/Data_scaled.csv' % output_folder,
 
 if __name__ == '__main__':
 
-    # Read input and controls files
+    # Arguments
+    identifier = args.identifier.lower()
+    pos_controls_f = [args.controls_f, args.pos_controls_cell_f, args.pos_controls_celldata_f]
     location_feat = ['plate', 'row', 'column']
-    plates, features, mapping, identifiers = read_input_files(input_f, input_data, features_f, mapping_f, location_feat)
-    neg_controls = read_negative_controls_file(controls_f, identifier)
-    df, dict_feat = initialize_dictionary(identifiers)
+
+    # Read input and controls files
+    plates, features, mapping, identifiers = read_input_files(args.input_files, args.input_data, args.features_file,
+                                                              args.mapping_file, location_feat)
+    neg_controls = read_negative_controls_file(args.controls_f, identifier)
+    main_dict, dict_feat = initialize_dictionary(identifiers)
 
     # Read and scale data
-    if input_data:
-        df = read_scaled_data(df, input_data, dict_feat, neg_controls, identifier, features)
+    if args.input_data:
+        main_dict = read_scaled_data(main_dict, args.input_data, dict_feat, neg_controls, identifier, features)
     else:
         for p in plates:
-            df = read_and_scale_plate(df, p, neg_controls, features, mapping, identifier, identifiers, dict_feat)
-        save_data(df, features, identifiers, output)
+            main_dict = read_and_scale_plate(main_dict, p, neg_controls, features, mapping,
+                                             identifier, identifiers, dict_feat)
+        save_data(main_dict, features, identifiers, output)
 
     # Prepare phenotype data and train NN
-    df, phenotype_df, phenotypes = prepare_phenotype_data(df, identifier, identifiers, features, pos_controls_f, output)
-    df = make_predictions(df, param, phenotype_df, probability, features, output)
+    main_dict, phenotype_df, phenotypes = prepare_phenotype_data(main_dict, identifier, identifiers,
+                                                                 features, pos_controls_f, output)
+    main_dict = make_predictions(main_dict, param, phenotype_df, args.probability, features, output)
 
     # Save results
-    df_OUT = prepare_output_file_well(df, identifiers, phenotypes, output)
-    df_OUT_strain = prepare_output_file_strain(df, identifiers, identifier, phenotypes, output)
+    df_well = prepare_output_file_well(main_dict, identifiers, phenotypes, output)
+    df_strain = prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, output)
 
     # Evaluate performance
-    evaluate_performance(controls_f, df_OUT, df_OUT_strain, neg_controls, identifier, output)
+    evaluate_performance(args.controls_f, df_well, df_strain, neg_controls, identifier, output)

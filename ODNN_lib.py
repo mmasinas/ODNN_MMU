@@ -1,13 +1,10 @@
-import matplotlib
-matplotlib.use('Agg')
-
 import os
 import sys
 import itertools
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
 from keras import optimizers, losses
 from keras.layers import Dense
 from keras.models import Sequential
@@ -15,46 +12,47 @@ from scipy import stats
 from sklearn.metrics import confusion_matrix, accuracy_score
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+matplotlib.use('Agg')
 
 
-def read_input_files(plate_list, input_data, features, map_file, location):
+def read_input_files(input_files, input_data_file, features_file, mapping_file, location):
     """ Read input files for plates, CP features, mapping sheet.
-        Return in lists and data frame.
+        Return in lists and dataframe.
 
         Args:
-            plate_list:     File of plate list to be analyzed
-            input_data:     Input data, scaled and filled with identifiers
-            features:       File of CP feature list to be used in the analysis
-            map_file:       Map gene names from plate-row-column info.
-            location:       Column names for plate-row-column info.
+            input_files (str): File of plate list to be analyzed
+            input_data_file (str): Input data, scaled and filled with identifiers
+            features_file (str): File of CP feature list to be used in the analysis
+            mapping_file (str): Map gene names from plate-row-column info.
+            location (list): Column names for plate-row-column info.
 
-        Return:
-            plates:         Plates to be analyzed
-            feature_set:    Features to be analyzed
-            mapping_sheet:  Data frame to map strain/condition information from arrayed plates
-            map_features:   Strain/condition identifier columns
+        Returns:
+            plates (list): Plates to be analyzed
+            feature_set (list): Features to be analyzed
+            mapping_sheet (pd.DataFrame): Dataframe to map strain/condition information from arrayed plates
+            map_features (list): Strain/condition identifier columns
         """
 
     # Read plate list
     plates = []
-    if os.path.isfile(plate_list):
-        f = open(plate_list, 'r')
+    if os.path.isfile(input_files):
+        f = open(input_files, 'r')
         plates = list(filter(None, [x.strip() for x in f.readlines()]))
         f.close()
-    elif not os.path.isfile(input_data):
+    elif not os.path.isfile(input_data_file):
         sys.exit('Please provide a list of plate paths to analyze, quitting...')
 
     # Read CP feature list
-    if os.path.isfile(features):
-        f = open(features, 'r')
+    if os.path.isfile(features_file):
+        f = open(features_file, 'r')
         feature_set = list(filter(None, [x.strip() for x in f.readlines()]))
         f.close()
     else:
         sys.exit('Please provide a CP feature list, quitting...')
 
     # Read strain/condition information file
-    if os.path.isfile(map_file):
-        mapping_sheet = lower_column_names(pd.read_csv(map_file)).fillna('')
+    if os.path.isfile(mapping_file):
+        mapping_sheet = lower_column_names(pd.read_csv(mapping_file)).fillna('')
         map_features = mapping_sheet.columns.values.tolist()
         for i in location:
             map_features.remove(i)
@@ -65,13 +63,13 @@ def read_input_files(plate_list, input_data, features, map_file, location):
 
 
 def lower_column_names(df):
-    """ Return pandas data frame with lower column names.
+    """ Return pandas dataframe with lower column names.
 
         Args:
-            df: Pandas DataFrame object
+            df (pd.DataFrame): Pandas Dataframe object
 
-        Return:
-            df: Pandas DataFrame object with lowercase column names
+        Returns:
+            df (pd.DataFrame): Pandas Dataframe object with lowercase column names
         """
 
     df.columns = [c.lower() for c in df.columns]
@@ -83,18 +81,18 @@ def read_negative_controls_file(filename, identifier):
     """ Read controls file and return negative controls.
 
         Args:
-            filename:       Controls file with positive and negative controls
-            identifier:     Unique identifier for the strain/condition
+            filename (str): Controls file with positive and negative controls
+            identifier (str): Unique identifier for the strain/condition
 
-        Return:
-            neg_controls:   List of negative controls
-            """
+        Returns:
+            neg_controls (list): List of negative controls
+        """
 
     if os.path.isfile(filename):
         neg_df = pd.read_csv(filename)
         neg_df = lower_column_names(neg_df)
         neg_df = neg_df[neg_df['phenotype'] == 'negative']
-        neg_controls = neg_df[identifier].values.tolist()
+        neg_controls = neg_df[identifier].values
 
     else:
         sys.exit('Please provide a controls file, quitting...')
@@ -106,80 +104,80 @@ def initialize_dictionary(identifiers):
     """ Return an empty dictionary with the following attributes.
 
         Args:
-            identifiers:    Strain/condition identifier columns
+            identifiers (list): Strain/condition identifier columns
 
-        Return:
-            df:             Dictionary of combined data
-            dict_feat:      Dictionary features
-            """
+        Returns:
+            main_dict (dict): Dictionary of combined data
+            dict_feat (dict): Dictionary features
+        """
 
-    df = {}
+    main_dict = {}
     for i in (identifiers + ['cell_id', 'column', 'row', 'plate', 'data', 'data_scaled', 'mask_neg']):
-        df[i] = np.array([])
+        main_dict[i] = np.array([])
 
-    dict_feat = list(df.keys())
+    dict_feat = list(main_dict.keys())
 
-    return df, dict_feat
+    return main_dict, dict_feat
 
 
-def read_and_scale_plate(df, plate, neg, features, mapping_sheet, identifier, identifiers, dict_feat):
+def read_and_scale_plate(main_dict, plate, neg, features, mapping_sheet, identifier, identifiers, dict_feat):
     """ Read, scale and add plate to the existing combined dictionary.
 
         Args:
-            df:             Dictionary of combined data
-            plate:          Plate name
-            neg:            Negative controls for scaling
-            features:       Features to be analyzed
-            mapping_sheet:  strain information on plates
-            identifier:     Unique identifier for the strain/condition
-            identifiers:    Strain/condition identifier columns
-            dict_feat:      Dictionary features
+            main_dict (dict): Dictionary of combined data
+            plate (str): Plate filename
+            neg (list): Negative controls for scaling
+            features (list): Features to be analyzed
+            mapping_sheet (pd.DataFrame): Strain information on plates
+            identifier (str): Unique identifier for the strain/condition
+            identifiers (list): Strain/condition identifier columns
+            dict_feat(list): Dictionary features
 
-        Return:
-            df:             Dictionary with new plate data appended
+        Returns:
+            main_dict (dict): Dictionary with new plate data appended
         """
 
     print('Reading: %s' % plate)
 
     # Read plate
-    input_df = pd.read_csv(plate, header=0)
-    input_df = lower_column_names(input_df)
-    input_df['plate'] = plate
-    plate_df = extract_plate_information(input_df, plate, features, mapping_sheet, neg, identifier, identifiers)
+    df = pd.read_csv(plate, header=0)
+    df = lower_column_names(df)
+    df['plate'] = plate
+    dict_plate = extract_plate_information(df, plate, features, mapping_sheet, neg, identifier, identifiers)
 
     # Scale plate wrt to negative control cells
-    data_wt = plate_df['data'][plate_df['mask_neg'] == 1]
-    plate_df['data_scaled'] = standard_scaler_fit_transform(data_wt, plate_df['data'])
-    plate_df['data_scaled'][np.isnan(plate_df['data_scaled'])] = 0
+    data_wt = dict_plate['data'][dict_plate['mask_neg'] == 1]
+    dict_plate['data_scaled'] = standard_scaler_fit_transform(data_wt, dict_plate['data'])
+    dict_plate['data_scaled'][np.isnan(dict_plate['data_scaled'])] = 0
 
     # Add to the existing dictionary of combined data
-    df = append_data(df, plate_df, dict_feat)
+    main_dict = append_data(main_dict, dict_plate, dict_feat)
 
-    return df
+    return main_dict
 
 
 def extract_plate_information(df, filename, features, mapping_sheet, neg, identifier, identifiers):
     """ Read a CP output for a plate and extract required information.
 
         Args:
-            df:             CP output of a plate as a data frame
-            filename:       Filename of the plate
-            features:       Features to be analyzed
-            mapping_sheet:  Data frame to map gene and allele names
-            neg:            Negative controls for scaling
-            identifier:     Unique identifier for the strain/condition
-            identifiers:    Strain/condition identifier columns
+            df (pd.DataFrame): CP output of a plate as a dataframe
+            filename (str): Filename of the plate
+            features (list): Features to be analyzed
+            mapping_sheet(pd.DataFrame): Dataframe to map gene and allele names
+            neg (list): Negative controls for scaling
+            identifier (str): Unique identifier for the strain/condition
+            identifiers (list): Strain/condition identifier columns
 
-        Return:
-            plate_df:       Extracted plate information as a dictionary
+        Returns:
+            dict_plate (dict): Extracted plate information as a dictionary
         """
 
     # Extract plate locations and cell_IDs from CP output
-    plate_df, _ = initialize_dictionary(identifiers)
-    plate_df['cell_id'] = np.array(df['cell_id'], dtype='int32')
-    plate_df['column'] = np.array(df['col'], dtype='int32')
-    plate_df['row'] = np.array(df['row'], dtype='int32')
-    plate_df['plate'] = np.array(df['plate'])
+    dict_plate, _ = initialize_dictionary(identifiers)
+    dict_plate['cell_id'] = np.array(df['cell_id'], dtype='int32')
+    dict_plate['column'] = np.array(df['col'], dtype='int32')
+    dict_plate['row'] = np.array(df['row'], dtype='int32')
+    dict_plate['plate'] = np.array(df['plate'])
 
     # Map strain/condition information from arrayed format
     plate_name = filename.split('/')[-1].split('_')[0].replace('plate', '')
@@ -189,33 +187,33 @@ def extract_plate_information(df, filename, features, mapping_sheet, neg, identi
     identifier_lists = [[] for _ in range(len(identifiers))]
 
     # Add strain identifier information for each well
-    for i in range(len(plate_df['column'])):
-        map_df = ms_plate[(ms_plate['column'] == plate_df['column'][i]) & (ms_plate['row'] == plate_df['row'][i])]
+    for i in range(len(dict_plate['column'])):
+        map_df = ms_plate[(ms_plate['column'] == dict_plate['column'][i]) & (ms_plate['row'] == dict_plate['row'][i])]
         for j in range(len(identifier_lists)):
             identifier_lists[j].append(map_df[identifiers[j]].values[0])
 
     # Add strain identifier information to the plate dictionary data
     for i in range(len(identifiers)):
-        plate_df[identifiers[i]] = np.array(identifier_lists[i])
+        dict_plate[identifiers[i]] = np.array(identifier_lists[i])
 
     # Keep CP features needed for analysis
-    plate_df['data'] = np.array(df[features], dtype='float64')
+    dict_plate['data'] = np.array(df[features], dtype='float64')
 
     # Find the negative control cells in the data
-    plate_df['mask_neg'] = np.array([x in neg for x in plate_df[identifier]])
+    dict_plate['mask_neg'] = np.array([x in neg for x in dict_plate[identifier]])
 
-    return plate_df
+    return dict_plate
 
 
 def standard_scaler_fit_transform(data_fit, data_transform=np.array([])):
     """ Scale data into zero mean and unit variance for each column.
 
         Args:
-            data_fit:       data to calculate mean and covariances
-            data_transform: data to scale wrt data_fit
+            data_fit (np.array): data to calculate mean and covariances
+            data_transform (np.array): data to scale wrt data_fit
 
-        Return:
-            Scaled data
+        Returns:
+            Scaled data (np.array)
         """
 
     mean = np.nanmean(data_fit, axis=0)
@@ -227,66 +225,66 @@ def standard_scaler_fit_transform(data_fit, data_transform=np.array([])):
         return (data_fit - mean) / variance
 
 
-def save_data(df, features, identifiers, output):
+def save_data(main_dict, features, identifiers, output):
     """ Save combined scale data for all plates.
 
         Args:
-            df:             Dictionary of combined data
-            features:       Features to be analyzed
-            identifiers:    Strain/condition identifier columns
-            output:         Output filename
+            main_dict (dict): Dictionary of combined data
+            features (list): Features to be analyzed
+            identifiers (list): Strain/condition identifier columns
+            output (dict): Output filenames
         """
 
     # Save scaled data for all plates
     data_scaled_columns = ['cell_id', 'plate', 'row', 'column'] + identifiers + features
-    data_scaled_output = df['cell_id'].reshape(-1, 1)
+    data_scaled_output = main_dict['cell_id'].reshape(-1, 1)
     for i in (['plate', 'row', 'column'] + identifiers):
-        data_scaled_output = np.concatenate((data_scaled_output, df[i].reshape(-1, 1)), axis=1)
-    data_scaled_output = np.concatenate((data_scaled_output, df['data_scaled']), axis=1)
+        data_scaled_output = np.concatenate((data_scaled_output, main_dict[i].reshape(-1, 1)), axis=1)
+    data_scaled_output = np.concatenate((data_scaled_output, main_dict['data_scaled']), axis=1)
     data_scaled_output_df = pd.DataFrame(data=data_scaled_output, columns=data_scaled_columns)
     data_scaled_output_df.to_csv(path_or_buf=output['DataScaled'], index=False)
 
 
-def append_data(df, add_df, dict_feat):
+def append_data(main_dict, dict_add, dict_feat):
     """ Append two dictionaries on selected features.
 
         Args:
-            df:         Dictionary of combined data
-            add_df:     Dictionary to be added
-            dict_feat:  Dictionary features
+            main_dict (dict): Dictionary of combined data
+            dict_add (dict): Dictionary to be added
+            dict_feat (list): Dictionary features
 
-        Return:
-            df:         Dictionary of combined data
+        Returns:
+            main_dict (dict): Dictionary of combined data
         """
 
     # Create a deep copy of features
     append_list = dict_feat[:]
-    if len(df['data']) == 0:
-        df['data'] = add_df['data']
-        df['data_scaled'] = add_df['data_scaled']
+    if len(main_dict['data']) == 0:
+        main_dict['data'] = dict_add['data']
+        main_dict['data_scaled'] = dict_add['data_scaled']
         append_list.remove('data')
         append_list.remove('data_scaled')
 
     # Append new dictionary to the existing one
     for i in append_list:
-        df[i] = np.append(df[i], add_df[i], axis=0)
+        main_dict[i] = np.append(main_dict[i], dict_add[i], axis=0)
 
-    return df
+    return main_dict
 
 
-def read_scaled_data(df, input_data, dict_feat, neg, identifier, features):
+def read_scaled_data(main_dict, input_data, dict_feat, neg, identifier, features):
     """ Read an input file with scaled CP features and strain/condition identifier information.
 
         Args:
-            df:             Initialized dictionary
-            input_data:     Input data, scaled and filled with identifiers
-            dict_feat:      Dictionary features
-            neg:            Negative controls for scaling
-            identifier:     Unique identifier for the strain/condition
-            features:       Features to be analyzed
+            main_dict (dict): Initialized dictionary
+            input_data (str): Input data, scaled and filled with identifiers
+            dict_feat (list): Dictionary features
+            neg (list): Negative controls for scaling
+            identifier (str): Unique identifier for the strain/condition
+            features (list): Features to be analyzed
 
-        Return:
-            df:             Dictionary of combined data
+        Returns:
+            main_dict (dict): Dictionary of combined data
         """
 
     print('Returning scaled data from %s' % input_data)
@@ -297,31 +295,31 @@ def read_scaled_data(df, input_data, dict_feat, neg, identifier, features):
     exclude = ['data', 'data_scaled', 'mask_neg']
     for i in dict_feat:
         if i not in exclude:
-            df[i] = np.array(df_scaled[i])
+            main_dict[i] = np.array(df_scaled[i])
 
     # Use the original order of features
-    df['data_scaled'] = np.array(df_scaled[features])
-    df['data_scaled'][np.isnan(df['data_scaled'])] = 0
-    df['mask_neg'] = np.array([x in neg for x in df[identifier]])
+    main_dict['data_scaled'] = np.array(df_scaled[features])
+    main_dict['data_scaled'][np.isnan(main_dict['data_scaled'])] = 0
+    main_dict['mask_neg'] = np.array([x in neg for x in main_dict[identifier]])
 
-    return df
+    return main_dict
 
 
-def prepare_phenotype_data(df, identifier, identifiers, features, pos_controls_files, output):
+def prepare_phenotype_data(main_dict, identifier, identifiers, features, pos_controls_files, output):
     """ Read and prepare training set from phenotype data with positive controls.
 
         Args:
-            df:                     Dictionary of combined data
-            identifier:             Unique identifier for the strain/condition
-            identifiers:            Strain/condition identifier columns
-            features:               Features to be analyzed
-            pos_controls_files:     List of positive controls file
-            output:                 Output filename
+            main_dict (dict): Dictionary of combined data
+            identifier (str): Unique identifier for the strain/condition
+            identifiers (list): Strain/condition identifier columns
+            features (list): Features to be analyzed
+            pos_controls_files (list): List of positive controls file
+            output (dict): Output filenames
 
-        Return:
-            df:                     Dictionary with positive control information added
-            phenotype_df:           Labeled set as a dataframe
-            phenotype_classes:      List of phenotype classes
+        Returns:
+            main_dict (dict): Dictionary with positive control information added
+            phenotype_df (pd.DataFrame): Labeled set as a dataframe
+            phenotype_classes (list): List of phenotype classes
         """
 
     # Positive controls
@@ -345,8 +343,9 @@ def prepare_phenotype_data(df, identifier, identifiers, features, pos_controls_f
             pc = pd.read_csv(pos_controls_cell)
             pc = lower_column_names(pc)
             phenotype_classes = pc['phenotype'].unique()
-            df['mask_pc'] = np.array([x in pc['cell_id'].values for x in df['cell_id']])
-            phenotypes = [pc[pc['cell_id'] == x]['phenotype'].values[0] for x in df['cell_id'][df['mask_pc'] == 1]]
+            main_dict['mask_pc'] = np.array([x in pc['cell_id'].values for x in main_dict['cell_id']])
+            phenotypes = [pc[pc['cell_id'] == x]['phenotype'].values[0]
+                          for x in main_dict['cell_id'][main_dict['mask_pc'] == 1]]
 
         # If training set with strain/condition is available, use all cells
         elif pos_controls_strain:
@@ -354,16 +353,18 @@ def prepare_phenotype_data(df, identifier, identifiers, features, pos_controls_f
             pc = pd.read_csv(pos_controls_strain)
             pc = lower_column_names(pc)
             phenotype_classes = pc['phenotype'].unique()
-            df['mask_pc'] = np.array([x in pc[identifier].values for x in df[identifier]])
-            phenotypes = [pc[pc[identifier] == x]['phenotype'].values[0] for x in df[identifier][df['mask_pc'] == 1]]
+            main_dict['mask_pc'] = np.array([x in pc[identifier].values for x in main_dict[identifier]])
+            phenotypes = [pc[pc[identifier] == x]['phenotype'].values[0]
+                          for x in main_dict[identifier][main_dict['mask_pc'] == 1]]
 
         # Combine positive control data
         phenotype_data_columns = ['cell_id'] + identifiers + ['plate', 'row', 'column', 'phenotype'] + features
-        phenotype_data = df['cell_id'][df['mask_pc'] == 1].reshape(-1, 1)
+        phenotype_data = main_dict['cell_id'][main_dict['mask_pc'] == 1].reshape(-1, 1)
         for i in (identifiers + ['plate', 'row', 'column']):
-            phenotype_data = np.concatenate((phenotype_data, df[i][df['mask_pc'] == 1].reshape(-1, 1)), axis=1)
+            phenotype_data = np.concatenate((phenotype_data, main_dict[i][main_dict['mask_pc'] == 1].reshape(-1, 1)),
+                                            axis=1)
         phenotype_data = np.concatenate((phenotype_data, np.array(phenotypes).reshape(-1, 1),
-                                         df['data_scaled'][df['mask_pc'] == 1]), axis=1)
+                                         main_dict['data_scaled'][main_dict['mask_pc'] == 1]), axis=1)
         phenotype_df = pd.DataFrame(data=phenotype_data, columns=phenotype_data_columns)
 
     # Save positive control data
@@ -373,26 +374,26 @@ def prepare_phenotype_data(df, identifier, identifiers, features, pos_controls_f
     # Add None as a phenotype class
     phenotype_classes = np.append(phenotype_classes, ['none'])
 
-    return df, phenotype_df, phenotype_classes
+    return main_dict, phenotype_df, phenotype_classes
 
 
 def split_labeled_set(pheno_df, features, k):
     """ Split labeled set into training and test set for k-fold cross-validation
 
         Args:
-            pheno_df:   Labeled set
-            features:   Features to be analyzed
-            k:          Number of fold in cross-validation
+            pheno_df (pd.DataFrame): Labeled set
+            features (list): Features to be analyzed
+            k (int): Number of fold in cross-validation
 
-        Return:
-            pheno_df:   Labeled set
-            X:          Labeled set input data
-            y:          Labeled set labels
-            X_train:    Training set input data
-            X_test:     Test set input data
-            y_train:    Training set labels
-            y_test:     Test set labels
-            phenotypes: List of phenotype classes
+        Returns:
+            pheno_df (pd.DataFrame): Labeled set
+            X (np.array): Labeled set input data
+            y (np.array): Labeled set labels
+            X_train (np.array): Training set input data
+            X_test (np.array): Test set input data
+            y_train (np.array): Training set labels
+            y_test (np.array): Test set labels
+            phenotypes (list): List of phenotype classes
         """
 
     # Shuffle labeled set
@@ -426,20 +427,20 @@ def split_labeled_set(pheno_df, features, k):
     return pheno_df, x, y, x_train, x_test, y_train, y_test, phenotypes
 
 
-def make_predictions(df, param, pheno_df, threshold, features, output):
+def make_predictions(main_dict, param, pheno_df, threshold, features, output):
     """ Train neural network (NN) with cross-validation and make predictions.
         Save phenotype predictions and inlier/outlier info in df
 
         Args:
-            df:         Dictionary of combined data
-            param:      NN hyper-parameters
-            pheno_df:   Labeled set
-            threshold:  Probability threshold to make predictions
-            features:   Features to be analyzed
-            output:     Output filename
+            main_dict (dict): Dictionary of combined data
+            param (dict): NN hyper-parameters
+            pheno_df (pd.DataFrame): Labeled set
+            threshold (float): Probability threshold to make predictions
+            features (list): Features to be analyzed
+            output (dict): Output filenames
 
-        Return:
-            df:         Dictionary with phenotype predictions added
+        Returns:
+            main_dict (dict): Dictionary with phenotype predictions added
         """
 
     print('\nMaking predictions...')
@@ -486,11 +487,11 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
 
     # Train NN with the complete labeled set
     performance = pd.DataFrame()
-    sum_prob_all = np.zeros([df['data_scaled'].shape[0], y.shape[1]])
+    sum_prob_all = np.zeros([main_dict['data_scaled'].shape[0], y.shape[1]])
     for n in range(param['runs']):
         model, performance = neural_network(x, y, param, phenotypes, performance, n)
         # Predictions on all data
-        probabilities_all = model.predict(df['data_scaled'], batch_size=param['batch_size'])
+        probabilities_all = model.predict(main_dict['data_scaled'], batch_size=param['batch_size'])
         sum_prob_all += probabilities_all
     plot_training_performance(performance, output['Training'], param['runs'])
 
@@ -516,7 +517,7 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
 
     # Save phenotype predictions for cell_IDs provided
     cell_id = pd.DataFrame(columns=['CellID', 'Prediction'] + list(phenotypes))
-    cell_id['CellID'] = df['cell_id']
+    cell_id['CellID'] = main_dict['cell_id']
     cell_id['Prediction'] = np.array(phenotype_all)
     for i in range(len(phenotypes)):
         cell_id[phenotypes[i]] = y_all[:, i]
@@ -524,27 +525,27 @@ def make_predictions(df, param, pheno_df, threshold, features, output):
     cell_id.to_csv(path_or_buf=output['PhenotypeCellIDs'], index=False)
 
     # Save predictions and inlier state in the combined dictionary
-    df['phenotype'] = np.array(phenotype_all)
-    df['is_inlier'] = np.array([p == 'negative' for p in df['phenotype']])
+    main_dict['phenotype'] = np.array(phenotype_all)
+    main_dict['is_inlier'] = np.array([p == 'negative' for p in main_dict['phenotype']])
 
-    return df
+    return main_dict
 
 
 def neural_network(x_train, y_train, param, phenotypes, performance, n, x_test=np.array([]), y_test=np.array([])):
     """ Train NN and return the model.
 
         Args:
-            x_train:        Training set input data
-            y_train:        Training set labels
-            param:          Neural network hyper-parameters
-            phenotypes:     List of phenotype classes
-            performance:    Cross-entropy and accuracy at each training
-            n:              The specific run out of the total random initializations
-            x_test:         Test set input data
-            y_test:         Test set labels
+            x_train (np.array): Training set input data
+            y_train (np.array): Training set labels
+            param (dict): Neural network hyper-parameters
+            phenotypes (list): List of phenotype classes
+            performance (pd.DataFrame): Cross-entropy and accuracy at each training
+            n (int): The specific run out of the total random initializations
+            x_test (np.array): Test set input data
+            y_test (np.array): Test set labels
 
-        Return:
-            model:          Trained neural network
+        Returns:
+            model (keras.models.Sequential): Trained neural network
         """
 
     # NN layer units
@@ -593,9 +594,9 @@ def plot_training_performance(performance, output, num_runs):
     """ Plot the cross-entropy and accuracy for training and validation set.
 
         Args:
-            performance:    Cross-entropy and accuracy at each training
-            output:         Output filename
-            num_runs:       Total number of runs (number of random initializations times the number of folds)
+            performance (pd.DataFrame): Cross-entropy and accuracy at each training
+            output (dict): Output filenames
+            num_runs (int): Total number of runs (number of random initializations times the number of folds)
         """
 
     # Save the training performance in a spreadsheet
@@ -657,11 +658,11 @@ def cell_accuracy(df, sum_prob, phenotypes, n, output):
         Save in an output file.
 
         Args:
-            df:         Labeled set in a data frame
-            sum_prob:   Cumulative probability for each sample and label
-            phenotypes: List of phenotype classes
-            n:          Independent neural network training runs
-            output:     Output filename
+            df (pd.DataFrame): Labeled set in a dataframe
+            sum_prob (np.array): Cumulative probability for each sample and label
+            phenotypes (list): List of phenotype classes
+            n (int): Independent neural network training runs
+            output (dict): Output filenames
         """
 
     # Create columns for each cross-validation run
@@ -693,10 +694,10 @@ def plot_confusion_matrix(y_true, y_pred, classes, output):
     """ Plot confusion matrix for all test set predictions.
 
         Args:
-            y_true:     Actual labels
-            y_pred:     Predicted labels
-            classes:    List of phenotype labels
-            output:     Output filename
+            y_true (np.array): Actual labels
+            y_pred (np.array): Predicted labels
+            classes (list): List of phenotype labels
+            output (dict): Output filenames
         """
 
     # Normalize counts for each true-predicted label pair
@@ -726,64 +727,63 @@ def plot_confusion_matrix(y_true, y_pred, classes, output):
     plt.close(fig)
 
 
-def pvalue_parameters(df):
+def pvalue_parameters(main_dict):
     """ Return numbers of negative control cells and outlier negative control cells.
         These numbers are used to calculate hyper-geometric p-value.
 
         Args:
-            df:                 Dictionary of combined data
+            main_dict (dict): Dictionary of combined data
 
-        Return:
-            neg_cells:          Number of negative control cells
-            neg_cells_outliers: Number of outlier negative control cells
+        Returns:
+            neg_cells (int): Number of negative control cells
+            neg_cells_outliers (int): Number of outlier negative control cells
         """
 
-    neg_cells = len(df['mask_neg'][df['mask_neg'] == 1])
-    neg_cells_outliers = len(df['mask_neg'][(df['mask_neg'] == 1) & (df['is_inlier'] == 0)])
+    neg_cells = len(main_dict['mask_neg'][main_dict['mask_neg'] == 1])
+    neg_cells_outliers = len(main_dict['mask_neg'][(main_dict['mask_neg'] == 1) & (main_dict['is_inlier'] == 0)])
 
     return neg_cells, neg_cells_outliers
 
 
-def prepare_output_file_well(df, identifiers, phenotypes, output):
+def prepare_output_file_well(main_dict, identifiers, phenotypes, output):
     """ Combine phenotype predictions and calculate penetrance for each well in a plate/arrayed format.
 
         Args:
-            df:                 Dictionary of combined data
-            identifiers:        Strain/condition identifier columns
-            phenotypes:         List of phenotype classes
-            output:             Output filename
+            main_dict (dict): Dictionary of combined data
+            identifiers (list): Strain/condition identifier columns
+            phenotypes (list): List of phenotype classes
+            output (dict): Output filenames
 
-        Return:
-            final_df_output:    Results for each well
+        Returns:
+            df_output (pd.DataFrame): Results for each well
         """
 
     print('\nPreparing the output values...')
 
-    # Save required data from dictionary to a pandas data frame
-    final_df = pd.DataFrame()
+    # Save required data from dictionary to a pandas dataframe
+    df = pd.DataFrame()
     for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
-        final_df[i] = df[i]
+        df[i] = main_dict[i]
     # Combine row and column information for a single well information
-    final_df['well'] = final_df.row.map(int).map(str) + '_' + final_df.column.map(int).map(str)
+    df['well'] = df.row.map(int).map(str) + '_' + df.column.map(int).map(str)
 
     # Initialize output file columns
     output_columns = identifiers + ['plate', 'row', 'column', 'p_value', 'penetrance', 'num_cells']
     for i in phenotypes:
         output_columns.append(i)
-    final_df_output = pd.DataFrame(columns=output_columns)
+    df_output = pd.DataFrame(columns=output_columns)
     this_row = 0
 
     # Extract negative control cell numbers for hyper-geometric p-value calculation
-    neg_cells, neg_cells_outliers = pvalue_parameters(df)
+    neg_cells, neg_cells_outliers = pvalue_parameters(main_dict)
 
     # Analyze each plate separately
-    for p in list(set(df['plate'])):
-        final_df_plate = final_df[final_df['plate'] == p]
+    for plate in list(set(main_dict['plate'])):
+        df_plate = df[df['plate'] == plate]
 
         # Analyze each well in each plate separately
-        wells = final_df_plate['well'].unique().tolist()
-        for well in wells:
-            df_well = final_df_plate[final_df_plate['well'] == well]
+        for well in df_plate['well'].unique():
+            df_well = df_plate[df_plate['well'] == well]
 
             # Calculate penetrance (1 - negative%) and p-value
             is_inlier_well = np.asarray(df_well['is_inlier'])
@@ -792,7 +792,7 @@ def prepare_output_file_well(df, identifiers, phenotypes, output):
             pene = float(num_outliers) / num_cells * 100
             pval = 1 - stats.hypergeom.cdf(num_outliers, neg_cells, neg_cells_outliers, num_cells)
 
-            # Enter well results into a final data frame row
+            # Enter well results into a final dataframe row
             line = []
             for i in (identifiers + ['plate', 'row', 'column']):
                 line.append(df_well[i].unique()[0])
@@ -801,57 +801,56 @@ def prepare_output_file_well(df, identifiers, phenotypes, output):
             line.append(num_cells)
             for i in phenotypes:
                 line.append(float(len(df_well[df_well.phenotype == i])) / num_cells)
-            final_df_output.loc[this_row, ] = line
+            df_output.loc[this_row, ] = line
             this_row += 1
 
     # Save results
-    final_df_output = final_df_output.sort_values('plate', ascending=True).reset_index(drop=True)
-    final_df_output.to_csv(path_or_buf=output['ODresultsWell'], index=False)
+    df_output = df_output.sort_values('plate', ascending=True).reset_index(drop=True)
+    df_output.to_csv(path_or_buf=output['ODresultsWell'], index=False)
 
-    return final_df_output
+    return df_output
 
 
-def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
+def prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, output):
     """ Combine phenotype predictions and calculate penetrance for each unique strain/condition identifier.
 
         Args:
-            df:                 Dictionary of combined data
-            identifiers:        Strain/condition identifier columns
-            identifier:         Unique identifier for the strain/condition
-            phenotypes:         List of phenotype classes
-            output:             Output filename
+            main_dict (dict): Dictionary of combined data
+            identifiers (list): Strain/condition identifier columns
+            identifier (str): Unique identifier for the strain/condition
+            phenotypes (list): List of phenotype classes
+            output (dict): Output filenames
 
-        Return:
-            final_df_output:    Results for each strain/condition
+        Returns:
+            df_output (pd.DataFrame): Results for each strain/condition
         """
 
-    # Save required data from dictionary to a pandas data frame
-    final_df = pd.DataFrame()
+    # Save required data from dictionary to a pandas dataframe
+    df = pd.DataFrame()
     for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
-        final_df[i] = df[i]
+        df[i] = main_dict[i]
     # Combine row and column information for a single well information
-    final_df['well'] = final_df.plate + '_' + final_df.row.map(int).map(str) + '_' + final_df.column.map(int).map(str)
+    df['well'] = df.plate + '_' + df.row.map(int).map(str) + '_' + df.column.map(int).map(str)
 
     # Initialize output file columns
     output_columns = identifiers + ['p_value', 'penetrance', 'num_cells', 'num_wells']
     for i in phenotypes:
         output_columns.append(i)
-    final_df_output = pd.DataFrame(columns=output_columns)
+    df_output = pd.DataFrame(columns=output_columns)
     this_row = 0
 
     # Extract negative control cell numbers for hyper-geometric p-value calculation
-    neg_cells, neg_cells_outliers = pvalue_parameters(df)
+    neg_cells, neg_cells_outliers = pvalue_parameters(main_dict)
 
     # Analyze each strain/condition separately
-    strains = final_df[identifier].unique().tolist()
-    for s in strains:
-        df_strain = final_df[final_df[identifier] == s]
+    for strain in df[identifier].unique():
+        df_strain = df[df[identifier] == strain]
         is_inlier_strain = np.asarray(df_strain['is_inlier'])
         num_cells = df_strain.shape[0]
 
         # If there are no cells, skip results
         if num_cells == 0:
-            print('Zero cells for %s' % s)
+            print('Zero cells for %s' % strain)
 
         # Calculate penetrance (1 - negative%) and p-value
         else:
@@ -860,7 +859,7 @@ def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
             pene = float(num_outliers) / num_cells * 100
             pval = 1 - stats.hypergeom.cdf(num_outliers, neg_cells, neg_cells_outliers, num_cells)
 
-            # Enter strain/condition results into a final data frame row
+            # Enter strain/condition results into a final dataframe row
             line = []
             for i in identifiers:
                 line.append(df_strain[i].unique()[0])
@@ -870,27 +869,27 @@ def prepare_output_file_strain(df, identifiers, identifier, phenotypes, output):
             line.append(num_wells)
             for i in phenotypes:
                 line.append(float(len(df_strain[df_strain.phenotype == i])) / num_cells)
-            final_df_output.loc[this_row, ] = line
+            df_output.loc[this_row, ] = line
             this_row += 1
 
     # Save results
-    final_df_output = final_df_output.sort_values(identifier, ascending=True).reset_index(drop=True)
-    final_df_output.to_csv(path_or_buf=output['ODresultsStrain'], index=False)
+    df_output = df_output.sort_values(identifier, ascending=True).reset_index(drop=True)
+    df_output.to_csv(path_or_buf=output['ODresultsStrain'], index=False)
 
-    return final_df_output
+    return df_output
 
 
-def evaluate_performance(controls_file, df, df_strain, neg, identifier, output):
+def evaluate_performance(controls_file, df_well, df_strain, neg, identifier, output):
     """ Extract positive controls to calculate TPR-FPR-Precision values.
         Predict penetrance bins if this information is provided in the controls file.
 
         Args:
-            controls_file:  Controls file with positive and negative controls
-            df:             Result data frame for wells
-            df_strain:      Result data frame for strain/condition
-            neg:            Negative controls for scaling
-            identifier:     Unique identifier for the strain/condition
-            output:         List of output file names
+            controls_file (str): Controls file with positive and negative controls
+            df_well (pd.DataFrame): Result dataframe for wells
+            df_strain (pd.DataFrame): Result dataframe for strain/condition
+            neg (list): Negative controls for scaling
+            identifier (str): Unique identifier for the strain/condition
+            output (dict):  List of output file names
         """
 
     print('\nEvaluating performances...')
@@ -898,17 +897,16 @@ def evaluate_performance(controls_file, df, df_strain, neg, identifier, output):
     # Penetrance values of all positive control strains
     pos_controls = pd.read_csv(controls_file)
     pos_controls = lower_column_names(pos_controls)
-    pos_control_strains = pos_controls[pos_controls['phenotype'] != 'negative'][identifier].unique().tolist()
     pc = []
-    for strain in pos_control_strains:
-        if strain in df_strain[identifier].tolist():
+    for strain in pos_controls[pos_controls['phenotype'] != 'negative'][identifier].unique():
+        if strain in df_strain[identifier]:
             pc.append(df_strain[df_strain[identifier] == strain]['penetrance'].values[0])
     pc = np.array(pc)
 
     # Penetrance values of all negative control wells
     nc = np.array([])
     for strain in neg:
-        nc = np.append(nc, np.asarray(df[df[identifier] == strain]['penetrance'].values))
+        nc = np.append(nc, np.asarray(df_well[df_well[identifier] == strain]['penetrance'].values))
 
     # Evaluate TPR-FPR-Precision values for ROC and PR curves
     evaluate_performance_roc_pr(nc, pc, output)
@@ -922,9 +920,9 @@ def evaluate_performance_roc_pr(nc, pc, output):
         Threshold changes from 0 to 100th percentile of negative control penetrance values.
 
         Args:
-            nc:       Penetrance values of negative controls
-            pc:       Penetrance values of positive controls
-            output:   Output filename
+            nc (np.array): Penetrance values of negative controls
+            pc(np.array): Penetrance values of positive controls
+            output (dict): Output filenames
         """
 
     # Calculate TPR-FPR-Precision values at each discrete negative control percentile
@@ -965,10 +963,10 @@ def evaluate_performance_penetrance_bins(controls_file, df, identifier, output):
         Bin-0: 0-20% penetrance
 
         Args:
-            controls_file:  Controls file with controls and penetrance bin and manual penetrance labels
-            df:             Result dataframe for strain/condition
-            identifier:     Unique identifier for the strain/condition
-            output:         Output filename
+            controls_file (str): Controls file with controls and penetrance bin and manual penetrance labels
+            df (pd.DataFrame): Result dataframe for strain/condition
+            identifier (str): Unique identifier for the strain/condition
+            output (dict): Output filenames
         """
 
     bin_df = pd.read_csv(controls_file)
@@ -976,11 +974,11 @@ def evaluate_performance_penetrance_bins(controls_file, df, identifier, output):
 
     if 'bin' in bin_df.columns.values:
         # Remove strains not screened
-        mask = np.array([1 if (x in df[identifier].tolist()) else False for x in bin_df[identifier]])
+        mask = np.array([1 if (x in df[identifier]) else False for x in bin_df[identifier]])
         bin_df = bin_df[mask == 1]
         bin_df = bin_df.reset_index(drop=True)
 
-        # Initialize output data frame for penetrance bins
+        # Initialize output dataframe for penetrance bins
         bin_df_out = pd.DataFrame(columns=bin_df.columns.values.tolist() + ['penetrance', 'predicted_bin', 'p_value',
                                                                             'num_cells', 'num_wells'])
         this_row = 0
@@ -1001,7 +999,7 @@ def evaluate_performance_penetrance_bins(controls_file, df, identifier, output):
             else:
                 predicted_bin = 0
 
-            # Gather ppredicted penetrance bin and other information
+            # Gather predicted penetrance bin and other information
             line = bin_df.iloc[i, :].tolist()
             line.append(penetrance)
             line.append(predicted_bin)
