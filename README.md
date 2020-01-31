@@ -1,7 +1,7 @@
 # ODNN
-This repository contains the code and example datasets for the paper:  
+This repository contains the code and example datasets for the paper:
 
-"Exploring endocytic compartment morphology with systematic genetics and single cell image analysis"
+"Systematic genetics and single-cell imaging reveal widespread morphological pleiotropy and cell-to-cell variability"
 
 Mojca Mattiazzi Usaj, Nil Sahin, Helena Friesen, Carles Pons, Matej Usaj, Myra Paz Masinas,
 Ermira Shuteriqi, Aleksei Shkurin, Patrick Aloy, Quaid Morris, Charles Boone, and Brenda J. Andrews

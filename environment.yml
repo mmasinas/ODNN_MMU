@@ -1,0 +1,12 @@
+name: ODNN
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - matplotlib
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - keras
+  - tensorflow-gpu
