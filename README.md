@@ -18,19 +18,6 @@ and penetrance as percent cells with combined mutant phenotypes.
 _Genome Biology_ 7:R100. PMID: 17076895 (2006).
 
 
-## Packages
-
-Python 3+: http://www.python.org/getit/
-   
-Tensorflow 1.13+: https://www.tensorflow.org/install
-   
-Keras 2.2+: https://keras.io/#installation
-
-You can use the following command to install all the required packages:
-
-    conda create --name <env> --file requirements.txt python=3.6.2 anaconda
-
-
 ## Requirements
 * This analysis is made on an array format. Plate-Row-Column information should be input.
 * At least one well identifier is required. This can be strain or condition information.
@@ -38,18 +25,26 @@ You can use the following command to install all the required packages:
 * Positive and negative controls should have all well identifiers. 'negative' phenotype is required in the control file.
 
 
+## Installation and Usage
 
-## Full Datasets
+Clone the repository
 
-The datasets are too large to store in the repository.
+    git clone https://github.com/BooneAndrewsLab/ODNN.git
+    cd ODNN
 
-The datasets are available at:
-<http://data_link.com>
+Create a new conda environment with the dependencies (recommended):
+
+    conda env create -f environment.yml
+    conda activate ODNN
+
+or if using virtualenv or the system wide Python, do
+
+    pip install -r requirements.txt
 
 
 ## Running ODNN
 
-To run ODNN, please use Option Parser, for example:
+To run ODNN, please use Argument Parser, for example:
 
     python ODNN.py --input-files input/screen1_plates.txt
     --features input/screen1_feature_set.txt
