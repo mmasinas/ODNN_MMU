@@ -713,7 +713,7 @@ def plot_confusion_matrix(y_true, y_pred, classes, output):
     plt.yticks(tick_marks, classes)
 
     # Plot percentage of labeled samples in each true-predicted label pair
-    thresh = cm.max() / 2.
+    thresh = np.max(cm) / 2.
     for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
         plt.text(j, i, cm[i, j], horizontalalignment='center',
                  color='white' if cm[i, j] > thresh else 'black')
