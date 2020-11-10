@@ -573,12 +573,12 @@ def neural_network(x_train, y_train, param, phenotypes, performance, n, x_test=n
                      batch_size=param['batch_size'],
                      validation_split=param['percent_to_valid'],
                      verbose=1)
-
+    
     # Evaluate model
     performance['Loss_%d' % n] = hist.history['loss']
     performance['Val_Loss_%d' % n] = hist.history['val_loss']
-    performance['Accuracy_%d' % n] = hist.history['acc']
-    performance['Val_Accuracy_%d' % n] = hist.history['val_acc']
+    performance['Accuracy_%d' % n] = hist.history['accuracy']
+    performance['Val_Accuracy_%d' % n] = hist.history['val_accuracy']
 
     if len(x_test):
         score = model.evaluate(x_test, y_test, batch_size=param['batch_size'])
@@ -609,7 +609,8 @@ def plot_training_performance(performance, output, num_runs):
     plt.subplot(211)
     train_all = []
     valid_all = []
-    for i in range(1, num_runs+1):
+
+    for i in range(num_runs):
         train = performance.iloc[:, performance.columns.get_loc('Loss_%d' % i)].values
         valid = performance.iloc[:, performance.columns.get_loc('Val_Loss_%d' % i)].values
         train_all.append(train)
@@ -630,7 +631,7 @@ def plot_training_performance(performance, output, num_runs):
     plt.subplot(212)
     train_all = []
     valid_all = []
-    for i in range(1, num_runs+1):
+    for i in range(num_runs):
         train = performance.iloc[:, performance.columns.get_loc('Accuracy_%d' % i)].values
         valid = performance.iloc[:, performance.columns.get_loc('Val_Accuracy_%d' % i)].values
         train_all.append(train)
@@ -668,6 +669,7 @@ def cell_accuracy(df, sum_prob, phenotypes, n, output):
     # Create columns for each cross-validation run
     df['accuracy'] = np.zeros(len(df))
     predictions = []
+    
     for c in df.columns.values:
         if 'Run-' in c:
             predictions.append(df.columns.get_loc(c))
@@ -801,7 +803,7 @@ def prepare_output_file_well(main_dict, identifiers, phenotypes, output):
             line.append(num_cells)
             for i in phenotypes:
                 line.append(float(len(df_well[df_well.phenotype == i])) / num_cells)
-            df_output.loc[this_row, ] = line
+            df_output.loc[this_row] = line
             this_row += 1
 
     # Save results
@@ -830,7 +832,8 @@ def prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, o
     for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
         df[i] = main_dict[i]
     # Combine row and column information for a single well information
-    df['well'] = df.plate + '_' + df.row.map(int).map(str) + '_' + df.column.map(int).map(str)
+    #df['well'] = df.plate + '_' + df.row.map(int).map(str) + '_' + df.column.map(int).map(str)
+    df['well'] = df.plate.astype(str) + '_' + df.row.astype(str) + '_' + df.column.astype(str)
 
     # Initialize output file columns
     output_columns = identifiers + ['p_value', 'penetrance', 'num_cells', 'num_wells']
@@ -869,7 +872,7 @@ def prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, o
             line.append(num_wells)
             for i in phenotypes:
                 line.append(float(len(df_strain[df_strain.phenotype == i])) / num_cells)
-            df_output.loc[this_row, ] = line
+            df_output.loc[this_row] = line
             this_row += 1
 
     # Save results
