@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser.add_argument('-u', '--identifier', default='',
                         help='Unique strain identifier: gene - allele')
     parser.add_argument('-c', '--controls-file', default='',
-                        help='Positive and negative controls file')
+                        help='Positive and negative controls file. This is optional.')
     parser.add_argument('-x', '--pos-control-cell', default='',
                         help='Positive controls file with single cell labels')
     parser.add_argument('-y', '--pos-control-celldata', default='',
@@ -62,7 +62,12 @@ if __name__ == '__main__':
     # Read input and controls files
     plates, features, mapping, identifiers = read_input_files(args.input_files, args.input_data, args.features_file,
                                                               args.mapping_file, location_feat)
-    neg_controls = read_negative_controls_file(args.controls_file, identifier)
+
+    if args.controls_file:
+        neg_controls = read_negative_controls_file(args.controls_file, identifier)
+    else:
+        neg_controls = []
+
     main_dict, dict_feat = initialize_dictionary(identifiers)
 
     # Read and scale data
@@ -84,4 +89,5 @@ if __name__ == '__main__':
     df_strain = prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, output)
 
     # Evaluate performance
-    evaluate_performance(args.controls_file, df_well, df_strain, neg_controls, identifier, output)
+    if args.controls_file:
+        evaluate_performance(args.controls_file, df_well, df_strain, neg_controls, identifier, output)

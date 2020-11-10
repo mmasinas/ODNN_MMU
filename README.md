@@ -72,7 +72,8 @@ CellProfiler do not have an input mapping sheet option so each row of CellProfil
 Example file at _input/screens_mapping_sheet.csv_
 
 **--control** (-c): This sheet contains positive and negative control strains.
-Positive controls are the mutant phenotype classes known prior, negative controls are the normal (WT, unperturbed) strains.  
+Positive controls are the mutant phenotype classes known prior, negative controls are the normal (WT, unperturbed) 
+strains. This is optional. If specified, the script will evaluate training performance by calculating the TPR-FPR-Precision values.  
 Example file at _input/screen1_controls.csv_  
 
 **--control** (-c): If you would like to assess the performance of penetrance calculation (total % mutant cells in a strain), please put a column named "Bin" and label each control with your manual assessment accordingly:  
