@@ -10,7 +10,7 @@ Molecular Systems Biology, 2020
 
 <https://www.embopress.org/doi/full/10.15252/msb.20199243>
 
-#### Mutant Phenotype Classification and Penetrance Calculation
+## Mutant Phenotype Classification and Penetrance Calculation
 This script learns and predicts mutant phenotypes from genetic or chemical perturbation screens.
 _CellProfiler*_ is used for extracting features but any other software or custom features can be used.
 The plates are normalized with respect to normal (wild-type, WT) cells each plate.
