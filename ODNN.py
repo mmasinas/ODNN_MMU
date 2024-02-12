@@ -8,14 +8,20 @@ if __name__ == '__main__':
                         help='Input files to be analyzed')
     parser.add_argument('-d', '--input-data', default='',
                         help='Input data, scaled and filled with identifiers')
-    parser.add_argument('-f', '--features-file', default='',
-                        help='Feature sets to include')
     parser.add_argument('-m', '--mapping-file', default='',
                         help='Mapping sheet for strain identifiers')
-    parser.add_argument('-p', '--probability', default=0,
-                        help='Minimum probability to make predictions for a cell')
+    parser.add_argument('-f', '--features-file', default='',
+                        help='Feature sets to include')
+    parser.add_argument('-l', '--location-features', default='Plate,Row,Column',
+                        help='Column names for plate-row-column information in specified order. '
+                             'Separate each item by a comma. Default is: "Plate,Row,Column"')
+    parser.add_argument('-s', '--strain-identifiers', default='ORF,Name,Allele,Strain',
+                        help='List of strain/condition identifier columns. Separate each item by a comma. '
+                             'Default is: "ORF,Name,Allele,Strain"')
     parser.add_argument('-u', '--identifier', default='',
                         help='Unique strain identifier: gene - allele')
+    parser.add_argument('-p', '--probability', default=0,
+                        help='Minimum probability to make predictions for a cell')
     parser.add_argument('-c', '--controls-file', default='',
                         help='Positive and negative controls file. This is optional.')
     parser.add_argument('-x', '--pos-control-cell', default='',
@@ -57,18 +63,18 @@ if __name__ == '__main__':
     # Arguments
     identifier = args.identifier.lower()
     pos_controls_f = [args.controls_file, args.pos_control_cell, args.pos_control_celldata]
-    location_feat = ['plate', 'row', 'column']
+    location_feat = [l.lower() for l in args.location_features.split(',')]
 
     # Read input and controls files
     plates, features, mapping, identifiers = read_input_files(args.input_files, args.input_data, args.features_file,
-                                                              args.mapping_file, location_feat)
+                                                              args.mapping_file, location_feat, args.strain_identifiers)
 
     if args.controls_file:
         neg_controls = read_negative_controls_file(args.controls_file, identifier)
     else:
         neg_controls = []
 
-    main_dict, dict_feat = initialize_dictionary(identifiers)
+    main_dict, dict_feat = initialize_dictionary(identifiers, location_feat)
 
     # Read and scale data
     if args.input_data:
@@ -77,16 +83,16 @@ if __name__ == '__main__':
         for p in plates:
             main_dict = read_and_scale_plate(main_dict, p, neg_controls, features, mapping,
                                              identifier, identifiers, dict_feat)
-        save_data(main_dict, features, identifiers, output)
+        save_data(main_dict, features, location_feat, identifiers, output)
 
     # Prepare phenotype data and train NN
-    main_dict, phenotype_df, phenotypes = prepare_phenotype_data(main_dict, identifier, identifiers,
-                                                                 features, pos_controls_f, output)
+    main_dict, phenotype_df, phenotypes = prepare_phenotype_data(main_dict, identifier, identifiers, features,
+                                                                 location_feat, pos_controls_f, output)
     main_dict = make_predictions(main_dict, param, phenotype_df, args.probability, features, output)
 
     # Save results
-    df_well = prepare_output_file_well(main_dict, identifiers, phenotypes, output)
-    df_strain = prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, output)
+    df_well = prepare_output_file_well(main_dict, identifiers, location_feat, phenotypes, output)
+    df_strain = prepare_output_file_strain(main_dict, identifiers, identifier, location_feat, phenotypes, output)
 
     # Evaluate performance
     if args.controls_file:

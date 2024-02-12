@@ -15,7 +15,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 matplotlib.use('Agg')
 
 
-def read_input_files(input_files, input_data_file, features_file, mapping_file, location):
+def read_input_files(input_files, input_data_file, features_file, mapping_file, location, strain_identifiers):
     """ Read input files for plates, CP features, mapping sheet.
         Return in lists and dataframe.
 
@@ -46,6 +46,7 @@ def read_input_files(input_files, input_data_file, features_file, mapping_file, 
     if os.path.isfile(features_file):
         f = open(features_file, 'r')
         feature_set = list(filter(None, [x.strip() for x in f.readlines()]))
+        feature_set = [f.lower() for f in feature_set]
         f.close()
     else:
         sys.exit('Please provide a CP feature list, quitting...')
@@ -57,7 +58,11 @@ def read_input_files(input_files, input_data_file, features_file, mapping_file, 
         for i in location:
             map_features.remove(i)
     else:
-        sys.exit('Please provide a mapping sheet for strain/condition information, quitting...')
+        if os.path.isfile(input_data_file):
+            mapping_sheet = None
+            map_features = [s.lower() for s in strain_identifiers.split(',')]
+        else:
+            sys.exit('Please provide a mapping sheet for strain/condition information, quitting...')
 
     return plates, feature_set, mapping_sheet, map_features
 
@@ -100,11 +105,12 @@ def read_negative_controls_file(filename, identifier):
     return neg_controls
 
 
-def initialize_dictionary(identifiers):
+def initialize_dictionary(identifiers, location_feat):
     """ Return an empty dictionary with the following attributes.
 
         Args:
             identifiers (list): Strain/condition identifier columns
+            location_feat (list): Column names for plate-row-column info
 
         Returns:
             main_dict (dict): Dictionary of combined data
@@ -112,7 +118,7 @@ def initialize_dictionary(identifiers):
         """
 
     main_dict = {}
-    for i in (identifiers + ['cell_id', 'column', 'row', 'plate', 'data', 'data_scaled', 'mask_neg']):
+    for i in (identifiers + ['cell_id'] + location_feat + ['data', 'data_scaled', 'mask_neg']):
         main_dict[i] = np.array([])
 
     dict_feat = list(main_dict.keys())
@@ -225,20 +231,21 @@ def standard_scaler_fit_transform(data_fit, data_transform=np.array([])):
         return (data_fit - mean) / variance
 
 
-def save_data(main_dict, features, identifiers, output):
+def save_data(main_dict, features, location_feat, identifiers, output):
     """ Save combined scale data for all plates.
 
         Args:
             main_dict (dict): Dictionary of combined data
             features (list): Features to be analyzed
+            location_feat (list): Column names for plate-row-column info
             identifiers (list): Strain/condition identifier columns
             output (dict): Output filenames
         """
 
     # Save scaled data for all plates
-    data_scaled_columns = ['cell_id', 'plate', 'row', 'column'] + identifiers + features
+    data_scaled_columns = ['cell_id'] + location_feat + identifiers + features
     data_scaled_output = main_dict['cell_id'].reshape(-1, 1)
-    for i in (['plate', 'row', 'column'] + identifiers):
+    for i in (location_feat + identifiers):
         data_scaled_output = np.concatenate((data_scaled_output, main_dict[i].reshape(-1, 1)), axis=1)
     data_scaled_output = np.concatenate((data_scaled_output, main_dict['data_scaled']), axis=1)
     data_scaled_output_df = pd.DataFrame(data=data_scaled_output, columns=data_scaled_columns)
@@ -305,7 +312,7 @@ def read_scaled_data(main_dict, input_data, dict_feat, neg, identifier, features
     return main_dict
 
 
-def prepare_phenotype_data(main_dict, identifier, identifiers, features, pos_controls_files, output):
+def prepare_phenotype_data(main_dict, identifier, identifiers, features, location_feat, pos_controls_files, output):
     """ Read and prepare training set from phenotype data with positive controls.
 
         Args:
@@ -313,6 +320,7 @@ def prepare_phenotype_data(main_dict, identifier, identifiers, features, pos_con
             identifier (str): Unique identifier for the strain/condition
             identifiers (list): Strain/condition identifier columns
             features (list): Features to be analyzed
+            location_feat (list): Column names for plate-row-column info
             pos_controls_files (list): List of positive controls file
             output (dict): Output filenames
 
@@ -358,9 +366,9 @@ def prepare_phenotype_data(main_dict, identifier, identifiers, features, pos_con
                           for x in main_dict[identifier][main_dict['mask_pc'] == 1]]
 
         # Combine positive control data
-        phenotype_data_columns = ['cell_id'] + identifiers + ['plate', 'row', 'column', 'phenotype'] + features
+        phenotype_data_columns = ['cell_id'] + identifiers + location_feat + ['phenotype'] + features
         phenotype_data = main_dict['cell_id'][main_dict['mask_pc'] == 1].reshape(-1, 1)
-        for i in (identifiers + ['plate', 'row', 'column']):
+        for i in (identifiers + location_feat):
             phenotype_data = np.concatenate((phenotype_data, main_dict[i][main_dict['mask_pc'] == 1].reshape(-1, 1)),
                                             axis=1)
         phenotype_data = np.concatenate((phenotype_data, np.array(phenotypes).reshape(-1, 1),
@@ -747,12 +755,13 @@ def pvalue_parameters(main_dict):
     return neg_cells, neg_cells_outliers
 
 
-def prepare_output_file_well(main_dict, identifiers, phenotypes, output):
+def prepare_output_file_well(main_dict, identifiers, location_feat, phenotypes, output):
     """ Combine phenotype predictions and calculate penetrance for each well in a plate/arrayed format.
 
         Args:
             main_dict (dict): Dictionary of combined data
             identifiers (list): Strain/condition identifier columns
+            location_feat (list): Column names for plate-row-column info
             phenotypes (list): List of phenotype classes
             output (dict): Output filenames
 
@@ -764,13 +773,15 @@ def prepare_output_file_well(main_dict, identifiers, phenotypes, output):
 
     # Save required data from dictionary to a pandas dataframe
     df = pd.DataFrame()
-    for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
+    for i in (identifiers + location_feat + ['phenotype', 'is_inlier']):
         df[i] = main_dict[i]
     # Combine row and column information for a single well information
-    df['well'] = df.row.map(int).map(str) + '_' + df.column.map(int).map(str)
+    row_str = location_feat[1]
+    col_str = location_feat[2]
+    df['well'] = df[row_str].map(int).map(str) + '_' + df[col_str].map(int).map(str)
 
     # Initialize output file columns
-    output_columns = identifiers + ['plate', 'row', 'column', 'p_value', 'penetrance', 'num_cells']
+    output_columns = identifiers + location_feat + ['p_value', 'penetrance', 'num_cells']
     for i in phenotypes:
         output_columns.append(i)
     df_output = pd.DataFrame(columns=output_columns)
@@ -796,7 +807,7 @@ def prepare_output_file_well(main_dict, identifiers, phenotypes, output):
 
             # Enter well results into a final dataframe row
             line = []
-            for i in (identifiers + ['plate', 'row', 'column']):
+            for i in (identifiers + location_feat):
                 line.append(df_well[i].unique()[0])
             line.append(pval)
             line.append(pene)
@@ -813,13 +824,14 @@ def prepare_output_file_well(main_dict, identifiers, phenotypes, output):
     return df_output
 
 
-def prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, output):
+def prepare_output_file_strain(main_dict, identifiers, identifier, location_feat, phenotypes, output):
     """ Combine phenotype predictions and calculate penetrance for each unique strain/condition identifier.
 
         Args:
             main_dict (dict): Dictionary of combined data
             identifiers (list): Strain/condition identifier columns
             identifier (str): Unique identifier for the strain/condition
+            location_feat (list): Column names for plate-row-column info
             phenotypes (list): List of phenotype classes
             output (dict): Output filenames
 
@@ -829,11 +841,14 @@ def prepare_output_file_strain(main_dict, identifiers, identifier, phenotypes, o
 
     # Save required data from dictionary to a pandas dataframe
     df = pd.DataFrame()
-    for i in (identifiers + ['plate', 'row', 'column', 'phenotype', 'is_inlier']):
+    for i in (identifiers + location_feat + ['phenotype', 'is_inlier']):
         df[i] = main_dict[i]
     # Combine row and column information for a single well information
     #df['well'] = df.plate + '_' + df.row.map(int).map(str) + '_' + df.column.map(int).map(str)
-    df['well'] = df.plate.astype(str) + '_' + df.row.astype(str) + '_' + df.column.astype(str)
+    plate_str = location_feat[0]
+    row_str = location_feat[1]
+    col_str = location_feat[2]
+    df['well'] = df[plate_str].astype(str) + '_' + df[row_str].astype(str) + '_' + df[col_str].astype(str)
 
     # Initialize output file columns
     output_columns = identifiers + ['p_value', 'penetrance', 'num_cells', 'num_wells']
