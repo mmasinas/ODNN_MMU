@@ -17,7 +17,7 @@ if __name__ == '__main__':
                              'Separate each item by a comma. Default is: "Plate,Row,Column"')
     parser.add_argument('-s', '--strain-identifiers', default='ORF,Name,Allele,Strain',
                         help='List of strain/condition identifier columns. Separate each item by a comma. '
-                             'Default is: "ORF,Name,Allele,Strain"')
+                             'Example: "ORF,Name,Allele,Strain"')
     parser.add_argument('-u', '--identifier', default='',
                         help='Unique strain identifier: gene - allele')
     parser.add_argument('-p', '--probability', default=0,
@@ -68,6 +68,7 @@ if __name__ == '__main__':
     # Read input and controls files
     plates, features, mapping, identifiers = read_input_files(args.input_files, args.input_data, args.features_file,
                                                               args.mapping_file, location_feat, args.strain_identifiers)
+    print("mapping", mapping)
 
     if args.controls_file:
         neg_controls = read_negative_controls_file(args.controls_file, identifier)
@@ -78,12 +79,21 @@ if __name__ == '__main__':
 
     # Read and scale data
     if args.input_data:
-        main_dict = read_scaled_data(main_dict, args.input_data, dict_feat, neg_controls, identifier, features)
+        p = None
+        main_dict = read_scaled_data(p, main_dict, args.input_data, dict_feat, neg_controls, identifier, features,
+                                     identifiers, location_feat, multi_plate=False)
     else:
-        for p in plates:
-            main_dict = read_and_scale_plate(main_dict, p, neg_controls, features, mapping,
-                                             identifier, identifiers, dict_feat)
-        save_data(main_dict, features, location_feat, identifiers, output)
+        if mapping:
+            for p in plates:
+                main_dict = read_and_scale_plate(main_dict, p, neg_controls, features, mapping,
+                                                 identifier, identifiers, dict_feat)
+            save_data(main_dict, features, location_feat, identifiers, output)
+        else:  # if no mapping sheet is provided, assume that input plates are already scaled
+            for p in plates:
+                main_dict = read_scaled_data(p, main_dict, args.input_data, dict_feat, neg_controls, identifier,
+                                             features, identifiers, location_feat, multi_plate=True)
+            save_data(main_dict, features, location_feat, identifiers, output)
+
 
     # Prepare phenotype data and train NN
     main_dict, phenotype_df, phenotypes = prepare_phenotype_data(main_dict, identifier, identifiers, features,

@@ -58,9 +58,10 @@ def read_input_files(input_files, input_data_file, features_file, mapping_file, 
         for i in location:
             map_features.remove(i)
     else:
-        if os.path.isfile(input_data_file):
+        if (os.path.isfile(input_data_file)) or (os.path.isfile(input_files) and strain_identifiers):
             mapping_sheet = None
             map_features = [s.lower() for s in strain_identifiers.split(',')]
+            print('No mapping sheet is found. The process will continue assuming the input is already scaled.')
         else:
             sys.exit('Please provide a mapping sheet for strain/condition information, quitting...')
 
@@ -157,7 +158,7 @@ def read_and_scale_plate(main_dict, plate, neg, features, mapping_sheet, identif
     dict_plate['data_scaled'][np.isnan(dict_plate['data_scaled'])] = 0
 
     # Add to the existing dictionary of combined data
-    main_dict = append_data(main_dict, dict_plate, dict_feat)
+    main_dict = append_data(main_dict, dict_plate, dict_feat, 'data')
 
     return main_dict
 
@@ -252,7 +253,7 @@ def save_data(main_dict, features, location_feat, identifiers, output):
     data_scaled_output_df.to_csv(path_or_buf=output['DataScaled'], index=False)
 
 
-def append_data(main_dict, dict_add, dict_feat):
+def append_data(main_dict, dict_add, dict_feat, data_type):
     """ Append two dictionaries on selected features.
 
         Args:
@@ -266,11 +267,14 @@ def append_data(main_dict, dict_add, dict_feat):
 
     # Create a deep copy of features
     append_list = dict_feat[:]
-    if len(main_dict['data']) == 0:
+    if len(main_dict[data_type]) == 0:
         main_dict['data'] = dict_add['data']
         main_dict['data_scaled'] = dict_add['data_scaled']
+        if data_type == 'data_scaled':
+            main_dict['mask_neg'] = dict_add['mask_neg']
         append_list.remove('data')
         append_list.remove('data_scaled')
+        append_list.remove('mask_neg')
 
     # Append new dictionary to the existing one
     for i in append_list:
@@ -279,7 +283,8 @@ def append_data(main_dict, dict_add, dict_feat):
     return main_dict
 
 
-def read_scaled_data(main_dict, input_data, dict_feat, neg, identifier, features):
+def read_scaled_data(p, main_dict, input_data, dict_feat, neg, identifier, features,
+                     identifiers, location_feat, multi_plate=False):
     """ Read an input file with scaled CP features and strain/condition identifier information.
 
         Args:
@@ -289,25 +294,41 @@ def read_scaled_data(main_dict, input_data, dict_feat, neg, identifier, features
             neg (list): Negative controls for scaling
             identifier (str): Unique identifier for the strain/condition
             features (list): Features to be analyzed
+            identifiers (list): Strain/condition identifier columns
+            location_feat (list): Column names for plate-row-column info
+            multi_plate (bool): Whether processing multiple input plates or not
 
         Returns:
             main_dict (dict): Dictionary of combined data
         """
 
-    print('Returning scaled data from %s' % input_data)
+    if multi_plate:
+        print('Returning scaled data from %s' % p)
+    else:
+        print('Returning scaled data from %s' % input_data)
 
     # Read scaled data and save in a dataframe
-    df_scaled = pd.read_csv(input_data)
+    df_scaled = pd.read_csv(p)
     df_scaled = lower_column_names(df_scaled)
     exclude = ['data', 'data_scaled', 'mask_neg']
+
+    if multi_plate:
+        dict_plate, dict_feat = initialize_dictionary(identifiers, location_feat)
+    else:
+        dict_plate = main_dict
+
     for i in dict_feat:
         if i not in exclude:
-            main_dict[i] = np.array(df_scaled[i])
+            dict_plate[i] = np.array(df_scaled[i])
 
     # Use the original order of features
-    main_dict['data_scaled'] = np.array(df_scaled[features])
-    main_dict['data_scaled'][np.isnan(main_dict['data_scaled'])] = 0
-    main_dict['mask_neg'] = np.array([x in neg for x in main_dict[identifier]])
+    dict_plate['data_scaled'] = np.array(df_scaled[features])
+    dict_plate['data_scaled'][np.isnan(dict_plate['data_scaled'])] = 0
+    dict_plate['mask_neg'] = np.array([x in neg for x in dict_plate[identifier]])
+
+    if multi_plate:
+        # Add to the existing dictionary of combined data
+        main_dict = append_data(main_dict, dict_plate, dict_feat, 'data_scaled')
 
     return main_dict
 
@@ -476,6 +497,7 @@ def make_predictions(main_dict, param, pheno_df, threshold, features, output):
         for n in range(param['runs']):
             runn = n + cv * param['runs']
             # Train NN with training set
+            print("Training on training set, run #%d of %d" % (n, param['runs']))
             model, performance = neural_network(x_train[cv], y_train[cv], param, phenotypes, performance, runn,
                                                 x_test[cv], y_test[cv])
             # Predictions on test data
@@ -497,6 +519,7 @@ def make_predictions(main_dict, param, pheno_df, threshold, features, output):
     performance = pd.DataFrame()
     sum_prob_all = np.zeros([main_dict['data_scaled'].shape[0], y.shape[1]])
     for n in range(param['runs']):
+        print("Training on labeled set, run #%d of %d" % (n, param['runs']))
         model, performance = neural_network(x, y, param, phenotypes, performance, n)
         # Predictions on all data
         probabilities_all = model.predict(main_dict['data_scaled'], batch_size=param['batch_size'])
@@ -522,7 +545,7 @@ def make_predictions(main_dict, param, pheno_df, threshold, features, output):
         if sum(y_prob_all[i]) == 0:
             pred = 'none'
         phenotype_all.append(pred)
-
+    
     # Save phenotype predictions for cell_IDs provided
     cell_id = pd.DataFrame(columns=['CellID', 'Prediction'] + list(phenotypes))
     cell_id['CellID'] = main_dict['cell_id']
