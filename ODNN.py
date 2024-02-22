@@ -8,6 +8,9 @@ if __name__ == '__main__':
                         help='Input files to be analyzed')
     parser.add_argument('-d', '--input-data', default='',
                         help='Input data, scaled and filled with identifiers')
+    parser.add_argument('-o', '--output-folder', default='ODNN_results',
+                        help='Path to the output directory. If not provided, the output folder will be automatically generated '
+                        'in the directory where the script was executed.')    
     parser.add_argument('-m', '--mapping-file', default='',
                         help='Mapping sheet for strain identifiers')
     parser.add_argument('-f', '--features-file', default='',
@@ -44,7 +47,8 @@ if __name__ == '__main__':
              'runs': 10}
 
     # Output files
-    output_folder = 'ODNN_results'
+    output_folder = args.output_folder
+    print("Creating output folder: %s" %output_folder)
     if not os.path.isdir(output_folder):
         os.system('mkdir %s' % output_folder)
 
