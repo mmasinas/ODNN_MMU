@@ -733,17 +733,22 @@ def plot_confusion_matrix(y_true, y_pred, classes, output):
             output (dict): Output filenames
         """
 
+    # Sort class labels
+    class_list = classes.tolist()
+    sorted_labels = sorted(class_list)
+    sorted_labels_idx = [class_list.index(c) for c in sorted_labels]
+
     # Normalize counts for each true-predicted label pair
     acc = accuracy_score(y_true, y_pred)
-    cm = confusion_matrix(y_true, y_pred)
+    cm = confusion_matrix(y_true, y_pred, labels=sorted_labels_idx)
     cm = np.around(cm.astype('float') / cm.sum(axis=1)[:, np.newaxis], decimals=2)
 
     # Plot confusion matrix
     plt.imshow(cm, interpolation='nearest', cmap='Blues')
     plt.title('Acc %.2f%%' % (acc * 100))
     tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45, ha='right')
-    plt.yticks(tick_marks, classes)
+    plt.xticks(tick_marks, sorted_labels, rotation=45, ha='right')
+    plt.yticks(tick_marks, sorted_labels)
 
     # Plot percentage of labeled samples in each true-predicted label pair
     thresh = np.max(cm) / 2.

@@ -44,7 +44,7 @@ if __name__ == '__main__':
              'momentum': 0.9,
              'nesterov': True,
              'num_epochs': 50,
-             'runs': 10}
+             'runs': 1}
 
     # Output files
     output_folder = args.output_folder
