@@ -96,7 +96,7 @@ if __name__ == '__main__':
             for p in plates:
                 main_dict = read_scaled_data(p, main_dict, args.input_data, dict_feat, neg_controls, identifier,
                                              features, identifiers, location_feat, multi_plate=True)
-            save_data(main_dict, features, location_feat, identifiers, output)
+            # save_data(main_dict, features, location_feat, identifiers, output)
 
 
     # Prepare phenotype data and train NN
